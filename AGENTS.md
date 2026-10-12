@@ -6,7 +6,13 @@ Repo: https://github.com/Escanor292/platform.git
 Clone: `gh repo clone Escanor292/platform`  
 Commit author: `Nguyễn Quách Phú Tài` `<phutaigameplay@gmail.com>`
 
-Trước khi xây hoặc sửa gì: **đọc mã nguồn liên quan** (`src/`, `prisma/schema.prisma`, API route, component). Không đoán luồng từ docs cũ nếu khác code.
+## Trước khi làm
+
+1. Đọc mã nguồn liên quan (`src/`, `prisma/schema.prisma`, API route, component). Không đoán luồng từ docs cũ nếu khác code.
+2. Đọc `GLOSSARY.md` (thuật ngữ domain).
+3. Đọc `CODING_STANDARDS.md` (quy tắc code).
+4. Feature lớn: dùng skill `grill-with-docs` (trong `.agents/skills/`).
+5. Skills nằm ở `.agents/skills/`. Xem `.agents/skills/README.md` để biết skill nào đã có và cách thêm.
 
 ---
 
@@ -110,7 +116,6 @@ Sửa schema Prisma: migration trong `prisma/migrations/`. Không “sửa schem
 7. Mongo script (`mongo:init`, `scripts/init-mongodb.js`, …) là leftover — đừng phụ thuộc.
 8. Không thêm script debug (`check-*`, `dump_*`, `inspect_*`, `reset_pw`, `list_users`) vào `scripts/`. Folder này chỉ giữ seed / migrate / CI / DBML.
 
-
 ---
 
 ## 7. Cấu trúc nhanh
@@ -123,6 +128,8 @@ prisma/           schema + migrations
 public/           static + presentations seed images
 scripts/          seed / migrate / CI helpers
 __tests__/  e2e/  Jest + Playwright
+.agents/skills/   AI agent skills (engineering workflows)
+docs/adr/         Architecture Decision Records
 ```
 
 Nguồn sự thật runtime: `src/` + `prisma/schema.prisma` + env. Docs chỉ bổ sung.
