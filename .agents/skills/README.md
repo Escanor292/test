@@ -34,6 +34,8 @@ Toàn bộ skill engineering + productivity hữu ích từ mattpocock/skills đ
 - handoff
 - wait-what
 - writing-for-agents
+- teach
+- to-questionnaire
 
 ## Cách thêm skill mới sau này
 
