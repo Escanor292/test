@@ -1,20 +1,9 @@
-import { defineConfig } from "@neon/config/v1";
+// Basic neon.ts configuration without @neon/config dependency
+// This is a simplified version for Vercel deployment
 
-export default defineConfig({
-  // Declare your Neon services here
+export default {
+  // Minimal configuration for Neon
   auth: false,
-  // Branch policy: per-branch tuning
-  branch: (branch) => {
-    if (branch.isDefault) {
-      // Default branch: no overrides, uses project defaults
-      return {};
-    }
-    if (!branch.exists) {
-      // New non-default branches: auto-expire
-      // Run `neon checkout <name>` to create a new branch with these settings
-      return { ttl: "7d" };
-    }
-    // Existing branch: no changes
-    return {};
-  },
-});
+  // Simple branch policy
+  branch: () => ({})
+};
