@@ -53,3 +53,13 @@ REQ-KYC-003,TR-KYC-004,KYC,Admin shall be able to approve/reject KYC documents,V
 REQ-KYC-003,TR-KYC-004,KYC,Admin shall be able to approve/reject KYC documents,Verify admin approval functionality,TC-KYC-008,Admin reject KYC document,Fully Covered,100%,Designed
 REQ-KYC-004,TR-KYC-005,KYC,Send notification when KYC status changes,Verify notification sending when status changes,TC-KYC-009,Receive notification when KYC approved,Fully Covered,100%,Designed
 REQ-KYC-004,TR-KYC-005,KYC,Send notification when KYC status changes,Verify notification sending when status changes,TC-KYC-010,Receive notification when KYC rejected,Fully Covered,100%,Designed
+REQ-LOGIN-005,TR-LOGIN-002,Login,Validate email format and password length,Verify login with invalid credentials,TC-LOGIN-007,Xác thực định dạng email không hợp lệ,Fully Covered,100%,Designed
+REQ-LOGIN-005,TR-LOGIN-002,Login,Validate email format and password length,Verify login with invalid credentials,TC-LOGIN-008,Xác thực trường mật khẩu trống,Fully Covered,100%,Designed
+REQ-REWARD-005,TR-REWARD-001,Reward,Limit available reward quantity for backers,Verify creation of reward with complete information,TC-REWARD-008,Create reward with limited quantity,Fully Covered,100%,Designed
+REQ-REWARD-005,TR-REWARD-005,Reward,Limit available reward quantity for backers,Verify display of reward list,TC-REWARD-009,Update quantity after backer selection,Fully Covered,100%,Designed
+REQ-BLOG-005,TR-BLOG-001,Blog,Ability to upload and display images in posts,Verify creation of post with complete information,TC-BLOG-008,Create blog post with image upload,Fully Covered,100%,Designed
+REQ-BLOG-005,TR-BLOG-002,Blog,Ability to upload and display images in posts,Verify validation when creating post,TC-BLOG-009,Create blog post with oversized image,Fully Covered,100%,Designed
+REQ-CAMP-005,TR-CAMP-001,Campaign,Display % achieved compared to goal,Verify creation of campaign with complete information,TC-CAMP-010,Calculate funding progress percentage,Fully Covered,100%,Designed
+REQ-KYC-005,TR-KYC-002,KYC,Validate file format and size,Verify validation during upload,TC-KYC-003,Upload oversized document,Fully Covered,100%,Designed
+REQ-KYC-005,TR-KYC-002,KYC,Validate file format and size,Verify validation during upload,TC-KYC-004,Upload document with invalid format,Fully Covered,100%,Designed
+REQ-CAMP-006,,Campaign,Send notification when someone donates,,,,Not Covered,0%,Ngoài phạm vi Phase 1
