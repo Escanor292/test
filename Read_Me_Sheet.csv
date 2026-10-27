@@ -1,0 +1,57 @@
+Section,Content
+Workbook Title,Test Case Documentation - Tử Tế Fund (23CT113_Nhom02)
+Project,Nền tảng Crowdfunding (Tử Tế Fund)
+Class,23CT113
+Group,Nhóm 02
+Date Created,26/10/2026
+Version,1.0
+Purpose,"This workbook contains complete test documentation for Tử Tế Fund project including requirements, test cases, traceability matrix, and summary statistics."
+Sheet Overview,"1. Read_Me: This sheet - instructions and overview
+2. Requirements: Combined REQ and TR (Functional Requirements + Test Requirements)
+3. Test_Cases: All designed test cases (54 TC)
+4. Traceability_Matrix: Links between REQ-TR-TC with coverage analysis
+5. Test_Execution: [Empty - for execution results]
+6. Bug_Log: [Empty - for bug tracking]
+7. Summary: Statistics and metrics"
+Naming Convention,"REQ-{MODULE}-{001}: Functional Requirement
+TR-{MODULE}-{001}: Test Requirement
+TC-{MODULE}-{001}: Test Case
+BUG-{MODULE}-{001}: Bug Report
+MODULE codes: LOGIN, REWARD, BLOG, CAMP, KYC"
+Team Assignments,"Nguyễn Quách Phú Tài: Login module (10 TC)
+Bùi Đặng Quốc Khánh: Reward module (10 TC)
+Nguyễn Trung Tiến: Blog module (10 TC)
+Trần Xuân Ân: Campaign module (12 TC)
+Nguyễn Khánh Du: KYC module (12 TC)"
+Test Environment,"Deploy: Production-like environment (URL to be provided)
+Local: Development environment (localhost:3000 or similar)"
+Execution Method,100% Manual Testing
+Test Approach,Black-box Testing (functional testing based on requirements)
+Key Dates,"Test Plan: 26/10/2026
+Test Design: 27/10/2026
+Test Execution (Deploy): 28-29/10/2026
+Test Execution (Local): 30/10/2026
+Test Reporting: 31/10/2026
+Final Submission: 01/11/2026"
+How to Use,"1. Review Requirements sheet to understand what needs testing
+2. Use Test_Cases sheet for test execution
+3. Record results in Test_Execution sheet (to be created)
+4. Log bugs in Bug_Log sheet (to be created)
+5. Check Traceability_Matrix for coverage analysis
+6. View Summary for statistics"
+Status Codes (Test Execution),"Pass: Actual result matches expected result
+Fail: Actual result differs from expected result
+Blocked: Cannot execute due to dependencies/issues
+Not Run: Not yet executed
+N/A: Not applicable"
+Priority Levels,"High: Critical functionality, must test
+Medium: Important functionality, should test
+Low: Nice-to-have, test if time permits"
+Contact Information,"Trưởng nhóm: Nguyễn Quách Phú Tài
+Email: [Group email]
+Communication: [Group chat/Zalo]"
+Notes,"1. All test data should be prepared before execution
+2. Screenshots/videos should be captured for evidence
+3. Both Deploy and Local environments need testing
+4. Report any issues immediately to team lead
+5. Keep this workbook updated with execution results"

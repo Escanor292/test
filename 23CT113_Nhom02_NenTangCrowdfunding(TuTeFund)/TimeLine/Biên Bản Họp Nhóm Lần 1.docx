@@ -1,0 +1,71 @@
+BIÊN BẢN HỌP NHÓM LẦN 1
+
+THÔNG TIN BUỔI HỌP
+• Số lần họp: Lần 1
+• Ngày/giờ: 12/10/2026, 19:00 - 20:30
+• Hình thức: Online qua Google Meet
+• Địa điểm: Online
+
+THÀNH VIÊN THAM DỰ
+1. Nguyễn Quách Phú Tài - Có mặt
+2. Bùi Đặng Quốc Khánh - Có mặt
+3. Nguyễn Trung Tiến - Có mặt
+4. Trần Xuân Ân - Có mặt
+5. Nguyễn Khánh Du - Có mặt
+
+MỤC ĐÍCH
+• Thống nhất đề tài và phạm vi kiểm thử
+• Phân công công việc cho các thành viên
+• Lập kế hoạch thực hiện dự án
+
+NỘI DUNG TRAO ĐỔI
+1. Thảo luận về đề tài "Nền tảng Crowdfunding (Tử Tế Fund)"
+2. Xác định 5 module chính cần kiểm thử:
+   - Đăng nhập (Login)
+   - Quản lý Reward
+   - Blog
+   - Campaign
+   - KYC thủ công
+3. Thống nhất sử dụng phương pháp Black-box testing
+4. Thảo luận về yêu cầu báo cáo ít nhất 3 lỗi thực tế
+
+QUYẾT ĐỊNH ĐÃ THỐNG NHẤT
+1. Chọn đề tài: Nền tảng Crowdfunding (Tử Tế Fund)
+2. Phạm vi kiểm thử: 5 module như đã xác định
+3. Thời gian dự án: 12/10/2026 - 01/11/2026
+4. Trưởng nhóm: Nguyễn Quách Phú Tài
+
+PHÂN CÔNG
+1. Nguyễn Quách Phú Tài:
+   - Điều phối chung, module Login
+   - Lập Test Plan
+2. Bùi Đặng Quốc Khánh: Module Reward
+3. Nguyễn Trung Tiến: Module Blog
+4. Trần Xuân Ân: Module Campaign  
+5. Nguyễn Khánh Du: Module KYC
+
+CÔNG VIỆC TIẾP THEO
+• Hoàn thành Product Requirements (PRD) - Hạn: 18/10/2026
+• Bắt đầu thiết kế Test Requirements - Hạn: 20/10/2026
+
+NGƯỜI LẬP BIÊN BẢN
+Nguyễn Quách Phú Tài
+
+CHỮ KÝ THÀNH VIÊN
+1. ___________________ (Nguyễn Quách Phú Tài)
+2. ___________________ (Bùi Đặng Quốc Khánh)
+3. ___________________ (Nguyễn Trung Tiến)
+4. ___________________ (Trần Xuân Ân)
+5. ___________________ (Nguyễn Khánh Du)
+
+---
+PHỤ LỤC ẢNH MINH CHỨNG
+
+ẢNH 1: CHỤP MÀN HÌNH BUỔI HỌP
+[Chèn ảnh chụp màn hình Google Meet/Zoom tại đây]
+
+ẢNH 2: BIÊN BẢN PHÂN CÔNG
+[Chèn ảnh phân công công việc tại đây]
+
+ẢNH 3: KẾT QUẢ THẢO LUẬN
+[Chèn ảnh ghi chú/thảo luận tại đây]

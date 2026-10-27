@@ -1,0 +1,13 @@
+WBS,Công việc,Người phụ trách,Ngày bắt đầu,Ngày kết thúc,Thời lượng,Phụ thuộc,Trạng thái,% hoàn thành,Ghi chú
+1,Xác nhận phạm vi/yêu cầu,Nguyễn Quách Phú Tài,12/10/2026,13/10/2026,2 ngày,,Hoàn thành,100%,Đã thống nhất 5 module chính
+2,Hoàn thiện PRD và TR,Cả nhóm,14/10/2026,18/10/2026,5 ngày,1,Hoàn thành,100%,Đã tạo 25 REQ và 50 TR
+3,Lập Test Plan,Nguyễn Quách Phú Tài,19/10/2026,21/10/2026,3 ngày,2,Hoàn thành,100%,Test Plan version 1.0
+4,Thiết kế Test Case theo module,Cả nhóm,22/10/2026,25/10/2026,4 ngày,3,Hoàn thành,100%,54 test cases đã thiết kế
+5,Rà soát Test Case,Nguyễn Trung Tiến,26/10/2026,26/10/2026,1 ngày,4,Đang thực hiện,80%,Rà soát chéo giữa các thành viên
+6,Chuẩn bị dữ liệu và môi trường,Trần Xuân Ân,27/10/2026,27/10/2026,1 ngày,5,Chưa bắt đầu,0%,Chuẩn bị tài khoản test
+7,Kiểm thử Deploy,Cả nhóm,28/10/2026,29/10/2026,2 ngày,6,Chưa bắt đầu,0%,Kiểm thử trên môi trường deploy
+8,Kiểm thử Local,Cả nhóm,30/10/2026,30/10/2026,1 ngày,7,Chưa bắt đầu,0%,Kiểm thử trên localhost
+9,Ghi nhận lỗi và kiểm thử lại,Nguyễn Khánh Du,31/10/2026,31/10/2026,1 ngày,8,Chưa bắt đầu,0%,Ghi bug và retest
+10,Hoàn thiện Test Report,Bùi Đặng Quốc Khánh,01/11/2026,01/11/2026,1 ngày,9,Chưa bắt đầu,0%,Tổng hợp báo cáo
+11,Hoàn thiện Word/PDF/PPTX,Nguyễn Quách Phú Tài,01/11/2026,01/11/2026,1 ngày,10,Chưa bắt đầu,0%,Báo cáo cuối kỳ
+12,Nộp bài,Cả nhóm,01/11/2026,01/11/2026,1 ngày,11,Chưa bắt đầu,0%,Hoàn thành và nộp

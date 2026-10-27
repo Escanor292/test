@@ -1,0 +1,136 @@
+BÁO CÁO KIỂM THỬ PHẦN MỀM
+
+DỰ ÁN: NỀN TẢNG CROWDFUNDING (TỬ TẾ FUND)
+NHÓM: 02 - LỚP: 23CT113
+
+THÔNG TIN TÀI LIỆU
+• Tên tài liệu: Test Report - Tử Tế Fund
+• Phiên bản: 1.0
+• Ngày lập: 26/10/2026
+• Người lập: Nguyễn Quách Phú Tài
+• Người rà soát: [Tên thành viên rà soát]
+
+MỤC LỤC
+1. Thông tin chung
+2. Mục tiêu và phạm vi thực tế
+3. Phương pháp đã thực hiện
+4. Môi trường kiểm thử
+5. Tổng quan kết quả
+6. Kết quả theo module
+7. Phân tích lỗi
+8. Ma trận truy vết yêu cầu
+9. Kiểm thử lại
+10. Đánh giá, khuyến nghị và quyết định
+11. Phê duyệt/phụ lục
+
+1. THÔNG TIN CHUNG
+• Dự án: Nền tảng Crowdfunding (Tử Tế Fund)
+• Phiên bản/build kiểm thử: [Ghi phiên bản build đã test]
+• Thời gian kiểm thử: 12/10/2026 - 01/11/2026
+• Người thực hiện: Nhóm 02 - 23CT113
+• Người lập báo cáo: Nguyễn Quách Phú Tài
+
+2. MỤC TIÊU VÀ PHẠM VI THỰC TẾ
+2.1 Mục tiêu kiểm thử
+• Kiểm tra tính đúng đắn của các chức năng cốt lõi
+• Đảm bảo hệ thống hoạt động ổn định trên hai môi trường Deploy và Local
+• Xác minh tính khả dụng và trải nghiệm người dùng
+• Phát hiện và báo cáo lỗi để cải thiện chất lượng
+
+2.2 Phạm vi đã thực hiện
+• Module Đăng nhập (Login): 10 test cases
+• Module Quản lý Reward: 10 test cases  
+• Module Blog: 10 test cases
+• Module Campaign: 12 test cases
+• Module KYC thủ công: 12 test cases
+
+2.3 Nội dung ngoài phạm vi
+• Kiểm thử hiệu năng/tải
+• Kiểm thử bảo mật nâng cao
+• Kiểm thử trên thiết bị di động
+• Kiểm thử tích hợp với hệ thống thanh toán bên thứ ba
+
+3. PHƯƠNG PHÁP ĐÃ THỰC HIỆN
+3.1 Black-box Testing
+• Kiểm tra chức năng qua giao diện người dùng
+• Xác minh tính đúng đắn của đầu vào/đầu ra
+• Kiểm tra xử lý lỗi và thông báo
+
+3.2 White-box Testing
+• [Ghi phần white-box đã thực hiện nếu có]
+• [Hoặc ghi lý do chưa thực hiện]
+
+3.3 Automated Testing
+• [Ghi phần automated testing đã thực hiện nếu có]
+• [Hoặc ghi lý do chưa thực hiện]
+
+4. MÔI TRƯỜNG KIỂM THỬ
+4.1 Môi trường Deploy
+• URL: [Ghi URL deploy]
+• Build/phiên bản: [Ghi phiên bản]
+• Hệ điều hành: Windows
+• Trình duyệt: Chrome [phiên bản]
+• Công cụ: [Ghi công cụ sử dụng]
+
+4.2 Môi trường Local
+• URL: localhost:3000
+• Build/phiên bản: [Ghi phiên bản]
+• Hệ điều hành: Windows
+• Trình duyệt: Chrome [phiên bản]
+• Công cụ: Visual Studio Code
+
+5. TỔNG QUAN KẾT QUẢ
+• Tổng số Test Case đã thiết kế: 54
+• Tổng số lượt chạy: [Số lượt chạy thực tế]
+• Kết quả Pass: [Số Pass]
+• Kết quả Fail: [Số Fail]
+• Kết quả Blocked: [Số Blocked]
+• Kết quả Not Run: [Số Not Run]
+• Tỷ lệ Pass: [Tỷ lệ %]
+• Tỷ lệ bao phủ yêu cầu: 100%
+
+6. KẾT QUẢ THEO MODULE
+[Ghi bảng kết quả chi tiết theo module]
+
+7. PHÂN TÍCH LỖI
+7.1 Tổng quan lỗi
+• Tổng số lỗi phát hiện: [Số lỗi]
+• Lỗi nghiêm trọng (Critical): [Số]
+• Lỗi cao (High): [Số]
+• Lỗi trung bình (Medium): [Số]
+• Lỗi thấp (Low): [Số]
+
+7.2 Chi tiết lỗi tiêu biểu
+[Ghi chi tiết các lỗi quan trọng đã phát hiện]
+
+8. MA TRẬN TRUY VẾT YÊU CẦU
+[Ghi ma trận liên kết REQ-TR-TC]
+
+9. KIỂM THỬ LẠI
+[Ghi kết quả kiểm thử lại sau khi sửa lỗi nếu có]
+
+10. ĐÁNH GIÁ, KHUYẾN NGHỊ VÀ QUYẾT ĐỊNH
+10.1 Đánh giá
+• [Đánh giá tổng quan về chất lượng]
+• [Đánh giá tính ổn định của hệ thống]
+
+10.2 Khuyến nghị
+• [Khuyến nghị sửa lỗi ưu tiên]
+• [Khuyến nghị cải thiện chức năng]
+• [Khuyến nghị cho các đợt kiểm thử tiếp theo]
+
+10.3 Quyết định
+• [Quyết định về việc phê duyệt/release]
+
+11. PHÊ DUYỆT/PHỤ LỤC
+11.1 Phê duyệt
+• Người chuẩn bị: Nguyễn Quách Phú Tài
+• Ngày: 26/10/2026
+• Người rà soát: [Tên]
+• Ngày: [Ngày]
+
+11.2 Phụ lục
+• File Excel Test Case: Test Case_23CT113_Nhom02_COMPLETE.xlsx
+• Test Plan: Test Plan_23CT113_Nhom02.docx
+• Product Requirements: 01-IC-Product-Requirements_23CT113_Nhom02.xlsx
+• Minh chứng: Thư mục MinhChung/

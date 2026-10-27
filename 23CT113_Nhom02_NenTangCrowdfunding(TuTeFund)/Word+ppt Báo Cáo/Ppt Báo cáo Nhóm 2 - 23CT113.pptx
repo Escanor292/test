@@ -1,0 +1,261 @@
+SLIDE 1: BÌA
+NỀN TẢNG CROWDFUNDING
+(TỬ TẾ FUND)
+
+BÁO CÁO KIỂM THỬ PHẦN MỀM
+NHÓM 02 - LỚP 23CT113
+
+Thành viên:
+• Nguyễn Quách Phú Tài (Trưởng nhóm)
+• Bùi Đặng Quốc Khánh
+• Nguyễn Trung Tiến
+• Trần Xuân Ân
+• Nguyễn Khánh Du
+
+Ngày: 01/11/2026
+
+---
+SLIDE 2: GIỚI THIỆU ĐỀ TÀI
+NỀN TẢNG TỬ TẾ FUND
+
+• Hệ thống crowdfunding trực tuyến
+• Cho phép tạo và quản lý chiến dịch gây quỹ
+• Hỗ trợ cộng đồng đóng góp và theo dõi tiến độ
+• Các module chính: Login, Reward, Blog, Campaign, KYC
+
+MỤC TIÊU KIỂM THỬ:
+• Đảm bảo tính đúng đắn của chức năng
+• Phát hiện và báo cáo lỗi hệ thống
+• Đánh giá khả năng hoạt động đa môi trường
+
+---
+SLIDE 3: PHẠM VI KIỂM THỬ
+5 MODULE CHÍNH
+
+1. ĐĂNG NHẬP (LOGIN)
+   • 10 Test Cases
+   • Kiểm tra authentication, validation, session
+
+2. QUẢN LÝ REWARD
+   • 10 Test Cases
+   • Tạo, sửa, xóa reward, quản lý số lượng
+
+3. BLOG
+   • 10 Test Cases
+   • Đăng bài, chỉnh sửa, hiển thị blog posts
+
+4. CAMPAIGN
+   • 12 Test Cases
+   • Tạo campaign, quản lý trạng thái, tính toán tiến độ
+
+5. KYC THỦ CÔNG
+   • 12 Test Cases
+   • Upload document, xác minh, quản lý trạng thái
+
+Tổng: 54 Test Cases
+
+---
+SLIDE 4: PHƯƠNG PHÁP KIỂM THỬ
+BLACK-BOX TESTING
+
+• Kiểm tra chức năng qua giao diện người dùng
+• Không yêu cầu kiến thức mã nguồn
+• Tập trung vào input-output behavior
+
+KỸ THUẬT ÁP DỤNG:
+• Positive Testing: Kịch bản hợp lệ
+• Negative Testing: Kịch bản không hợp lệ
+• Boundary Value Analysis
+• Equivalence Partitioning
+
+CÁCH THỰC THI:
+• 100% Manual Testing
+• Kiểm thử trên 2 môi trường: Deploy & Local
+
+---
+SLIDE 5: MÔI TRƯỜNG KIỂM THỬ
+DEVELOPMENT & DEPLOYMENT
+
+MÔI TRƯỜNG DEPLOY:
+• Production-like environment
+• Build/version: [Specific version]
+• Browser: Chrome [version]
+• OS: Windows
+
+MÔI TRƯỜNG LOCAL:
+• Localhost:3000
+• Development environment
+• Browser: Chrome [version]
+• OS: Windows
+
+CÔNG CỤ SỬ DỤNG:
+• Visual Studio Code
+• Chrome Developer Tools
+• Excel for documentation
+• GitHub for collaboration
+
+---
+SLIDE 6: PHÂN CÔNG NHÓM
+THÀNH VIÊN VÀ TRÁCH NHIỆM
+
+TRƯỞNG NHÓM:
+• Nguyễn Quách Phú Tài
+• Module: Login (10 TC)
+• Trách nhiệm: Test Plan, điều phối
+
+THÀNH VIÊN:
+• Bùi Đặng Quốc Khánh: Reward (10 TC)
+• Nguyễn Trung Tiến: Blog (10 TC)
+• Trần Xuân Ân: Campaign (12 TC)
+• Nguyễn Khánh Du: KYC (12 TC)
+
+QUY TRÌNH LÀM VIỆC:
+• Họp nhóm 3 lần
+• Rà soát chéo test case
+• Đồng bộ kết quả qua Excel
+
+---
+SLIDE 7: TIMELINE DỰ ÁN
+12/10/2026 - 01/11/2026
+
+GIAI ĐOẠN 1: THIẾT KẾ (12-25/10)
+• Xác định yêu cầu (PRD)
+• Thiết kế Test Requirements (TR)
+• Thiết kế Test Cases (TC)
+
+GIAI ĐOẠN 2: THỰC THI (28-31/10)
+• Kiểm thử Deploy (28-29/10)
+• Kiểm thử Local (30/10)
+• Ghi bug và retest (31/10)
+
+GIAI ĐOẠN 3: BÁO CÁO (01/11)
+• Tổng hợp kết quả
+• Hoàn thiện báo cáo
+• Nộp bài
+
+---
+SLIDE 8: THIẾT KẾ TEST CASE
+QUY TRÌNH VÀ TIÊU CHUẨN
+
+QUY TRÌNH THIẾT KẾ:
+1. PRD → Test Requirements
+2. TR → Test Cases
+3. Review & Approval
+
+TIÊU CHUẨN TEST CASE:
+• Mã TC duy nhất (TC-XXX-XXX)
+• Precondition rõ ràng
+• Test Steps cụ thể
+• Expected Result đo lường được
+• Test Data đầy đủ
+
+ĐẢM BẢO CHẤT LƯỢNG:
+• Rà soát chéo giữa thành viên
+• Đảm bảo traceability REQ-TR-TC
+• Kiểm tra tính khả thi
+
+---
+SLIDE 9: KẾT QUẢ TỔNG QUAN
+THỐNG KÊ KIỂM THỬ
+
+TỔNG SỐ TEST CASE: 54
+PHÂN BỔ THEO MODULE:
+• Login: 10 TC (18.5%)
+• Reward: 10 TC (18.5%)
+• Blog: 10 TC (18.5%)
+• Campaign: 12 TC (22.2%)
+• KYC: 12 TC (22.2%)
+
+PHÂN BỔ THEO ƯU TIÊN:
+• High: 38 TC (70.4%)
+• Medium: 14 TC (25.9%)
+• Low: 2 TC (3.7%)
+
+LOẠI KIỂM THỬ:
+• Functional: 34 TC (63.0%)
+• Validation: 14 TC (25.9%)
+• UI: 5 TC (9.3%)
+• Security: 1 TC (1.9%)
+
+---
+SLIDE 10: KẾT QUẢ THỰC THI
+PASS/FAIL/BLOCKED
+
+[CHÈN BIỂU ĐỒ KẾT QUẢ Ở ĐÂY]
+
+DEVELOP ENVIRONMENT:
+• Pass: [Number]
+• Fail: [Number]
+• Blocked: [Number]
+• Not Run: [Number]
+
+LOCAL ENVIRONMENT:
+• Pass: [Number]
+• Fail: [Number]
+• Blocked: [Number]
+• Not Run: [Number]
+
+TỶ LỆ PASS: [Percentage]%
+BAO PHỦ YÊU CẦU: 100%
+
+---
+SLIDE 11: PHÂN TÍCH LỖI
+BUG REPORT SUMMARY
+
+TỔNG SỐ LỖI: [Number]
+PHÂN LOẠI THEO MỨC ĐỘ:
+• Critical: [Number]
+• High: [Number]
+• Medium: [Number]
+• Low: [Number]
+
+LỖI NGHIÊM TRỌNG TIÊU BIỂU:
+1. [Bug ID]: [Mô tả ngắn]
+2. [Bug ID]: [Mô tả ngắn]
+3. [Bug ID]: [Mô tả ngắn]
+
+PHÂN BỐ THEO MODULE:
+• Login: [Number] bugs
+• Reward: [Number] bugs
+• Blog: [Number] bugs
+• Campaign: [Number] bugs
+• KYC: [Number] bugs
+
+---
+SLIDE 12: ĐÁNH GIÁ VÀ KHUYẾN NGHỊ
+KẾT LUẬN DỰ ÁN
+
+ĐÁNH GIÁ CHẤT LƯỢNG:
+• [Đánh giá tổng quan về hệ thống]
+• [Điểm mạnh đã phát hiện]
+• [Điểm yếu cần cải thiện]
+
+KHUYẾN NGHỊ:
+• Ưu tiên sửa lỗi nghiêm trọng
+• Cải thiện validation và error handling
+• Tối ưu trải nghiệm người dùng
+• Mở rộng test coverage cho future releases
+
+KẾT LUẬN:
+• Hệ thống [đạt/không đạt] tiêu chí chất lượng
+• [Số lượng] yêu cầu đã được kiểm thử đầy đủ
+• Dự án hoàn thành theo đúng kế hoạch
+
+---
+SLIDE 13: CẢM ƠN
+Q&A
+
+CẢM ƠN SỰ THEO DÕI!
+
+CÂU HỎI & THẢO LUẬN
+
+LIÊN HỆ:
+• Trưởng nhóm: Nguyễn Quách Phú Tài
+• Email: [Group email]
+• GitHub: [Repository link]
+
+TÀI LIỆU ĐÍNH KÈM:
+• Test Case Excel Workbook
+• Test Plan Document
+• Test Report
+• Minh chứng kiểm thử

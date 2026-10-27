@@ -1,0 +1,185 @@
+Test Case ID,Test Requirement ID,Module,Test Case Title,Objective,Test Approach,Test Type,Test Technique,Priority,Precondition,Test Data,Test Steps,Expected Result,Test Environment,Execution Method,Assignee
+TC-LOGIN-001,TR-LOGIN-001,Login,Đăng nhập thành công với thông tin hợp lệ,Kiểm tra chức năng đăng nhập với thông tin đúng,Black-box,Chức năng,Kiểm thử tích cực,Cao,Có tài khoản người dùng,email: test@example.com, password: Test1234,"1. Điều hướng đến trang đăng nhập
+2. Nhập email: test@example.com
+3. Nhập mật khẩu: Test1234
+4. Nhấn nút ""Đăng nhập""",Hệ thống xác thực người dùng và chuyển hướng đến trang dashboard,Deploy & Local,Thủ công,Nguyễn Quách Phú Tài
+TC-LOGIN-002,TR-LOGIN-001,Login,Đăng nhập với email viết hoa/thường,Kiểm tra xử lý email không phân biệt hoa thường,Black-box,Chức năng,Phân vùng tương đương,Trung bình,Có tài khoản người dùng,email: TEST@example.com, password: Test1234,"1. Điều hướng đến trang đăng nhập
+2. Nhập email viết hoa: TEST@example.com
+3. Nhập mật khẩu: Test1234
+4. Nhấn nút ""Đăng nhập""",Hệ thống xác thực người dùng thành công,Deploy & Local,Thủ công,Nguyễn Quách Phú Tài
+TC-LOGIN-003,TR-LOGIN-002,Login,Đăng nhập với mật khẩu sai,Kiểm tra xử lý lỗi khi mật khẩu sai,Black-box,Chức năng,Kiểm thử tiêu cực,Cao,Có tài khoản người dùng,email: test@example.com, password: WrongPass,"1. Điều hướng đến trang đăng nhập
+2. Nhập email: test@example.com
+3. Nhập mật khẩu sai: WrongPass
+4. Nhấn nút ""Đăng nhập""",Hệ thống hiển thị lỗi: ""Email hoặc mật khẩu không đúng"",Deploy & Local,Thủ công,Nguyễn Quách Phú Tài
+TC-LOGIN-004,TR-LOGIN-002,Login,Đăng nhập với email không tồn tại,Kiểm tra xử lý lỗi khi email không tồn tại,Black-box,Chức năng,Kiểm thử tiêu cực,Cao,Không có tài khoản với email này,email: notexist@example.com, password: Test1234,"1. Điều hướng đến trang đăng nhập
+2. Nhập email không tồn tại: notexist@example.com
+3. Nhập mật khẩu: Test1234
+4. Nhấn nút ""Đăng nhập""",Hệ thống hiển thị lỗi: ""Email hoặc mật khẩu không đúng"",Deploy & Local,Thủ công,Nguyễn Quách Phú Tài
+TC-LOGIN-005,TR-LOGIN-003,Login,Chức năng ""Ghi nhớ đăng nhập"",Kiểm tra duy trì phiên đăng nhập với ""Ghi nhớ đăng nhập"",Black-box,Chức năng,Kiểm thử tích cực,Trung bình,Có tài khoản người dùng,email: test@example.com, password: Test1234,"1. Điều hướng đến trang đăng nhập
+2. Tick vào ô ""Ghi nhớ đăng nhập""
+3. Nhập thông tin đăng nhập
+4. Nhấn ""Đăng nhập""
+5. Đóng trình duyệt
+6. Mở lại trang web",Hệ thống duy trì phiên đăng nhập mà không cần đăng nhập lại,Deploy & Local,Thủ công,Nguyễn Quách Phú Tài
+TC-LOGIN-006,TR-LOGIN-004,Login,Chức năng đăng xuất,Kiểm tra quá trình đăng xuất thành công,Black-box,Chức năng,Kiểm thử tích cực,Trung bình,Người dùng đã đăng nhập,Không có,"1. Người dùng đã đăng nhập thành công
+2. Nhấn vào avatar/profile
+3. Chọn ""Đăng xuất""
+4. Xác nhận đăng xuất",Hệ thống kết thúc phiên và chuyển hướng về trang đăng nhập,Deploy & Local,Thủ công,Nguyễn Quách Phú Tài
+TC-LOGIN-007,TR-LOGIN-002,Login,Xác thực định dạng email không hợp lệ,Kiểm tra xác thực định dạng email,Black-box,Xác thực,Phân tích giá trị biên,Thấp,Không cần tài khoản,email: invalid-email, password: Test1234,"1. Điều hướng đến trang đăng nhập
+2. Nhập email không hợp lệ: invalid-email
+3. Nhập mật khẩu: Test1234
+4. Nhấn nút ""Đăng nhập""",Hệ thống hiển thị lỗi xác thực: ""Định dạng email không hợp lệ"",Deploy & Local,Thủ công,Nguyễn Quách Phú Tài
+TC-LOGIN-008,TR-LOGIN-002,Login,Xác thực trường mật khẩu trống,Kiểm tra xác thực trường bắt buộc cho mật khẩu,Black-box,Xác thực,Kiểm thử tiêu cực,Trung bình,Có tài khoản người dùng,email: test@example.com, password: (để trống),"1. Điều hướng đến trang đăng nhập
+2. Nhập email: test@example.com
+3. Để trống trường mật khẩu
+4. Nhấn nút ""Đăng nhập""",Hệ thống hiển thị lỗi: ""Vui lòng nhập mật khẩu"",Deploy & Local,Thủ công,Nguyễn Quách Phú Tài
+TC-LOGIN-009,TR-LOGIN-001,Login,Đăng nhập với tài khoản bị khóa,Kiểm tra xử lý tài khoản bị khóa,Black-box,Chức năng,Kiểm thử tiêu cực,Trung bình,Tài khoản người dùng bị khóa,email: locked@example.com, password: Test1234,"1. Điều hướng đến trang đăng nhập
+2. Nhập email tài khoản bị khóa: locked@example.com
+3. Nhập mật khẩu: Test1234
+4. Nhấn nút ""Đăng nhập""",Hệ thống hiển thị lỗi: ""Tài khoản của bạn đã bị khóa"",Deploy & Local,Thủ công,Nguyễn Quách Phú Tài
+TC-LOGIN-010,TR-LOGIN-001,Login,Đăng nhập sau nhiều lần thất bại,Kiểm tra biện pháp bảo mật sau nhiều lần đăng nhập sai,Black-box,Bảo mật,Kiểm thử tiêu cực,Trung bình,Có tài khoản người dùng,email: test@example.com, password: WrongPass,"1. Điều hướng đến trang đăng nhập
+2. Nhập sai mật khẩu 5 lần liên tiếp
+3. Nhập đúng mật khẩu lần thứ 6",Hệ thống hiển thị CAPTCHA hoặc yêu cầu thời gian chờ,Deploy & Local,Thủ công,Nguyễn Quách Phú Tài
+TC-REWARD-001,TR-REWARD-001,Reward,Tạo reward hợp lệ với đầy đủ thông tin,Kiểm tra tạo reward thành công,Black-box,Chức năng,Kiểm thử tích cực,Cao,Người dùng đã đăng nhập, có campaign đang mở,Tên: ""Early Bird"", Mô tả: ""Nhận sản phẩm sớm"", Giá: 100000, Số lượng: 50,"1. Điều hướng đến trang quản lý campaign
+2. Nhấn nút ""Thêm reward""
+3. Nhập đầy đủ thông tin reward
+4. Nhấn nút ""Lưu""",Hệ thống tạo reward thành công và hiển thị trong danh sách reward,Deploy & Local,Thủ công,Bùi Đặng Quốc Khánh
+TC-REWARD-002,TR-REWARD-002,Reward,Create reward without name,Verify name field validation,Black-box,Validation,Negative Testing,High,User is logged in, active campaign exists,Name: (empty), Description: ""Test"", Price: 50000,"1. Navigate to campaign management page
+2. Click ""Add Reward"" button
+3. Leave name field empty
+4. Enter other information
+5. Click ""Save"" button",The system shall display error: ""Name field is required"",Deploy & Local,Manual,Bùi Đặng Quốc Khánh
+TC-REWARD-003,TR-REWARD-002,Reward,Create reward with negative price,Verify price field validation,Black-box,Validation,Negative Testing,High,User is logged in, active campaign exists,Name: ""Test Reward"", Price: -10000,"1. Navigate to campaign management page
+2. Click ""Add Reward"" button
+3. Enter negative price value
+4. Click ""Save"" button",The system shall display error: ""Price must be greater than 0"",Deploy & Local,Manual,Bùi Đặng Quốc Khánh
+TC-REWARD-004,TR-REWARD-003,Reward,Edit reward name,Verify reward name update functionality,Black-box,Functional,Positive Testing,High,Existing reward created,New name: ""Updated Early Bird"","1. Navigate to reward list
+2. Click ""Edit"" on target reward
+3. Modify name field
+4. Click ""Update"" button",The system shall update reward name successfully,Deploy & Local,Manual,Bùi Đặng Quốc Khánh
+TC-REWARD-005,TR-REWARD-003,Reward,Edit reward price,Verify reward price update functionality,Black-box,Functional,Positive Testing,Medium,Existing reward created,New price: 150000,"1. Navigate to reward list
+2. Click ""Edit"" on target reward
+3. Modify price field
+4. Click ""Update"" button",The system shall update reward price successfully,Deploy & Local,Manual,Bùi Đặng Quốc Khánh
+TC-REWARD-006,TR-REWARD-004,Reward,Delete reward,Verify reward deletion functionality,Black-box,Functional,Positive Testing,Medium,Existing reward created,N/A,"1. Navigate to reward list
+2. Click ""Delete"" on target reward
+3. Confirm deletion",The system shall remove reward from the list,Deploy & Local,Manual,Bùi Đặng Quốc Khánh
+TC-REWARD-007,TR-REWARD-005,Reward,Display reward list for campaign,Verify reward listing display,Black-box,UI,Positive Testing,High,Campaign with multiple rewards exists,N/A,"1. Navigate to campaign page
+2. View ""Rewards"" section",The system shall display all rewards with name, price, description,Deploy & Local,Manual,Bùi Đặng Quốc Khánh
+TC-REWARD-008,TR-REWARD-001,Reward,Create reward with limited quantity,Verify limited quantity reward creation,Black-box,Functional,Positive Testing,Medium,User is logged in, active campaign exists,Quantity: 10,"1. Navigate to campaign management page
+2. Create reward with limited quantity
+3. Click ""Save"" button",The system shall create reward showing ""10/10 remaining"",Deploy & Local,Manual,Bùi Đặng Quốc Khánh
+TC-REWARD-009,TR-REWARD-005,Reward,Update quantity after backer selection,Verify quantity decrement after backer,Black-box,Functional,Positive Testing,Medium,Reward with limited quantity exists, backer selects reward,N/A,"1. Reward with quantity 10 exists
+2. Backer selects this reward
+3. Check reward quantity",The system shall reduce quantity to 9 remaining,Deploy & Local,Manual,Bùi Đặng Quốc Khánh
+TC-REWARD-010,TR-REWARD-002,Reward,Create reward with oversized description,Verify description length validation,Black-box,Validation,Boundary Value Analysis,Medium,User is logged in, active campaign exists,Description: 1001 characters,"1. Navigate to campaign management page
+2. Enter description exceeding 1000 characters
+3. Click ""Save"" button",The system shall display error: ""Description exceeds maximum length (1000 characters)"",Deploy & Local,Manual,Bùi Đặng Quốc Khánh
+TC-BLOG-001,TR-BLOG-001,Blog,Create valid blog post with complete information,Verify successful blog post creation,Black-box,Functional,Positive Testing,High,User is logged in, campaign exists,Title: ""First Update"", Content: ""We have reached 50% of our goal"","1. Navigate to the campaign page
+2. Click ""Add Post"" button
+3. Enter title and content
+4. Click ""Publish"" button",The system shall create the post successfully and display it in the post list,Deploy & Local,Manual,Nguyễn Trung Tiến
+TC-BLOG-002,TR-BLOG-002,Blog,Create blog post without title,Verify title field validation,Black-box,Validation,Negative Testing,High,User is logged in, campaign exists,Title: (empty), Content: ""Test content"","1. Navigate to the campaign page
+2. Click ""Add Post"" button
+3. Leave title field empty
+4. Enter content
+5. Click ""Publish"" button",The system shall display error message: ""Title field is required"",Deploy & Local,Manual,Nguyễn Trung Tiến
+TC-BLOG-003,TR-BLOG-002,Blog,Create blog post without content,Verify content field validation,Black-box,Validation,Negative Testing,High,User is logged in, campaign exists,Title: ""Test title"", Content: (empty),"1. Navigate to the campaign page
+2. Click ""Add Post"" button
+3. Enter title
+4. Leave content field empty
+5. Click ""Publish"" button",The system shall display error message: ""Content field is required"",Deploy & Local,Manual,Nguyễn Trung Tiến
+TC-BLOG-004,TR-BLOG-003,Blog,Edit blog post content,Verify post content update functionality,Black-box,Functional,Positive Testing,High,Existing blog post created,New content: ""Update: Reached 60% of our goal"","1. Navigate to the blog post list
+2. Click ""Edit"" on the target post
+3. Modify the content
+4. Click ""Update"" button",The system shall update the post content successfully,Deploy & Local,Manual,Nguyễn Trung Tiến
+TC-BLOG-005,TR-BLOG-003,Blog,Edit blog post title,Verify post title update functionality,Black-box,Functional,Positive Testing,Medium,Existing blog post created,New title: ""Latest Progress Update"","1. Navigate to the blog post list
+2. Click ""Edit"" on the target post
+3. Modify the title
+4. Click ""Update"" button",The system shall update the post title successfully,Deploy & Local,Manual,Nguyễn Trung Tiến
+TC-BLOG-006,TR-BLOG-004,Blog,Delete blog post,Verify post deletion functionality,Black-box,Functional,Positive Testing,Medium,Existing blog post created,N/A,"1. Navigate to the blog post list
+2. Click ""Delete"" on the target post
+3. Confirm deletion",The system shall remove the post from the list,Deploy & Local,Manual,Nguyễn Trung Tiến
+TC-BLOG-007,TR-BLOG-005,Blog,Display blog posts in chronological order,Verify post listing order by date,Black-box,UI,Positive Testing,High,Multiple posts with different timestamps,N/A,"1. Navigate to the campaign page
+2. View the ""Posts"" section",The system shall display posts with newest first order,Deploy & Local,Manual,Nguyễn Trung Tiến
+TC-BLOG-008,TR-BLOG-001,Blog,Create blog post with image upload,Verify image upload functionality,Black-box,Functional,Positive Testing,Medium,User is logged in, campaign exists,Image file: test.jpg (under 5MB),"1. Navigate to the campaign page
+2. Create post with image attachment
+3. Click ""Publish"" button",The system shall publish post with image displayed,Deploy & Local,Manual,Nguyễn Trung Tiến
+TC-BLOG-009,TR-BLOG-002,Blog,Create blog post with oversized image,Verify image size validation,Black-box,Validation,Negative Testing,Medium,User is logged in, campaign exists,Image file: large.jpg (10MB),"1. Navigate to the campaign page
+2. Create post with oversized image
+3. Click ""Publish"" button",The system shall display error: ""Image size exceeds maximum limit (5MB)"",Deploy & Local,Manual,Nguyễn Trung Tiến
+TC-BLOG-010,TR-BLOG-005,Blog,Display blog posts to public viewers,Verify post visibility for non-logged users,Black-box,UI,Positive Testing,High,Published blog post exists,N/A,"1. Navigate to campaign page (without login)
+2. View the ""Posts"" section",The system shall display post with complete content to public viewers,Deploy & Local,Manual,Nguyễn Trung Tiến
+TC-CAMP-001,TR-CAMP-001,Campaign,Create valid campaign with complete information,Verify successful campaign creation,Black-box,Functional,Positive Testing,High,User is logged in,Name: ""Clean Water Project"", Description: ""Provide clean water for underserved areas"", Goal: 100000000, Duration: 30 days,"1. Click ""Create New Campaign"" button
+2. Enter complete campaign information
+3. Click ""Save"" button",The system shall create campaign successfully and display in user's campaign list,Deploy & Local,Manual,Trần Xuân Ân
+TC-CAMP-002,TR-CAMP-002,Campaign,Create campaign without name,Verify name field validation,Black-box,Validation,Negative Testing,High,User is logged in,Name: (empty), Description: ""Test"", Goal: 50000000,"1. Click ""Create New Campaign"" button
+2. Leave name field empty
+3. Enter other information
+4. Click ""Save"" button",The system shall display error: ""Campaign name is required"",Deploy & Local,Manual,Trần Xuân Ân
+TC-CAMP-003,TR-CAMP-002,Campaign,Create campaign with negative goal amount,Verify goal amount validation,Black-box,Validation,Negative Testing,High,User is logged in,Goal: -1000000,"1. Click ""Create New Campaign"" button
+2. Enter negative goal amount
+3. Click ""Save"" button",The system shall display error: ""Goal amount must be greater than 0"",Deploy & Local,Manual,Trần Xuân Ân
+TC-CAMP-004,TR-CAMP-003,Campaign,Edit campaign description,Verify campaign description update,Black-box,Functional,Positive Testing,High,Existing campaign created,New description: ""Updated: Expanded project scope"","1. Navigate to campaign management page
+2. Click ""Edit"" button
+3. Modify description
+4. Click ""Update"" button",The system shall update campaign description successfully,Deploy & Local,Manual,Trần Xuân Ân
+TC-CAMP-005,TR-CAMP-003,Campaign,Edit campaign goal amount,Verify campaign goal update,Black-box,Functional,Positive Testing,Medium,Existing campaign created,New goal: 150000000,"1. Navigate to campaign management page
+2. Click ""Edit"" button
+3. Modify goal amount
+4. Click ""Update"" button",The system shall update goal and recalculate progress,Deploy & Local,Manual,Trần Xuân Ân
+TC-CAMP-006,TR-CAMP-004,Campaign,Display campaign list on homepage,Verify campaign listing on homepage,Black-box,UI,Positive Testing,High,Multiple active campaigns exists,N/A,"1. Navigate to homepage
+2. View ""Featured Campaigns"" section",The system shall display campaigns with image, name, progress,Deploy & Local,Manual,Trần Xuân Ân
+TC-CAMP-007,TR-CAMP-004,Campaign,Search campaign by name,Verify campaign search functionality,Black-box,Functional,Positive Testing,Medium,Campaign with specific name exists,Keyword: ""Clean Water"","1. Navigate to homepage
+2. Enter search keyword
+3. Click ""Search"" button",The system shall display matching campaigns,Deploy & Local,Manual,Trần Xuân Ân
+TC-CAMP-008,TR-CAMP-005,Campaign,Change campaign status to ""Paused"",Verify campaign pausing functionality,Black-box,Functional,Positive Testing,Medium,Active campaign exists,N/A,"1. Navigate to campaign management page
+2. Click ""Pause"" button
+3. Confirm action",The system shall change status to ""Paused"" and stop accepting donations,Deploy & Local,Manual,Trần Xuân Ân
+TC-CAMP-009,TR-CAMP-005,Campaign,Change campaign status to ""Completed"",Verify campaign completion functionality,Black-box,Functional,Positive Testing,Medium,Active campaign exists,N/A,"1. Navigate to campaign management page
+2. Click ""Complete"" button
+3. Confirm action",The system shall change status to ""Completed"",Deploy & Local,Manual,Trần Xuân Ân
+TC-CAMP-010,TR-CAMP-001,Campaign,Calculate funding progress percentage,Verify progress calculation functionality,Black-box,Functional,Positive Testing,High,Campaign has donations, total: 25000000, goal: 100000000,N/A,"1. Navigate to campaign page
+2. View ""Progress"" section",The system shall display ""25% achieved"" with progress bar at 25%,Deploy & Local,Manual,Trần Xuân Ân
+TC-CAMP-011,TR-CAMP-002,Campaign,Create campaign with too short duration,Verify duration validation,Black-box,Validation,Negative Testing,Medium,User is logged in,Duration: 1 day,"1. Click ""Create New Campaign"" button
+2. Enter duration of 1 day
+3. Click ""Save"" button",The system shall display error: ""Minimum duration is 7 days"",Deploy & Local,Manual,Trần Xuân Ân
+TC-CAMP-012,TR-CAMP-004,Campaign,Filter campaigns by category,Verify category filtering functionality,Black-box,Functional,Positive Testing,Medium,Campaigns in multiple categories exist,Category: ""Environment"","1. Navigate to homepage
+2. Select ""Environment"" category
+3. View results",The system shall display only campaigns in selected category,Deploy & Local,Manual,Trần Xuân Ân
+TC-KYC-001,TR-KYC-001,KYC,Upload valid KYC document (JPG image),Verify successful document upload,Black-box,Functional,Positive Testing,High,User is logged in,File: cmnd_front.jpg (under 5MB),"1. Navigate to ""KYC Verification"" page
+2. Click ""Choose File"" button
+3. Select valid image file
+4. Click ""Upload"" button",The system shall upload document successfully and display confirmation,Deploy & Local,Manual,Nguyễn Khánh Du
+TC-KYC-002,TR-KYC-001,KYC,Upload valid KYC document (PDF file),Verify PDF document upload,Black-box,Functional,Positive Testing,High,User is logged in,File: document.pdf (under 5MB),"1. Navigate to ""KYC Verification"" page
+2. Click ""Choose File"" button
+3. Select valid PDF file
+4. Click ""Upload"" button",The system shall upload PDF document successfully,Deploy & Local,Manual,Nguyễn Khánh Du
+TC-KYC-003,TR-KYC-002,KYC,Upload oversized document,Verify file size validation,Black-box,Validation,Negative Testing,High,User is logged in,File: large_file.jpg (10MB),"1. Navigate to ""KYC Verification"" page
+2. Select oversized file
+3. Click ""Upload"" button",The system shall display error: ""File size exceeds maximum limit (5MB)"",Deploy & Local,Manual,Nguyễn Khánh Du
+TC-KYC-004,TR-KYC-002,KYC,Upload document with invalid format,Verify file format validation,Black-box,Validation,Negative Testing,High,User is logged in,File: document.txt,"1. Navigate to ""KYC Verification"" page
+2. Select .txt file
+3. Click ""Upload"" button",The system shall display error: ""Only JPG, PNG, PDF files are accepted"",Deploy & Local,Manual,Nguyễn Khánh Du
+TC-KYC-005,TR-KYC-003,KYC,View KYC status ""Pending Review"",Verify pending status display,Black-box,UI,Positive Testing,High,Document uploaded, status is pending,N/A,"1. Navigate to ""KYC Verification"" page
+2. View ""Status"" section",The system shall display ""Pending Review"" status,Deploy & Local,Manual,Nguyễn Khánh Du
+TC-KYC-006,TR-KYC-003,KYC,View KYC status ""Approved"",Verify approved status display,Black-box,UI,Positive Testing,High,KYC has been approved by admin,N/A,"1. Navigate to ""KYC Verification"" page
+2. View ""Status"" section",The system shall display ""Approved"" with approval date,Deploy & Local,Manual,Nguyễn Khánh Du
+TC-KYC-007,TR-KYC-004,KYC,Admin approve KYC document,Verify admin approval functionality,Black-box,Functional,Positive Testing,High,User with admin role logged in, pending KYC exists,N/A,"1. Navigate to admin ""KYC Management"" page
+2. View pending KYC list
+3. Click ""Approve"" on a record
+4. Confirm action",The system shall change KYC status to ""Approved"",Deploy & Local,Manual,Nguyễn Khánh Du
+TC-KYC-008,TR-KYC-004,KYC,Admin reject KYC document,Verify admin rejection functionality,Black-box,Functional,Positive Testing,High,User with admin role logged in, pending KYC exists,N/A,"1. Navigate to admin ""KYC Management"" page
+2. View pending KYC list
+3. Click ""Reject"" on a record
+4. Enter rejection reason
+5. Confirm action",The system shall change KYC status to ""Rejected"" with reason,Deploy & Local,Manual,Nguyễn Khánh Du
+TC-KYC-009,TR-KYC-005,KYC,Receive notification when KYC approved,Verify approval notification,Black-box,Functional,Positive Testing,Medium,KYC is pending, gets approved by admin,N/A,"1. Admin approves KYC
+2. User checks notifications",The system shall send notification/email: ""Your KYC has been approved"",Deploy & Local,Manual,Nguyễn Khánh Du
+TC-KYC-010,TR-KYC-005,KYC,Receive notification when KYC rejected,Verify rejection notification,Black-box,Functional,Positive Testing,Medium,KYC is pending, gets rejected by admin,N/A,"1. Admin rejects KYC
+2. User checks notifications",The system shall send notification: ""KYC rejected"" with reason,Deploy & Local,Manual,Nguyễn Khánh Du
+TC-KYC-011,TR-KYC-002,KYC,Upload multiple documents simultaneously,Verify multiple file upload,Black-box,Functional,Positive Testing,Medium,User is logged in,2 valid image files,N/A,"1. Navigate to ""KYC Verification"" page
+2. Select multiple files
+3. Click ""Upload"" button",The system shall upload all files successfully,Deploy & Local,Manual,Nguyễn Khánh Du
+TC-KYC-012,TR-KYC-003,KYC,View KYC history,Verify KYC history display,Black-box,UI,Positive Testing,Low,Multiple KYC uploads exist,N/A,"1. Navigate to ""KYC Verification"" page
+2. View ""History"" section",The system shall display previous uploads and statuses,Deploy & Local,Manual,Nguyễn Khánh Du

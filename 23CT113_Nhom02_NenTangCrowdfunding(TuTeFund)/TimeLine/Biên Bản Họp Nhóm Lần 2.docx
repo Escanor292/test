@@ -1,0 +1,76 @@
+BIÊN BẢN HỌP NHÓM LẦN 2
+
+THÔNG TIN BUỔI HỌP
+• Số lần họp: Lần 2
+• Ngày/giờ: 19/10/2026, 20:00 - 21:30
+• Hình thức: Online qua Google Meet
+• Địa điểm: Online
+
+THÀNH VIÊN THAM DỰ
+1. Nguyễn Quách Phú Tài - Có mặt
+2. Bùi Đặng Quốc Khánh - Có mặt
+3. Nguyễn Trung Tiến - Có mặt
+4. Trần Xuân Ân - Có mặt
+5. Nguyễn Khánh Du - Có mặt
+
+MỤC ĐÍCH
+• Rà soát Product Requirements (PRD) đã hoàn thành
+• Thống nhất Test Requirements (TR)
+• Phân tích và thảo luận về Test Plan
+
+NỘI DUNG TRAO ĐỔI
+1. Review Product Requirements (25 REQ):
+   - Đã xác định đầy đủ 5 module
+   - Các yêu cầu đã được mô tả rõ ràng
+   - Cần bổ sung Acceptance Criteria cho một số REQ
+2. Thảo luận về Test Requirements:
+   - Mỗi REQ sẽ có 2 TR trung bình
+   - Tổng cộng 50 TR cho toàn bộ dự án
+   - Cần đảm bảo TR có thể kiểm thử được
+3. Review Test Plan draft:
+   - Đã có outline cơ bản
+   - Cần bổ sung chi tiết về môi trường test
+   - Cần xác định rõ tiêu chí hoàn thành
+
+QUYẾT ĐỊNH ĐÃ THỐNG NHẤT
+1. Chấp nhận PRD với 25 REQ
+2. Phê duyệt Test Plan version 1.0
+3. Mỗi thành viên chịu trách nhiệm thiết kế TR cho module của mình
+
+PHÂN CÔNG
+1. Nguyễn Quách Phú Tài:
+   - Hoàn thiện Test Plan - Hạn: 21/10/2026
+   - Phân bổ TR cho các module
+2. Tất cả thành viên:
+   - Thiết kế TR cho module được phân công - Hạn: 22/10/2026
+   - Bắt đầu thiết kế Test Case - Hạn: 23/10/2026
+
+CÔNG VIỆC TIẾP THEO
+• Hoàn thiện Test Plan version 1.0 - Hạn: 21/10/2026
+• Hoàn thành thiết kế TR - Hạn: 22/10/2026
+• Bắt đầu thiết kế Test Case - Hạn: 23/10/2026
+
+NGƯỜI LẬP BIÊN BẢN
+Nguyễn Trung Tiến
+
+CHỮ KÝ THÀNH VIÊN
+1. ___________________ (Nguyễn Quách Phú Tài)
+2. ___________________ (Bùi Đặng Quốc Khánh)
+3. ___________________ (Nguyễn Trung Tiến)
+4. ___________________ (Trần Xuân Ân)
+5. ___________________ (Nguyễn Khánh Du)
+
+---
+PHỤ LỤC ẢNH MINH CHỨNG
+
+ẢNH 1: CHỤP MÀN HÌNH BUỔI HỌP LẦN 2
+[Chèn ảnh chụp màn hình Google Meet/Zoom tại đây]
+
+ẢNH 2: REVIEW PRODUCT REQUIREMENTS
+[Chèn ảnh review PRD/Excel tại đây]
+
+ẢNH 3: TEST PLAN DRAFT
+[Chèn ảnh draft Test Plan tại đây]
+
+ẢNH 4: PHÂN CÔNG TR
+[Chèn ảnh phân công Test Requirements tại đây]

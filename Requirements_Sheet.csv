@@ -1,0 +1,51 @@
+Requirement ID,Module,Requirement Title,Requirement Description,Stakeholder Role,Acceptance Criteria,Priority,Source/Reference Requirement,Confirmation Status,Requirement Type
+REQ-LOGIN-001,Login,Login with email and password,User shall be able to login using registered email and password,User,Successful login, redirect to dashboard,High,Product Requirements,Confirmed,Functional Requirement
+REQ-LOGIN-002,Login,Handle unsuccessful login,The system shall display error message when login credentials are incorrect,User,Display error message "Invalid email or password",High,Product Requirements,Confirmed,Functional Requirement
+REQ-LOGIN-003,Login,"Remember Me" functionality,User shall be able to select "Remember Me" to avoid re-login,User,Token stored in cookie/localStorage, extended session duration,Medium,Product Requirements,Confirmed,Functional Requirement
+REQ-LOGIN-004,Login,Logout functionality,User shall be able to logout from the system,User,Clear session/token, redirect to login page,Medium,Product Requirements,Confirmed,Functional Requirement
+REQ-LOGIN-005,Login,Login form validation,Validate email format and password length,User,Display validation error immediately for incorrect format,Low,Product Requirements,Confirmed,Validation Requirement
+TR-LOGIN-001,Login,Test successful login,Verify login with valid credentials,User,Successful login, correct redirection,High,REQ-LOGIN-001,Confirmed,Test Requirement
+TR-LOGIN-002,Login,Test unsuccessful login,Verify login with invalid credentials,User,Display appropriate error message,High,REQ-LOGIN-002,Confirmed,Test Requirement
+TR-LOGIN-003,Login,Test "Remember Me" functionality,Verify session persistence with "Remember Me",User,Login session maintained after browser close,Medium,REQ-LOGIN-003,Confirmed,Test Requirement
+TR-LOGIN-004,Login,Test logout functionality,Verify successful logout,User,Successful logout, session information cleared,Medium,REQ-LOGIN-004,Confirmed,Test Requirement
+REQ-REWARD-001,Reward,Create new reward,User shall be able to create rewards for campaign,Campaign Creator,Complete information entered, saved successfully,High,Product Requirements,Confirmed,Functional Requirement
+REQ-REWARD-002,Reward,Edit existing reward,User shall be able to edit reward information,Campaign Creator,Information updated successfully,High,Product Requirements,Confirmed,Functional Requirement
+REQ-REWARD-003,Reward,Delete reward,User shall be able to delete created reward,Campaign Creator,Deleted successfully, not displayed in list,Medium,Product Requirements,Confirmed,Functional Requirement
+REQ-REWARD-004,Reward,Display reward list,Display list of campaign rewards,User/Backer,View all rewards with complete information,High,Product Requirements,Confirmed,Functional Requirement
+REQ-REWARD-005,Reward,Manage limited quantity rewards,Limit available reward quantity for backers,Campaign Creator,Display remaining quantity, update when backer selects,Medium,Product Requirements,Confirmed,Functional Requirement
+TR-REWARD-001,Reward,Test valid reward creation,Verify creation of reward with complete information,Campaign Creator,Created successfully, displayed in list,High,REQ-REWARD-001,Confirmed,Test Requirement
+TR-REWARD-002,Reward,Test invalid reward creation,Verify validation when creating reward,Campaign Creator,Display appropriate error messages,High,REQ-REWARD-001,Confirmed,Test Requirement
+TR-REWARD-003,Reward,Test reward editing,Verify update of reward information,Campaign Creator,Edited successfully, information updated,High,REQ-REWARD-002,Confirmed,Test Requirement
+TR-REWARD-004,Reward,Test reward deletion,Verify deletion of reward,Campaign Creator,Deleted successfully, removed from list,Medium,REQ-REWARD-003,Confirmed,Test Requirement
+TR-REWARD-005,Reward,Test reward list display,Verify display of reward list,User/Backer,Display complete reward information,High,REQ-REWARD-004,Confirmed,Test Requirement
+REQ-BLOG-001,Blog,Create new post,User/campaign creator shall be able to create blog posts for campaign,User/Creator,Enter title, content, save successfully,High,Product Requirements,Confirmed,Functional Requirement
+REQ-BLOG-002,Blog,Edit post,Creator shall be able to edit published posts,User/Creator,Content updated successfully,High,Product Requirements,Confirmed,Functional Requirement
+REQ-BLOG-003,Blog,Delete post,Creator shall be able to delete posts,User/Creator,Deleted successfully, not displayed,Medium,Product Requirements,Confirmed,Functional Requirement
+REQ-BLOG-004,Blog,Display post list,Display posts in chronological order,User/Backer,View newest posts first,High,Product Requirements,Confirmed,Functional Requirement
+REQ-BLOG-005,Blog,Add images to post,Ability to upload and display images in posts,User/Creator,Image uploaded and displayed correctly,Medium,Product Requirements,Confirmed,Functional Requirement
+TR-BLOG-001,Blog,Test valid post creation,Verify creation of post with complete information,User/Creator,Created successfully, displayed in list,High,REQ-BLOG-001,Confirmed,Test Requirement
+TR-BLOG-002,Blog,Test invalid post creation,Verify validation when creating post,User/Creator,Display appropriate error messages,High,REQ-BLOG-001,Confirmed,Test Requirement
+TR-BLOG-003,Blog,Test post editing,Verify update of post content,User/Creator,Edited successfully, content updated,High,REQ-BLOG-002,Confirmed,Test Requirement
+TR-BLOG-004,Blog,Test post deletion,Verify deletion of post,User/Creator,Deleted successfully, removed from list,Medium,REQ-BLOG-003,Confirmed,Test Requirement
+TR-BLOG-005,Blog,Test post list display,Verify display and ordering of posts,User/Backer,Display correct chronological order,High,REQ-BLOG-004,Confirmed,Test Requirement
+REQ-CAMP-001,Campaign,Create new campaign,User shall be able to create fundraising campaign,Creator,Enter complete campaign information, save successfully,High,Product Requirements,Confirmed,Functional Requirement
+REQ-CAMP-002,Campaign,Edit campaign,Edit information of created campaign,Creator,Information updated successfully,High,Product Requirements,Confirmed,Functional Requirement
+REQ-CAMP-003,Campaign,Display campaign list,Display active campaigns,User/Backer,View campaigns with basic information,High,Product Requirements,Confirmed,Functional Requirement
+REQ-CAMP-004,Campaign,Manage campaign status,Change campaign status (active, paused, completed),Creator,Status updated correctly,Medium,Product Requirements,Confirmed,Functional Requirement
+REQ-CAMP-005,Campaign,Calculate and display funding progress,Display % achieved compared to goal,User/Backer,Calculate correctly, display progress bar,High,Product Requirements,Confirmed,Functional Requirement
+REQ-CAMP-006,Campaign,Notification for new donation,Send notification when someone donates,Creator/Backer,Receive notification/update information,Medium,Product Requirements,Confirmed,Functional Requirement
+TR-CAMP-001,Campaign,Test valid campaign creation,Verify creation of campaign with complete information,Creator,Created successfully, displayed in list,High,REQ-CAMP-001,Confirmed,Test Requirement
+TR-CAMP-002,Campaign,Test invalid campaign creation,Verify validation when creating campaign,Creator,Display appropriate error messages,High,REQ-CAMP-001,Confirmed,Test Requirement
+TR-CAMP-003,Campaign,Test campaign editing,Verify update of campaign information,Creator,Edited successfully, information updated,High,REQ-CAMP-002,Confirmed,Test Requirement
+TR-CAMP-004,Campaign,Test campaign list display,Verify display of campaign list,User/Backer,Display complete campaign information,High,REQ-CAMP-003,Confirmed,Test Requirement
+TR-CAMP-005,Campaign,Test campaign status change,Verify update of campaign status,Creator,Status changed successfully,Medium,REQ-CAMP-004,Confirmed,Test Requirement
+REQ-KYC-001,KYC,Upload KYC document,User shall be able to upload verification documents (ID card),User,Upload successful, file stored,High,Product Requirements,Confirmed,Functional Requirement
+REQ-KYC-002,KYC,View KYC status,User shall be able to view verification status,User,Display status: pending, approved, rejected,High,Product Requirements,Confirmed,Functional Requirement
+REQ-KYC-003,KYC,Admin review KYC,Admin shall be able to approve/reject KYC documents,Admin,Can view documents and change status,High,Product Requirements,Confirmed,Functional Requirement
+REQ-KYC-004,KYC,KYC result notification,Send notification when KYC status changes,User,Receive email/in-system notification,Medium,Product Requirements,Confirmed,Functional Requirement
+REQ-KYC-005,KYC,Document upload validation,Validate file format and size,User,Only accept image/PDF files under specified size,Medium,Product Requirements,Confirmed,Functional Requirement
+TR-KYC-001,KYC,Test KYC document upload,Verify successful document upload,User,Upload successful, file saved,High,REQ-KYC-001,Confirmed,Test Requirement
+TR-KYC-002,KYC,Test invalid document upload,Verify validation during upload,User,Display appropriate error messages,High,REQ-KYC-001,Confirmed,Test Requirement
+TR-KYC-003,KYC,Test KYC status viewing,Verify status display,User,Display current status correctly,High,REQ-KYC-002,Confirmed,Test Requirement
+TR-KYC-004,KYC,Test admin KYC review,Verify admin approval functionality,Admin,Can change KYC status,High,REQ-KYC-003,Confirmed,Test Requirement
+TR-KYC-005,KYC,Test KYC notification,Verify notification sending when status changes,User,Receive notification,Medium,REQ-KYC-004,Confirmed,Test Requirement

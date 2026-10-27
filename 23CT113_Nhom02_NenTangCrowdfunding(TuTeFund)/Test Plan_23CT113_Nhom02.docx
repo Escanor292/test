@@ -1,0 +1,238 @@
+# TEST PLAN
+## Dự án: Nền tảng Crowdfunding (Tử Tế Fund)
+## Nhóm: 23CT113_Nhom02
+## Phiên bản: 1.0
+## Ngày lập: 26/10/2026
+
+---
+
+## MỤC LỤC
+
+1. THÔNG TIN TÀI LIỆU
+2. GIỚI THIỆU VÀ MỤC TIÊU
+3. PHẠM VI KIỂM THỬ
+4. PHƯƠNG PHÁP VÀ LOẠI KIỂM THỬ
+5. TÀI NGUYÊN VÀ MÔI TRƯỜNG
+6. PHÂN CÔNG NHIỆM VỤ
+7. TIẾN ĐỘ THỰC HIỆN
+8. TIÊU CHÍ BẮT ĐẦU VÀ HOÀN THÀNH
+9. RỦI RO VÀ GIẢM THIỂU
+10. PHỤ LỤC
+
+---
+
+## 1. THÔNG TIN TÀI LIỆU
+
+| Thông tin | Chi tiết |
+|-----------|----------|
+| **Dự án** | Nền tảng Crowdfunding (Tử Tế Fund) |
+| **Phiên bản Test Plan** | 1.0 |
+| **Ngày lập** | 26/10/2026 |
+| **Người lập** | Nguyễn Quách Phú Tài |
+| **Người rà soát** | Toàn bộ thành viên nhóm |
+| **Phiên bản hệ thống** | Phiên bản hiện tại của Tử Tế Fund |
+| **Lịch sử sửa đổi** | - Phiên bản 1.0: Tạo mới ngày 26/10/2026 |
+
+## 2. GIỚI THIỆU VÀ MỤC TIÊU
+
+### 2.1 Giới thiệu hệ thống
+Tử Tế Fund là nền tảng crowdfunding (gây quỹ cộng đồng) cho phép các cá nhân, tổ chức tạo và quản lý các chiến dịch gây quỹ vì mục đích xã hội, từ thiện. Hệ thống hỗ trợ đa dạng chức năng từ đăng ký, tạo campaign, quản lý reward, cập nhật thông tin qua blog, đến xác thực người dùng (KYC).
+
+### 2.2 Mục tiêu kiểm thử
+- **Đảm bảo chất lượng**: Xác nhận các chức năng chính hoạt động đúng theo yêu cầu
+- **Phát hiện lỗi**: Phát hiện và báo cáo các lỗi trong 5 module chính
+- **Đánh giá khả năng sử dụng**: Kiểm tra trải nghiệm người dùng trên cả hai môi trường Deploy và Local
+- **Đáp ứng yêu cầu học phần**: Thực hiện đầy đủ các loại kiểm thử theo yêu cầu (Black-box, White-box)
+- **Đạt coverage**: Đảm bảo ít nhất 80% yêu cầu được kiểm thử
+
+### 2.3 Phạm vi thời gian
+- **Thời gian dự án**: 12/10/2026 - 01/11/2026
+- **Thời gian kiểm thử**: 26/10/2026 - 31/10/2026
+- **Báo cáo cuối cùng**: 01/11/2026
+
+## 3. PHẠM VI KIỂM THỬ
+
+### 3.1 Trong phạm vi
+Nhóm tập trung kiểm thử 5 module chính đã được phân công:
+
+| Module | Chức năng chính | Người phụ trách |
+|--------|-----------------|-----------------|
+| **Login** | Đăng nhập, đăng xuất, validation, session management | Nguyễn Quách Phú Tài |
+| **Reward** | Tạo, chỉnh sửa, xóa, hiển thị reward cho campaign | Bùi Đặng Quốc Khánh |
+| **Blog** | Tạo, chỉnh sửa, xóa bài viết, upload hình ảnh | Nguyễn Trung Tiến |
+| **Campaign** | Tạo campaign, quản lý trạng thái, tính toán funding | Trần Xuân Ân |
+| **KYC thủ công** | Upload tài liệu, xem trạng thái, admin duyệt | Nguyễn Khánh Du |
+
+### 3.2 Ngoài phạm vi
+Các chức năng và loại kiểm thử KHÔNG nằm trong phạm vi của đợt kiểm thử này:
+- **Chức năng ngoài 5 module**: Payment, Notification system, Social sharing, Advanced search
+- **Performance testing**: Load testing, stress testing với số lượng người dùng lớn
+- **Security testing**: Penetration testing, vulnerability scanning chuyên sâu
+- **Cross-browser testing**: Chỉ tập trung vào Chrome, không test trên Edge, Firefox, Safari
+- **Mobile responsiveness**: Không kiểm thử responsive design trên mobile devices
+- **Accessibility testing**: Không kiểm thử khả năng truy cập cho người khuyết tật
+
+## 4. PHƯƠNG PHÁP VÀ LOẠI KIỂM THỬ
+
+### 4.1 Phương pháp tiếp cận
+
+| Phương pháp | Mô tả | Phạm vi áp dụng |
+|-------------|-------|-----------------|
+| **Black-box Testing** | Kiểm thử dựa trên đặc tả yêu cầu, không cần biết mã nguồn bên trong | Tất cả 5 module, tập trung vào chức năng người dùng cuối |
+| **White-box Testing** | Kiểm thử dựa trên cấu trúc mã nguồn, logic bên trong | Chỉ áp dụng nếu có quyền truy cập mã nguồn và môi trường phù hợp |
+| **Grey-box Testing** | Kết hợp cả black-box và white-box | Áp dụng cho một số trường hợp cụ thể |
+
+### 4.2 Loại kiểm thử
+
+| Loại kiểm thử | Mục tiêu | Kỹ thuật áp dụng |
+|---------------|----------|------------------|
+| **Functional Testing** | Kiểm tra chức năng hoạt động đúng | Positive/Negative testing, Equivalence Partitioning, Boundary Value Analysis |
+| **UI Testing** | Kiểm tra giao diện người dùng | Visual validation, Layout testing, Usability testing |
+| **Validation Testing** | Kiểm tra tính hợp lệ của dữ liệu nhập | Input validation, Data format checking |
+| **Integration Testing** | Kiểm tra tương tác giữa các module | Interface testing, Data flow testing |
+
+### 4.3 Cách thực thi
+
+| Cách thực thi | Mô tả | Tỷ lệ dự kiến |
+|---------------|-------|---------------|
+| **Manual Testing** | Thực hiện thủ công bởi tester | 100% test cases |
+| **Automated Testing** | Sử dụng script/tool tự động | 0% (không áp dụng trong đợt này) |
+
+## 5. TÀI NGUYÊN VÀ MÔI TRƯỜNG
+
+### 5.1 Môi trường kiểm thử
+
+| Môi trường | URL/Địa chỉ | Mục đích |
+|------------|-------------|----------|
+| **Deploy (Production-like)** | URL deploy của Tử Tế Fund | Kiểm thử chức năng trên môi trường thực tế |
+| **Local (Development)** | Localhost:3000 (hoặc port tương ứng) | Kiểm thử chức năng trên môi trường phát triển |
+
+### 5.2 Cấu hình hệ thống
+
+| Thành phần | Thông số kỹ thuật |
+|------------|-------------------|
+| **Hệ điều hành** | Windows 10/11 |
+| **Trình duyệt** | Google Chrome (phiên bản mới nhất) |
+| **Công cụ kiểm thử** | Visual Studio Code, Postman (nếu cần API testing) |
+| **Thiết bị** | Laptop/PC với độ phân giải tối thiểu 1366x768 |
+| **Kết nối mạng** | Internet ổn định cho môi trường Deploy |
+
+### 5.3 Dữ liệu kiểm thử
+
+| Loại dữ liệu | Mô tả | Chuẩn bị |
+|--------------|-------|----------|
+| **Tài khoản test** | Tài khoản người dùng với các vai trò khác nhau | Tạo ít nhất 3 tài khoản: User, Campaign Creator, Admin |
+| **Dữ liệu campaign** | Campaign mẫu với các trạng thái khác nhau | Tạo 2-3 campaign test |
+| **Tài liệu KYC** | File ảnh/PDF mẫu cho upload KYC | Chuẩn bị file test hợp lệ và không hợp lệ |
+| **Test data** | Dữ liệu nhập cho các trường hợp test | Định nghĩa trong Test Case design |
+
+## 6. PHÂN CÔNG NHIỆM VỤ
+
+| Thành viên | Vai trò | Module phụ trách | Trách nhiệm chính |
+|------------|---------|------------------|-------------------|
+| **Nguyễn Quách Phú Tài** | Trưởng nhóm, Tester | Login | - Điều phối nhóm<br>- Thiết kế & thực thi test cases cho Login<br>- Tổng hợp báo cáo |
+| **Bùi Đặng Quốc Khánh** | Tester | Reward | - Thiết kế & thực thi test cases cho Reward<br>- Báo cáo lỗi và kết quả |
+| **Nguyễn Trung Tiến** | Tester | Blog | - Thiết kế & thực thi test cases cho Blog<br>- Báo cáo lỗi và kết quả |
+| **Trần Xuân Ân** | Tester | Campaign | - Thiết kế & thực thi test cases cho Campaign<br>- Báo cáo lỗi và kết quả |
+| **Nguyễn Khánh Du** | Tester | KYC | - Thiết kế & thực thi test cases cho KYC<br>- Báo cáo lỗi và kết quả |
+
+## 7. TIẾN ĐỘ THỰC HIỆN
+
+### 7.1 Lịch trình tổng thể
+
+| Giai đoạn | Thời gian | Công việc chính | Deliverables |
+|-----------|-----------|-----------------|--------------|
+| **1. Chuẩn bị** | 26/10/2026 | - Xác nhận phạm vi<br>- Hoàn thiện Test Plan<br>- Chuẩn bị môi trường | Test Plan v1.0 |
+| **2. Thiết kế** | 27/10/2026 | - Thiết kế Test Requirements<br>- Thiết kế Test Cases<br>- Rà soát test design | Test Requirements, Test Cases |
+| **3. Thực thi (Deploy)** | 28-29/10/2026 | - Thực thi test trên môi trường Deploy<br>- Ghi nhận kết quả<br>- Báo cáo lỗi | Test Execution Logs, Bug Reports |
+| **4. Thực thi (Local)** | 30/10/2026 | - Thực thi test trên môi trường Local<br>- So sánh kết quả<br>- Kiểm thử lại (nếu có) | Test Execution Logs, Comparison Results |
+| **5. Báo cáo** | 31/10/2026 | - Tổng hợp kết quả<br>- Hoàn thiện Test Report<br>- Chuẩn bị báo cáo cuối kỳ | Test Report, Final Documentation |
+| **6. Hoàn tất** | 01/11/2026 | - Nộp hồ sơ hoàn chỉnh<br>- Chuẩn bị presentation | Complete Submission Package |
+
+### 7.2 Biểu đồ Gantt (tóm tắt)
+
+```
+Tuần 1 (26-29/10): [#######....] Chuẩn bị & Thiết kế (40%)
+Tuần 2 (30-31/10): [..........##] Thực thi & Báo cáo (60%)
+```
+
+## 8. TIÊU CHÍ BẮT ĐẦU VÀ HOÀN THÀNH
+
+### 8.1 Tiêu chí bắt đầu kiểm thử (Entry Criteria)
+- [x] Test Plan được phê duyệt bởi toàn bộ thành viên
+- [x] Test Requirements và Test Cases đã được thiết kế đầy đủ
+- [x] Môi trường Deploy và Local đã sẵn sàng
+- [x] Dữ liệu kiểm thử đã được chuẩn bị
+- [x] Công cụ và tài khoản test đã sẵn sàng
+
+### 8.2 Tiêu chí tạm dừng kiểm thử (Suspension Criteria)
+- Môi trường test không khả dụng trong hơn 4 giờ
+- Phát hiện lỗi nghiêm trọng (Critical/Blocker) ảnh hưởng đến >50% test cases
+- Thiếu dữ liệu test quan trọng không thể thay thế
+- Thay đổi yêu cầu lớn ảnh hưởng đến phạm vi kiểm thử
+
+### 8.3 Tiêu chí tiếp tục kiểm thử (Resumption Criteria)
+- Môi trường đã được khắc phục
+- Lỗi nghiêm trọng đã được sửa và xác nhận
+- Dữ liệu test đã được bổ sung
+- Yêu cầu thay đổi đã được cập nhật trong test design
+
+### 8.4 Tiêu chí hoàn thành kiểm thử (Exit Criteria)
+- [ ] Tất cả test cases đã được thực thi ít nhất 1 lần
+- [ ] Tất cả lỗi Critical/High đã được sửa và verify
+- [ ] Tỷ lệ test cases Pass đạt ít nhất 70%
+- [ ] Test Report đã được hoàn thiện và phê duyệt
+- [ ] Tất cả bằng chứng kiểm thử đã được lưu trữ
+- [ ] Ma trận truy vết đã được cập nhật đầy đủ
+
+## 9. RỦI RO VÀ GIẢM THIỂU
+
+### 9.1 Rủi ro đã xác định
+
+| Rủi ro | Mức độ | Tác động | Biện pháp giảm thiểu |
+|--------|--------|----------|----------------------|
+| **Không có quyền truy cập mã nguồn** | Cao | Không thể thực hiện White-box testing | Tập trung vào Black-box testing, ghi nhận trong báo cáo |
+| **Môi trường Deploy không ổn định** | Trung bình | Không thể thực thi test hoặc kết quả không đáng tin cậy | Có kế hoạch dự phòng test trên Local, ghi lại thời điểm test |
+| **Thiếu dữ liệu/tài khoản test** | Trung bình | Một số test cases bị Blocked | Chuẩn bị trước test data, có phương án tạo dữ liệu test |
+| **Khác biệt kết quả giữa Deploy và Local** | Trung bình | Khó đánh giá kết quả cuối cùng | Ghi riêng kết quả từng môi trường, phân tích nguyên nhân |
+| **Thời gian hạn chế** | Cao | Không cover hết test cases | Ưu tiên test cases High priority, sử dụng kỹ thuật risk-based testing |
+
+### 9.2 Kế hoạch dự phòng
+1. **Ưu tiên test cases**: Focus vào High priority trước
+2. **Phân bổ thời gian linh hoạt**: Điều chỉnh tiến độ theo thực tế
+3. **Hỗ trợ chéo**: Thành viên hỗ trợ nhau khi cần thiết
+4. **Ghi nhận rõ ràng**: Document đầy đủ các vấn đề gặp phải
+
+## 10. PHỤ LỤC
+
+### 10.1 Danh sách tài liệu tham khảo
+- Product Requirements Document (PRD)
+- Test Requirements (5 file CSV)
+- Test Cases (5 file CSV)
+- Hướng dẫn sử dụng hệ thống Tử Tế Fund
+
+### 10.2 Thuật ngữ và từ viết tắt
+- **TR**: Test Requirement (Yêu cầu kiểm thử)
+- **TC**: Test Case (Trường hợp kiểm thử)
+- **KYC**: Know Your Customer (Xác thực khách hàng)
+- **BVA**: Boundary Value Analysis (Phân tích giá trị biên)
+- **EP**: Equivalence Partitioning (Phân vùng tương đương)
+
+### 10.3 Thông tin liên hệ
+- **Trưởng nhóm**: Nguyễn Quách Phú Tài
+- **Email nhóm**: [Email của nhóm]
+- **Kênh trao đổi**: [Group chat/Zalo của nhóm]
+
+---
+
+## PHÊ DUYỆT
+
+| Vai trò | Tên | Chữ ký | Ngày |
+|---------|-----|--------|------|
+| **Người lập** | Nguyễn Quách Phú Tài | | 26/10/2026 |
+| **Người rà soát** | Bùi Đặng Quốc Khánh | | |
+| **Người rà soát** | Nguyễn Trung Tiến | | |
+| **Người rà soát** | Trần Xuân Ân | | |
+| **Người rà soát** | Nguyễn Khánh Du | | |
+
+**Lưu ý**: Test Plan này có hiệu lực từ ngày ký và có thể được cập nhật khi có thay đổi về phạm vi hoặc phương pháp kiểm thử.

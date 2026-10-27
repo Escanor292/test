@@ -1,0 +1,66 @@
+BIÊN BẢN HỌP NHÓM LẦN 3
+
+THÔNG TIN BUỔI HỌP
+• Số lần họp: Lần 3
+• Ngày/giờ: 26/10/2026, 19:30 - 21:00
+• Hình thức: Online qua Google Meet
+• Địa điểm: Online
+
+THÀNH VIÊN THAM DỰ
+1. Nguyễn Quách Phú Tài - Có mặt
+2. Bùi Đặng Quốc Khánh - Có mặt
+3. Nguyễn Trung Tiến - Có mặt
+4. Trần Xuân Ân - Có mặt
+5. Nguyễn Khánh Du - Có mặt
+
+MỤC ĐÍCH
+• Review thiết kế Test Case đã hoàn thành
+• Thống nhất cấu trúc folder và file documentation
+• Lập kế hoạch cho giai đoạn thực thi kiểm thử
+
+NỘI DUNG TRAO ĐỔI
+1. Review Test Case đã thiết kế:
+   - Tổng cộng 54 Test Cases đã được thiết kế
+   - Phân bổ: Login (10), Reward (10), Blog (10), Campaign (12), KYC (12)
+   - Cần rà soát lại một số Test Case cho rõ ràng hơn
+2. Thảo luận về cấu trúc folder:
+   - Thống nhất tạo folder "23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)"
+   - Tạo sub-folders: TimeLine, Word+ppt Báo Cáo, MinhChung
+   - Sử dụng English column headers với Vietnamese content
+3. Kế hoạch thực thi:
+   - Kiểm thử trên 2 môi trường: Deploy và Local
+   - Mỗi TC sẽ được chạy trên cả 2 môi trường
+   - Cần chuẩn bị test data trước khi thực thi
+
+QUYẾT ĐỊNH ĐÃ THỐNG NHẤT
+1. Chấp nhận 54 Test Cases đã thiết kế
+2. Phê duyệt cấu trúc folder và file documentation
+3. Lịch trình thực thi:
+   - 28-29/10/2026: Kiểm thử Deploy
+   - 30/10/2026: Kiểm thử Local
+   - 31/10/2026: Ghi bug và retest
+   - 01/11/2026: Hoàn thiện báo cáo
+
+PHÂN CÔNG
+1. Nguyễn Quách Phú Tài:
+   - Tạo cấu trúc folder và file templates
+   - Điều phối quá trình thực thi
+2. Tất cả thành viên:
+   - Rà soát Test Case lần cuối - Hạn: 27/10/2026
+   - Chuẩn bị test data - Hạn: 27/10/2026
+   - Sẵn sàng cho thực thi - Hạn: 28/10/2026
+
+CÔNG VIỆC TIẾP THEO
+• Hoàn thành rà soát Test Case - Hạn: 27/10/2026
+• Chuẩn bị đầy đủ test data - Hạn: 27/10/2026
+• Bắt đầu thực thi kiểm thử Deploy - Hạn: 28/10/2026
+
+NGƯỜI LẬP BIÊN BẢN
+Trần Xuân Ân
+
+CHỮ KÝ THÀNH VIÊN
+1. ___________________ (Nguyễn Quách Phú Tài)
+2. ___________________ (Bùi Đặng Quốc Khánh)
+3. ___________________ (Nguyễn Trung Tiến)
+4. ___________________ (Trần Xuân Ân)
+5. ___________________ (Nguyễn Khánh Du)
