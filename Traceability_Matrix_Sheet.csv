@@ -7,7 +7,7 @@ REQ-LOGIN-002,TR-LOGIN-002,Login,The system shall display error message when log
 REQ-LOGIN-002,TR-LOGIN-002,Login,The system shall display error message when login credentials are incorrect,Verify login with invalid credentials,TC-LOGIN-004,Login with non-existent email,Fully Covered,100%,Designed
 REQ-LOGIN-002,TR-LOGIN-002,Login,The system shall display error message when login credentials are incorrect,Verify login with invalid credentials,TC-LOGIN-007,Invalid email format validation,Fully Covered,100%,Designed
 REQ-LOGIN-002,TR-LOGIN-002,Login,The system shall display error message when login credentials are incorrect,Verify login with invalid credentials,TC-LOGIN-008,Empty password field validation,Fully Covered,100%,Designed
-REQ-LOGIN-003,TR-LOGIN-003,Login,User shall be able to select "Remember Me" to avoid re-login,Verify session persistence with "Remember Me",TC-LOGIN-005,Remember me functionality,Fully Covered,100%,Designed
+REQ-LOGIN-003,TR-LOGIN-003,Login,"User shall be able to select ""Remember Me"" to avoid re-login","Verify session persistence with ""Remember Me""",TC-LOGIN-005,Remember me functionality,Fully Covered,100%,Designed
 REQ-LOGIN-004,TR-LOGIN-004,Login,User shall be able to logout from the system,Verify successful logout,TC-LOGIN-006,Logout functionality,Fully Covered,100%,Designed
 REQ-REWARD-001,TR-REWARD-001,Reward,User shall be able to create rewards for campaign,Verify creation of reward with complete information,TC-REWARD-001,Create valid reward with complete information,Fully Covered,100%,Designed
 REQ-REWARD-001,TR-REWARD-001,Reward,User shall be able to create rewards for campaign,Verify creation of reward with complete information,TC-REWARD-008,Create reward with limited quantity,Fully Covered,100%,Designed
@@ -39,15 +39,15 @@ REQ-CAMP-002,TR-CAMP-003,Campaign,Edit information of created campaign,Verify up
 REQ-CAMP-003,TR-CAMP-004,Campaign,Display active campaigns,Verify display of campaign list,TC-CAMP-006,Display campaign list on homepage,Fully Covered,100%,Designed
 REQ-CAMP-003,TR-CAMP-004,Campaign,Display active campaigns,Verify display of campaign list,TC-CAMP-007,Search campaign by name,Fully Covered,100%,Designed
 REQ-CAMP-003,TR-CAMP-004,Campaign,Display active campaigns,Verify display of campaign list,TC-CAMP-012,Filter campaigns by category,Fully Covered,100%,Designed
-REQ-CAMP-004,TR-CAMP-005,Campaign,Change campaign status (active, paused, completed),Verify update of campaign status,TC-CAMP-008,Change campaign status to "Paused",Fully Covered,100%,Designed
-REQ-CAMP-004,TR-CAMP-005,Campaign,Change campaign status (active, paused, completed),Verify update of campaign status,TC-CAMP-009,Change campaign status to "Completed",Fully Covered,100%,Designed
+REQ-CAMP-004,TR-CAMP-005,Campaign,"Change campaign status (active, paused, completed)",Verify update of campaign status,TC-CAMP-008,"Change campaign status to ""Paused""",Fully Covered,100%,Designed
+REQ-CAMP-004,TR-CAMP-005,Campaign,"Change campaign status (active, paused, completed)",Verify update of campaign status,TC-CAMP-009,"Change campaign status to ""Completed""",Fully Covered,100%,Designed
 REQ-KYC-001,TR-KYC-001,KYC,User shall be able to upload verification documents (ID card),Verify successful document upload,TC-KYC-001,Upload valid KYC document (JPG image),Fully Covered,100%,Designed
 REQ-KYC-001,TR-KYC-001,KYC,User shall be able to upload verification documents (ID card),Verify successful document upload,TC-KYC-002,Upload valid KYC document (PDF file),Fully Covered,100%,Designed
 REQ-KYC-001,TR-KYC-001,KYC,User shall be able to upload verification documents (ID card),Verify successful document upload,TC-KYC-011,Upload multiple documents simultaneously,Fully Covered,100%,Designed
 REQ-KYC-001,TR-KYC-002,KYC,User shall be able to upload verification documents (ID card),Verify validation during upload,TC-KYC-003,Upload oversized document,Fully Covered,100%,Designed
 REQ-KYC-001,TR-KYC-002,KYC,User shall be able to upload verification documents (ID card),Verify validation during upload,TC-KYC-004,Upload document with invalid format,Fully Covered,100%,Designed
-REQ-KYC-002,TR-KYC-003,KYC,User shall be able to view verification status,Verify status display,TC-KYC-005,View KYC status "Pending Review",Fully Covered,100%,Designed
-REQ-KYC-002,TR-KYC-003,KYC,User shall be able to view verification status,Verify status display,TC-KYC-006,View KYC status "Approved",Fully Covered,100%,Designed
+REQ-KYC-002,TR-KYC-003,KYC,User shall be able to view verification status,Verify status display,TC-KYC-005,"View KYC status ""Pending Review""",Fully Covered,100%,Designed
+REQ-KYC-002,TR-KYC-003,KYC,User shall be able to view verification status,Verify status display,TC-KYC-006,"View KYC status ""Approved""",Fully Covered,100%,Designed
 REQ-KYC-002,TR-KYC-003,KYC,User shall be able to view verification status,Verify status display,TC-KYC-012,View KYC history,Fully Covered,100%,Designed
 REQ-KYC-003,TR-KYC-004,KYC,Admin shall be able to approve/reject KYC documents,Verify admin approval functionality,TC-KYC-007,Admin approve KYC document,Fully Covered,100%,Designed
 REQ-KYC-003,TR-KYC-004,KYC,Admin shall be able to approve/reject KYC documents,Verify admin approval functionality,TC-KYC-008,Admin reject KYC document,Fully Covered,100%,Designed

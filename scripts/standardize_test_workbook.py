@@ -1,8 +1,13 @@
+# NOTE (27/10/2026): ba workbook trong PROJECT_DIR da duoc bo sung thu cong phan Bug Log
+# (12 loi BUG-001..BUG-012), lien ket Bug ID o sheet Test Execution va 10 dong truy xuat
+# REQ con thieu. Chay lai script nay se GHI DE va lam mat cac phan do, chi nen chay khi
+# thuc su muon sinh lai workbook tu cac file CSV nguon.
 from __future__ import annotations
 
 import csv
 from pathlib import Path
 from openpyxl import Workbook
+from openpyxl.worksheet.datavalidation import DataValidation
 
 ROOT = Path(r"d:\Kiem_Thu\testing")
 PROJECT_DIR = ROOT / "23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)"
@@ -58,6 +63,31 @@ def build_actual_result(row: dict) -> str:
     if expected:
         return issue_text + " Expected: " + expected
     return issue_text
+
+
+def add_dropdown(ws, column: str, options: list[str], first_row: int, last_row: int):
+    """Add an Excel list validation (dropdown) so the column only accepts known values."""
+    dv = DataValidation(type="list", formula1='"' + ",".join(options) + '"', allow_blank=True)
+    dv.error = "Chọn một giá trị trong danh sách."
+    dv.errorTitle = "Giá trị không hợp lệ"
+    ws.add_data_validation(dv)
+    dv.add(f"{column}{first_row}:{column}{last_row}")
+
+
+def add_workbook_dropdowns(case_sheet, exec_sheet, bug_sheet, last_case_row: int, last_exec_row: int):
+    add_dropdown(case_sheet, "F", ["Black-box", "White-box", "Grey-box"], 2, last_case_row)
+    add_dropdown(case_sheet, "G", ["Functional", "Validation", "UI", "Security"], 2, last_case_row)
+    add_dropdown(case_sheet, "H", ["Positive Testing", "Negative Testing", "Boundary Value Analysis",
+                                   "Equivalence Partitioning"], 2, last_case_row)
+    add_dropdown(case_sheet, "I", ["High", "Medium", "Low"], 2, last_case_row)
+    add_dropdown(case_sheet, "N", ["Deploy & Local", "Deploy", "Local"], 2, last_case_row)
+    add_dropdown(case_sheet, "O", ["Manual", "Auto"], 2, last_case_row)
+    add_dropdown(case_sheet, "Q", ["Manual Black-box", "Auto"], 2, last_case_row)
+    add_dropdown(case_sheet, "S", ["Pass", "Fail", "Blocked", "Not Run"], 2, last_case_row)
+    add_dropdown(exec_sheet, "J", ["Manual", "Auto"], 2, last_exec_row)
+    add_dropdown(exec_sheet, "L", ["Pass", "Fail", "Blocked", "Not Run"], 2, last_exec_row)
+    add_dropdown(bug_sheet, "I", ["Critical", "High", "Medium", "Low"], 2, 200)
+    add_dropdown(bug_sheet, "O", ["Open", "In Progress", "Fixed", "Closed", "Reopened"], 2, 200)
 
 
 def pad_width(ws, width: int = 18):
@@ -205,12 +235,14 @@ def build_workbook(rows, workbook_path: Path):
             "v1.0",
             "Windows 11",
             "Chrome Latest",
-            row.get("Execution Method", "") or "Thủ công",
+            row.get("Execution Method", "") or "Manual",
             row.get("Actual Result", "") or "Actual result matches expected result.",
             row.get("Test Status", "") or "Pass",
             "Evidence captured in test execution checklist.",
             "",
-            "No defect found; expected behavior observed.",
+            ("No defect found; actual result matches expected result."
+             if row.get("Test Status") == "Pass"
+             else "Actual result differs from expected result - recorded for defect follow-up."),
         ])
 
     bug_sheet = wb.create_sheet("Bug Log")
@@ -254,14 +286,19 @@ def build_workbook(rows, workbook_path: Path):
 
     summary = wb.create_sheet("Summary")
     summary.append(["Category", "Count", "Note"])
-    summary.append(["Requirements", str(len(req_rows)), "Total requirements"])
+    req_only = [r for r in req_rows if str(r.get("Requirement ID", "")).startswith("REQ")]
+    tr_only = [r for r in req_rows if str(r.get("Requirement ID", "")).startswith("TR")]
+    summary.append(["Functional Requirements (REQ)", str(len(req_only)), "Requirements from the PRD"])
+    summary.append(["Test Requirements (TR)", str(len(tr_only)), "Derived from REQ for testing"])
     summary.append(["Test Cases", str(len(rows)), "Full project test suite"])
     summary.append(["Executed", str(len(rows)), "All test cases have execution result recorded"])
-    summary.append(["Passed", str(sum(1 for row in rows if (row.get("Test Status") or "").lower() == "pass")), "All expected results matched"])
-    summary.append(["Failed", str(sum(1 for row in rows if (row.get("Test Status") or "").lower() == "fail")), "No defects found during execution"])
+    summary.append(["Passed", str(sum(1 for row in rows if (row.get("Test Status") or "").lower() == "pass")), "Actual result matched the expected result"])
+    summary.append(["Failed", str(sum(1 for row in rows if (row.get("Test Status") or "").lower() == "fail")), "Mismatch recorded - defect follow-up required"])
     summary.append(["Auto", str(sum(1 for row in rows if row.get("Automation Type") == "Auto")), "Logic/validation tests"])
     summary.append(["Manual Black-box", str(sum(1 for row in rows if row.get("Automation Type") == "Manual Black-box")), "UI / browser / interaction tests"])
     summary.append(["White-box", "0", "Not required in current dataset"])
+
+    add_workbook_dropdowns(case_sheet, exec_sheet, bug_sheet, case_sheet.max_row, exec_sheet.max_row)
 
     for sheet in [readme, req_sheet, case_sheet, exec_sheet, bug_sheet, trace_sheet, summary]:
         pad_width(sheet)
