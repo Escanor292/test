@@ -8,7 +8,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
-import { getInboxNotes, createUserNote } from '@/services/mongodb/chat.service';
+import { getInboxNotes, createUserNote } from '@/services/pg/chat.service';
 import { CreateUserNoteRequest } from '@/types/chat.types';
 import { permissionDenied, userHasPermission } from '@/lib/permissions';
 

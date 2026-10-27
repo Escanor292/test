@@ -5,7 +5,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
-import { setTypingIndicator, getTypingUsers } from '@/services/mongodb/chat.service';
+import { setTypingIndicator, getTypingUsers } from '@/services/pg/chat.service';
 import { TypingIndicatorRequest } from '@/types/chat.types';
 
 export async function POST(

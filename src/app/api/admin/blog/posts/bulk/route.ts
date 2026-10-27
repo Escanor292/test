@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 import { applyBlogReview, MAX_BULK_REVIEW, normalizeRejectReason } from '@/lib/blog/blog-review';
-import { notificationService } from '@/services/mongodb/notification.service';
+import { notificationService } from '@/services/pg';
 import { createAuditLog } from '@/lib/audit';
 
 export async function PATCH(request: NextRequest) {

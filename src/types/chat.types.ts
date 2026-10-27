@@ -1,16 +1,14 @@
 /**
  * Chat System TypeScript Types
- * MongoDB-based chat for 1-1 conversations
+ * PostgreSQL-backed chat model
  */
-
-import { ObjectId } from 'mongodb';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Base Types
 // ─────────────────────────────────────────────────────────────────────────────
 
 export interface MongoBase {
-  _id?: ObjectId;
+  _id?: string;
   createdAt: Date;
   updatedAt: Date;
 }

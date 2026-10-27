@@ -1,6 +1,6 @@
 import { prisma } from "@/lib/prisma";
 import { executeRaw, queryRaw } from "@/lib/sql/raw";
-import { notificationService } from "@/services/mongodb/notification.service";
+import { notificationService } from "@/services/pg";
 import { PUBLIC_CAMPAIGN_STATUSES } from "@/lib/moderation/policy";
 import { extractHttpUrls, probeHttpUrl } from "@/lib/link-health";
 import { getPermissionMap, hasBit, resolveAccountType, userHasPermission } from "@/lib/permissions";

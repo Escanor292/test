@@ -9,7 +9,7 @@ export type { NotificationType, NotificationPayload } from './notification.servi
 export { activityLogService } from './activity-log.service';
 export type { ActivityAction } from './activity-log.service';
 
-export { analyticsService } from './analytics.service';
+export { ANALYTICS_TTL_OPTIONS, DEFAULT_ANALYTICS_TTL_DAYS, analyticsService } from './analytics.service';
 export type { AnalyticsTtlDays } from './analytics.service';
 
 export { commentService } from './comment.service';

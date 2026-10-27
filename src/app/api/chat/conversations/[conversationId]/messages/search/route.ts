@@ -5,7 +5,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
-import { searchMessages } from '@/services/mongodb/chat.service';
+import { searchMessages } from '@/services/pg/chat.service';
 
 export async function GET(
   request: NextRequest,

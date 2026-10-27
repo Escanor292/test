@@ -5,7 +5,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
-import { markAsRead } from '@/services/mongodb/chat.service';
+import { markAsRead } from '@/services/pg/chat.service';
 
 export async function PATCH(
   request: NextRequest,

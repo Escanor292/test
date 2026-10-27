@@ -14,7 +14,7 @@ import { UserFollowButton } from "@/components/profile/UserFollowButton";
 import { ProfileNoteBubble } from "@/components/profile/ProfileNoteBubble";
 import { ShareProfileThemeButton } from "@/components/profile/ShareProfileThemeButton";
 import { getUserFollowStats } from "@/lib/user-follows";
-import { getActiveSelfNote } from "@/services/mongodb/chat.service";
+import { getActiveSelfNote } from "@/services/pg/chat.service";
 import { userHasPermission } from "@/lib/permissions";
 import { canExposePrivacyField } from "@/lib/profile-settings";
 import { getPublicProfileCustomization, isLayoutSectionVisible, normalizeProfileCustomization, profileAudience, resolveProfileLayout } from "@/lib/profile-customization";
@@ -195,9 +195,9 @@ export default async function ProfilePage({ params, searchParams }: ProfilePageP
     }),
     currentUserId && currentUserId !== userId
       ? prisma.memberships.findUnique({
-          where: { supporterId_creatorId: { supporterId: currentUserId, creatorId: userId } },
-          select: { status: true, currentPeriodEnd: true, canceledAt: true },
-        })
+        where: { supporterId_creatorId: { supporterId: currentUserId, creatorId: userId } },
+        select: { status: true, currentPeriodEnd: true, canceledAt: true },
+      })
       : Promise.resolve(null),
   ]);
 
@@ -305,17 +305,17 @@ export default async function ProfilePage({ params, searchParams }: ProfilePageP
                   <Eye size={16} /> Chế độ xem
                 </Link>
                 {canCustomizeProfile && (
-                <ShareProfileThemeButton defaultTitle={user.name ? `Giao diện ${user.name}` : "Giao diện của tôi"} />
+                  <ShareProfileThemeButton defaultTitle={user.name ? `Giao diện ${user.name}` : "Giao diện của tôi"} />
                 )}
                 {canCustomizeProfile && (
-                <Link href={`/profile/${userId}/customize`} className="inline-flex items-center gap-1.5 rounded-xl bg-gray-100 px-3 py-2 text-xs font-bold text-gray-900 transition hover:bg-gray-200 sm:px-4 sm:text-sm">
-                  <Palette size={16} /> Giao diện
-                </Link>
+                  <Link href={`/profile/${userId}/customize`} className="inline-flex items-center gap-1.5 rounded-xl bg-gray-100 px-3 py-2 text-xs font-bold text-gray-900 transition hover:bg-gray-200 sm:px-4 sm:text-sm">
+                    <Palette size={16} /> Giao diện
+                  </Link>
                 )}
                 {canEditProfile && (
-                <Link href={`/profile/${userId}/edit`} className="inline-flex items-center gap-1.5 rounded-xl bg-gray-100 px-3 py-2 text-xs font-bold text-gray-900 transition hover:bg-gray-200 sm:px-4 sm:text-sm">
-                  <Settings size={16} /> Chỉnh sửa
-                </Link>
+                  <Link href={`/profile/${userId}/edit`} className="inline-flex items-center gap-1.5 rounded-xl bg-gray-100 px-3 py-2 text-xs font-bold text-gray-900 transition hover:bg-gray-200 sm:px-4 sm:text-sm">
+                    <Settings size={16} /> Chỉnh sửa
+                  </Link>
                 )}
                 {user.role === "ADMIN" && (
                   <Link href="/dashboard/admin" className="inline-flex items-center gap-1.5 rounded-xl bg-red-600 px-3 py-2 text-xs font-bold text-white transition hover:bg-red-700 sm:px-4 sm:text-sm">

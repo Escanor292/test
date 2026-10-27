@@ -5,7 +5,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
-import { getMessages, sendMessage } from '@/services/mongodb/chat.service';
+import { getMessages, sendMessage } from '@/services/pg/chat.service';
 import { SendMessageRequest } from '@/types/chat.types';
 
 async function enrichCallEndDuration(

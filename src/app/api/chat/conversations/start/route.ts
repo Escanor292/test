@@ -5,7 +5,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
-import { startConversation } from '@/services/mongodb/chat.service';
+import { startConversation } from '@/services/pg/chat.service';
 import { StartConversationRequest } from '@/types/chat.types';
 
 export async function POST(request: NextRequest) {

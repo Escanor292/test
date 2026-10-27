@@ -5,7 +5,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
-import { deleteConversation } from '@/services/mongodb/chat.service';
+import { deleteConversation } from '@/services/pg/chat.service';
 
 export async function DELETE(
   request: NextRequest,

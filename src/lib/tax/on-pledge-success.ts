@@ -1,7 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { grantDigitalWarehouseItem } from "@/lib/digital-warehouse";
 import { createBackerInvoice, createPlatformFeeInvoice } from "@/lib/invoice-generator";
-import { notificationService } from "@/services/mongodb/notification.service";
+import { notificationService } from "@/services/pg";
 import { estimatePlatformFee } from "@/lib/tax/money-flow";
 import { issueTaxDocumentForPledge, sendCertificateEmail } from "@/lib/tax/certificate";
 

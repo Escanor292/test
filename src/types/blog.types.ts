@@ -2,8 +2,6 @@
 // BLOG TYPES - TypeScript Definitions
 // ============================================================
 
-import { ObjectId } from 'mongodb';
-
 export interface BlogContentBlock {
   id: string;
   type: 'paragraph' | 'heading' | 'image' | 'video' | 'code' | 'quote' | 'list' | 'embed';
@@ -26,7 +24,7 @@ export interface BlogTableOfContents {
 }
 
 export interface BlogContent {
-  _id?: ObjectId;
+  _id?: string;
   postId: string;
   format: 'markdown' | 'html' | 'rich_json';
   content?: string;
@@ -42,7 +40,7 @@ export interface BlogContent {
 }
 
 export interface BlogDraft {
-  _id?: ObjectId;
+  _id?: string;
   postId: string;
   authorId: string;
   titleSnapshot?: string;
@@ -55,7 +53,7 @@ export interface BlogDraft {
 }
 
 export interface BlogVersion {
-  _id?: ObjectId;
+  _id?: string;
   postId: string;
   versionNumber: number;
   authorId: string;
@@ -70,7 +68,7 @@ export interface BlogVersion {
 }
 
 export interface BlogViewLog {
-  _id?: ObjectId;
+  _id?: string;
   postId: string;
   userId?: string;
   ip?: string;

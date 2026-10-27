@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { getDb } from "@/lib/mongodb";
 import prisma from "@/lib/prisma";
+import { startConversation } from "@/services/pg/chat.service";
 
 export async function POST(req: NextRequest) {
   try {
@@ -14,7 +14,6 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Lấy thông tin user hiện tại từ PostgreSQL
     const currentUser = await prisma.users.findUnique({
       where: { email: session.user.email },
     });
@@ -35,7 +34,6 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Kiểm tra không thể chat với chính mình
     if (currentUser.id === participantId) {
       return NextResponse.json(
         { error: "Không thể nhắn tin với chính mình" },
@@ -43,7 +41,6 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Kiểm tra user đích có tồn tại không
     const targetUser = await prisma.users.findUnique({
       where: { id: participantId },
     });
@@ -55,60 +52,11 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Kết nối MongoDB
-    let db;
-    try {
-      db = await getDb();
-    } catch (mongoError) {
-      console.error("[MongoDB Connection Error]", mongoError);
-      return NextResponse.json(
-        { error: "Không thể kết nối database" },
-        { status: 500 }
-      );
-    }
-
-    const conversationsCollection = db.collection("conversations");
-
-    // Tìm conversation đã tồn tại giữa 2 user
-    const existingConversation = await conversationsCollection.findOne({
-      participants: {
-        $all: [currentUser.id, participantId],
-        $size: 2,
-      },
-    });
-
-    if (existingConversation) {
-      return NextResponse.json(existingConversation);
-    }
-
-    // Tạo conversation mới
-    const newConversation = {
-      participants: [currentUser.id, participantId],
-      participantDetails: [
-        {
-          userId: currentUser.id,
-          name: currentUser.name,
-          email: currentUser.email,
-          avatar: currentUser.image || null,
-        },
-        {
-          userId: targetUser.id,
-          name: targetUser.name,
-          email: targetUser.email,
-          avatar: targetUser.image || null,
-        },
-      ],
-      lastMessage: null,
-      lastMessageAt: new Date(),
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    };
-
-    const result = await conversationsCollection.insertOne(newConversation);
+    const result = await startConversation(currentUser.id, participantId);
 
     return NextResponse.json({
-      _id: result.insertedId.toString(),
-      ...newConversation,
+      ...result.conversation,
+      isNew: result.isNew,
     });
   } catch (error: any) {
     console.error("[POST /api/chat/conversations/find-or-create]", error);

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { ANALYTICS_TTL_OPTIONS, analyticsService } from "@/services/mongodb/analytics.service";
+import { ANALYTICS_TTL_OPTIONS, analyticsService } from "@/services/pg";
 
 function isAdminSession(user: { role?: string; isAdmin?: boolean } | null | undefined) {
   return user?.role === "ADMIN" || user?.isAdmin === true;

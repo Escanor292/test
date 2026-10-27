@@ -1,7 +1,7 @@
 import { auth } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 import { getBlogReviewFields } from '@/lib/blog/blog-review';
-import { getBlogContent } from '@/services/mongodb/blog.service';
+import { getBlogContent } from '@/services/pg';
 import { notFound, redirect } from 'next/navigation';
 import Link from 'next/link';
 import RichTextRenderer from '@/components/shared/RichTextRenderer';

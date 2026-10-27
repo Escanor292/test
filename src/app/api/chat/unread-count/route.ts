@@ -5,7 +5,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
-import { getTotalUnreadCount } from '@/services/mongodb/chat.service';
+import { getTotalUnreadCount } from '@/services/pg/chat.service';
 
 export async function GET(request: NextRequest) {
   try {

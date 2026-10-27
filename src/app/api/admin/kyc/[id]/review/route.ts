@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { createAuditLog } from "@/lib/audit";
-import { notificationService } from "@/services/mongodb/notification.service";
+import { notificationService } from "@/services/pg";
 import { normalizeRejectReason } from "@/lib/moderation/policy";
 
 export async function PATCH(request: NextRequest, context: { params: Promise<{ id: string }> }) {

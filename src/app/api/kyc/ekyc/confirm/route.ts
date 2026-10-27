@@ -4,7 +4,7 @@ import { prisma } from "@/lib/prisma";
 import { executeRaw } from "@/lib/sql/raw";
 import { createAuditLog } from "@/lib/audit";
 import { validateIDCard } from "@/lib/kyc";
-import { notificationService } from "@/services/mongodb/notification.service";
+import { notificationService } from "@/services/pg";
 import { getEkycSession } from "@/lib/ekyc/session-store";
 import { verifyNationalId } from "@/lib/ekyc/national";
 import { EKYC_PASS_SCORE, type IdCardType, type OcrFields } from "@/lib/ekyc/types";

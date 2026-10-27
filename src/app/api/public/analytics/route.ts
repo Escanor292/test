@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { analyticsService } from "@/services/mongodb";
+import { analyticsService } from "@/services/pg";
 import { parseProductAnalyticsPayload } from "@/lib/analytics-contract";
 
 const headers = {

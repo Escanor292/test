@@ -6,7 +6,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
 import { getPostComments, createComment } from '@/lib/blog/comment.service';
 import { prisma } from '@/lib/prisma';
-import { notificationService } from '@/services/mongodb/notification.service';
+import { notificationService } from '@/services/pg';
 
 export async function GET(
   _request: NextRequest,

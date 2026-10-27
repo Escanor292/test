@@ -5,7 +5,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
-import { reportConversation } from '@/services/mongodb/chat.service';
+import { reportConversation } from '@/services/pg/chat.service';
 import { ReportConversationRequest } from '@/types/chat.types';
 import { validateReportEvidence } from '@/lib/content-report';
 

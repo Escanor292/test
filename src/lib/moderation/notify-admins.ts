@@ -1,6 +1,6 @@
 import { prisma } from '@/lib/prisma';
-import { notificationService } from '@/services/mongodb/notification.service';
-import type { NotificationType } from '@/types/mongodb.types';
+import { notificationService } from '@/services/pg/notification.service';
+import type { NotificationType } from '@/services/pg/notification.service';
 
 export async function notifyAdmins(params: {
   exceptUserId?: string;

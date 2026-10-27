@@ -1,4 +1,4 @@
-import type { NotificationType } from '@/types/mongodb.types';
+import type { NotificationType } from '@/services/pg/notification.service';
 
 export type PrivacyField = 'email' | 'phone' | 'location' | 'bio' | 'website' | 'socialLinks';
 
