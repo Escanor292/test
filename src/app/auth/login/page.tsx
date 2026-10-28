@@ -2,26 +2,24 @@
 
 import { signIn } from "next-auth/react";
 import { useMemo, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { PasswordInput } from "@/components/ui/PasswordInput";
 import { Globe, Lock, Mail, AlertCircle, Loader2 } from "lucide-react";
-import LeafIcon from "@/components/shared/LeafIcon";
 import Link from "next/link";
 
 function getSafeCallbackUrl(value: string | null) {
-  if (!value || !value.startsWith("/") || value.startsWith("//")) return "/dashboard";
+  if (!value || !value.startsWith("/") || value.startsWith("//")) return "/";
   try {
     const parsed = new URL(value, "http://localhost");
-    return parsed.origin === "http://localhost" ? value : "/dashboard";
+    return parsed.origin === "http://localhost" ? value : "/";
   } catch {
-    return "/dashboard";
+    return "/";
   }
 }
 
 export default function LoginPage() {
-  const router = useRouter();
   const searchParams = useSearchParams();
   const callbackUrl = useMemo(() => getSafeCallbackUrl(searchParams.get("callbackUrl")), [searchParams]);
   const [email, setEmail] = useState("");
@@ -43,13 +41,13 @@ export default function LoginPage() {
 
       if (result?.error) {
         setError("Email hoặc mật khẩu không chính xác.");
+        setLoading(false);
       } else {
-        router.replace(callbackUrl);
-        router.refresh();
+        // Chuyển hướng cứng để đảm bảo cookie phiên đăng nhập được gửi ngay lập tức lên server
+        window.location.href = callbackUrl;
       }
     } catch (err) {
       setError("Đã xảy ra lỗi hệ thống.");
-    } finally {
       setLoading(false);
     }
   };

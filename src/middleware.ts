@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-import { auth } from "@/lib/auth";
+import NextAuth from "next-auth";
+import { authConfig } from "@/auth.config";
+
+const { auth } = NextAuth(authConfig);
 
 export async function middleware(request: NextRequest) {
   try {
@@ -44,9 +47,9 @@ export async function middleware(request: NextRequest) {
       return NextResponse.next();
     }
 
-    // If user is logged in and trying to access auth routes, redirect to dashboard
+    // If user is logged in and trying to access auth routes, redirect to home
     if (session?.user && isAuthRoute) {
-      return NextResponse.redirect(new URL("/dashboard", request.url));
+      return NextResponse.redirect(new URL("/", request.url));
     }
 
     // Allow public routes

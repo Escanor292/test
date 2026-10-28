@@ -2,6 +2,7 @@ import type { NextAuthConfig } from "next-auth";
 import Google from "next-auth/providers/google";
 
 export const authConfig = {
+  secret: process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET || "7e476405-95cf-4a3f-a901-3f6f6700db49-reconstructed",
   debug: process.env.NODE_ENV === "development", // Enable debug in development
   trustHost: true, // Trust the host header
   providers: [
@@ -11,6 +12,33 @@ export const authConfig = {
     }),
   ],
   callbacks: {
+    async session({ session, token }: any) {
+      if (session.user && token) {
+        session.user.id = token.id as string;
+        session.user.role = token.role as string;
+        session.user.status = token.status as string;
+        session.user.isAdmin = !!token.isAdmin;
+        session.user.isOrganization = !!token.isOrganization;
+      }
+      return session;
+    },
+    async jwt({ token, user, trigger, session }: any) {
+      if (user) {
+        token.id = user.id;
+        token.role = (user as any).role;
+        token.status = (user as any).status;
+        token.isAdmin = (user as any).isAdmin;
+        token.isOrganization = (user as any).isOrganization;
+      }
+      if (trigger === "update" && session) {
+        const next = session as Record<string, unknown>;
+        if (typeof next.role === "string") token.role = next.role;
+        if (typeof next.status === "string") token.status = next.status;
+        if (typeof next.isOrganization === "boolean") token.isOrganization = next.isOrganization;
+        if (typeof next.isAdmin === "boolean") token.isAdmin = next.isAdmin;
+      }
+      return token;
+    },
     authorized({ auth, request: { nextUrl } }) {
       const isLoggedIn = !!auth?.user;
       const isApiAuthRoute = nextUrl.pathname.startsWith("/api/auth");
@@ -48,7 +76,7 @@ export const authConfig = {
             // Fall through to the safe default below.
           }
         }
-        return Response.redirect(new URL("/dashboard", nextUrl));
+        return Response.redirect(new URL("/", nextUrl));
       }
 
       if (!isLoggedIn && !isPublicRoute) return false;
