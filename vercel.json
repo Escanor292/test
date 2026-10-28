@@ -1,14 +1,26 @@
 {
-  "buildCommand": "prisma generate && (prisma migrate deploy || (prisma migrate resolve --rolled-back 20260911134110_migrate_mongo_to_postgres && prisma migrate deploy)) && next build",
+  "buildCommand": "prisma generate && next build",
   "framework": "nextjs",
   "regions": [
     "sin1"
   ],
   "crons": [
-    { "path": "/api/cron/update-campaign-status", "schedule": "0 1 * * *" },
-    { "path": "/api/cron/ship-sla", "schedule": "0 2 * * *" },
-    { "path": "/api/cron/cleanup-payments", "schedule": "30 2 * * *" },
-    { "path": "/api/cron/memberships", "schedule": "0 3 * * *" }
+    {
+      "path": "/api/cron/update-campaign-status",
+      "schedule": "0 1 * * *"
+    },
+    {
+      "path": "/api/cron/ship-sla",
+      "schedule": "0 2 * * *"
+    },
+    {
+      "path": "/api/cron/cleanup-payments",
+      "schedule": "30 2 * * *"
+    },
+    {
+      "path": "/api/cron/memberships",
+      "schedule": "0 3 * * *"
+    }
   ],
   "functions": {
     "src/app/api/**/*.ts": {
