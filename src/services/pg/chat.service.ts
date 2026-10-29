@@ -90,7 +90,7 @@ async function getCampaignInfo(campaignId: string): Promise<ConversationCampaign
 function serializeConv(conv: any) {
     return {
         ...conv,
-        _id: { toString: () => conv.id },
+        _id: conv.id,
         participants: Array.isArray(conv.participants) ? conv.participants : [],
         participantIds: Array.isArray(conv.participantIds) ? conv.participantIds : [],
         unreadCount: typeof conv.unreadCount === 'object' ? conv.unreadCount : {},
@@ -104,7 +104,7 @@ function serializeConv(conv: any) {
 function serializeMsg(msg: any) {
     return {
         ...msg,
-        _id: { toString: () => msg.id },
+        _id: msg.id,
         conversationId: msg.conversationId,
         reactions: (msg.message_reactions ?? []).map((r: any) => ({
             emoji: r.emoji,
@@ -520,7 +520,7 @@ export async function searchUsers(query: string, currentUserId: string): Promise
     });
     return users.flatMap((u) => {
         const visibleEmail = normalizePrivacySettings(u.role, u.privacySettings).email;
-        const name = u.displayName || u.name;
+        const name = u.displayName || u.name || "";
         const nameHit = name.toLocaleLowerCase().includes(folded);
         if (!nameHit && !visibleEmail) return [];
         return [{

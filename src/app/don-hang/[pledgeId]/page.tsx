@@ -6,6 +6,8 @@ import { fulfillmentLabel } from "@/lib/order-fulfillment";
 import { formatVND } from "@/lib/utils";
 import { isAdminActor } from "@/lib/payment/simulate-checkout";
 import ShipmentActions from "@/components/orders/ShipmentActions";
+import RefundActions from "@/components/orders/RefundActions";
+import { loadRefundEvidence } from "@/lib/payment/refund-evidence";
 import { isSimulationMode } from "@/lib/platform-settings";
 import { Package, Clock, CheckCircle2 } from "lucide-react";
 
@@ -47,7 +49,7 @@ export default async function OrderPage({ params }: { params: Promise<{ pledgeId
   const codCollected = pledge.isCashOnDelivery && pledge.fulfillmentStatus === "DELIVERED";
   const simulationModeOn = await isSimulationMode();
   const canSimulate = admin && (simulated || simulationModeOn);
-
+  const evidence = await loadRefundEvidence(pledge.id);
 
   return (
     <main className="min-h-screen bg-slate-50/70 py-14 px-4 sm:px-6 text-slate-800">
@@ -58,6 +60,9 @@ export default async function OrderPage({ params }: { params: Promise<{ pledgeId
               <Package className="w-4 h-4" />
             </span>
             <span className="text-xs font-bold uppercase tracking-wider text-emerald-800">Đơn hàng quà tặng</span>
+            <Link href="/don-hang" className="text-xs font-semibold text-slate-500 hover:text-emerald-700">
+              Tất cả đơn
+            </Link>
           </div>
           <span className={`px-3 py-1 rounded-full text-xs font-bold ${
             pledge.fulfillmentStatus === "DELIVERED"
@@ -188,6 +193,18 @@ export default async function OrderPage({ params }: { params: Promise<{ pledgeId
               currentTrackingNumber={pledge.trackingNumber}
             />
           </div>
+        )}
+
+        {(admin || pledge.userId === user.id) && (pledge.status === "SUCCESS" || pledge.status === "REFUNDED") && (
+          <RefundActions
+            pledgeId={pledge.id}
+            refundStatus={pledge.refundStatus}
+            note={pledge.cancellationReason}
+            evidence={evidence}
+            isOwner={pledge.userId === user.id}
+            isAdmin={admin}
+            canSimulate={canSimulate}
+          />
         )}
       </div>
     </main>

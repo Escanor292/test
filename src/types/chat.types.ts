@@ -77,7 +77,7 @@ export interface MessageAttachment {
 }
 
 export interface MongoMessage extends MongoBase {
-  conversationId: ObjectId;
+  conversationId: string;
   senderId: string; // PostgreSQL user.id
   senderName: string;
   senderAvatar?: string;
@@ -107,8 +107,8 @@ export type ChatReportReason = 'spam' | 'scam' | 'abuse' | 'other';
 export type ChatReportStatus = 'pending' | 'reviewed' | 'rejected' | 'resolved';
 
 export interface MongoChatReport extends MongoBase {
-  conversationId: ObjectId;
-  messageId?: ObjectId | null;
+  conversationId: string;
+  messageId?: string | null;
   reporterId: string; // PostgreSQL user.id
   reason: ChatReportReason;
   description: string;
