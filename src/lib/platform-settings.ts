@@ -4,6 +4,7 @@ import { normalizeGa4Id } from "@/lib/seo";
 
 export const EKYC_ENABLED_KEY = "ekyc_enabled";
 export const GA4_ID_KEY = "ga4_measurement_id";
+export const SIMULATION_MODE_KEY = "simulation_mode";
 
 async function ensureSettingsTable() {
   await executeRaw(`
@@ -60,6 +61,15 @@ export async function setGa4MeasurementId(raw?: string | null) {
   const normalized = normalizeGa4Id(raw);
   await setPlatformSetting(GA4_ID_KEY, normalized || "");
   return normalized;
+}
+
+export async function isSimulationMode(): Promise<boolean> {
+  return (await getPlatformSetting(SIMULATION_MODE_KEY)) === "true";
+}
+
+export async function setSimulationMode(enabled: boolean) {
+  await setPlatformSetting(SIMULATION_MODE_KEY, enabled ? "true" : "false");
+  return enabled;
 }
 
 export function ekycDisabledResponse() {

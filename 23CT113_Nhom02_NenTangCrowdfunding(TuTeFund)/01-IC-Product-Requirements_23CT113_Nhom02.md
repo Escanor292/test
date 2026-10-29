@@ -110,9 +110,9 @@ Căn cứ: `enum UserRole` và `enum UserStatus` trong `prisma/schema.prisma`, c
 | Mã | Tác nhân | Điều kiện nhận diện | Quyền hạn chính |
 |:---|:---|:---|:---|
 | **ACT-01** | Khách (Guest) | Chưa có session | Xem trang công khai, blog đã `PUBLISHED`, danh sách campaign `ACTIVE/SUCCESS/FAILED`, tra cứu giao dịch `/lookup` |
-| **ACT-02** | Backer | `role = BACKER` (mặc định khi đăng ký) | Ủng hộ, bình luận, thả tim, bookmark, theo dõi campaign, nâng cấp Creator |
-| **ACT-03** | Creator (chờ duyệt) | `role = CREATOR_PENDING` | Tạo campaign `DRAFT`, gửi duyệt; **chưa** được duyệt campaign |
-| **ACT-04** | Creator | `role = CREATOR` | Toàn quyền trên campaign/reward thuộc sở hữu, xem sao kê, gửi duyệt |
+| **ACT-02** | Backer | `role = BACKER` (mặc định khi đăng ký) | Ủng hộ, bình luận, thả tim, bookmark, theo dõi campaign, yêu cầu nâng cấp Creator |
+| **ACT-03** | Creator | `role = CREATOR` | Toàn quyền trên campaign/reward thuộc sở hữu, xem sao kê, gửi duyệt |
+| **ACT-04** | Creator Pro | `role = CREATOR` **và** `status = PRO` | Được mở rộng quyền nâng cao như tính năng Pro, banner “Pro”, quyền content premium; đây là **không phải** trạng thái chờ duyệt |
 | **ACT-05** | Admin | `role = ADMIN` **hoặc** `users.isAdmin = true` | Duyệt/từ chối campaign, duyệt KYC, quản lý user, badge, báo cáo, credentials |
 
 ### 3.2. Ghi chú quan trọng về cơ chế quyền
@@ -129,7 +129,7 @@ Mã nguồn dùng **đồng thời hai cơ chế**: `role` (enum) và cờ `isAd
 | `PRO` | Nâng cao | Huy hiệu PRO, hiển thị khác biệt | `src/app/api/admin/users/[userId]/update-status` |
 | `BANNED` | Bị khoá | Chuyển hướng về `/banned` | `src/app/banned`, `src/lib/blacklist.ts` |
 
-**Quy tắc nghiệp vụ (theo tài liệu cũ, cần tái xác minh khi kiểm thử):** Không gán `PRO` cho `BACKER`; không đổi trạng thái tài khoản `ADMIN`.
+**Quy tắc nghiệp vụ (đã đối chiếu với mã nguồn):** `Creator Pro` là một trạng thái nâng cao của `Creator`, được biểu diễn bằng `role = CREATOR` + `status = PRO`; không phải `role = CREATOR_PENDING`. Trạng thái `CREATOR_PENDING` là giai đoạn chờ Admin/KYC duyệt nâng cấp từ `BACKER` sang `CREATOR`, không được gộp với `Creator Pro`.
 
 ---
 
