@@ -6,6 +6,7 @@ import {
   buildVietQrImageUrl,
   getEscrowBankAccount,
 } from "@/lib/payment/escrow-account";
+import { simulationApplies } from "@/lib/payment/simulate-checkout";
 
 export async function GET(
   _request: NextRequest,
@@ -68,5 +69,6 @@ export async function GET(
       qrUrl: buildVietQrImageUrl({ amount, addInfo: content, account: escrow }),
     },
     note,
+    simulated: await simulationApplies(session?.user),
   });
 }

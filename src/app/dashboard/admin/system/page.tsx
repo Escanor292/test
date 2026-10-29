@@ -5,6 +5,7 @@ import { BarChart3, Database, Loader2, Search, Settings, Shield } from "lucide-r
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import SimulationToggle from "@/components/admin/SimulationToggle";
 
 type DatabaseReadiness = {
   stored: string;
@@ -115,7 +116,15 @@ export default function AdminSystemPage() {
             <Settings size={12} /> Quản lý hệ thống
           </div>
           <h1 className="text-4xl font-black tracking-tight text-gray-900">Cài đặt nền tảng</h1>
-          <p className="mt-2 text-gray-500">eKYC, đo lường GA4, sitemap và database.</p>
+          <p className="mt-2 text-gray-500">eKYC, đo lường GA4, sitemap, database và giả lập thanh toán.</p>
+        </div>
+
+        <div className="rounded-[2rem] border border-amber-100 bg-white p-8 shadow-sm">
+          <div className="text-lg font-black text-gray-900">Chế độ giả lập</div>
+          <p className="mt-1 mb-4 text-sm text-gray-500">
+            Chỉ tài khoản admin đi được đường này. Người dùng thường vẫn chuyển khoản.
+          </p>
+          <SimulationToggle />
         </div>
 
         <div className="rounded-[2rem] border border-gray-100 bg-white p-8 shadow-sm">

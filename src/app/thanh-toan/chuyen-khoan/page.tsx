@@ -4,6 +4,7 @@ import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Copy, Landmark } from "lucide-react";
+import SimulatedPaySteps from "@/components/payment/SimulatedPaySteps";
 
 type TransferInfo = {
   amount: number;
@@ -19,6 +20,8 @@ type TransferInfo = {
     branch?: string;
   };
   note: string;
+  simulated?: boolean;
+  pledgeId?: string;
 };
 
 function TransferInner() {
@@ -122,6 +125,9 @@ function TransferInner() {
         Trạng thái hiện tại: {data.status === "PENDING" ? "Chờ tiền vào tài khoản giữ hộ" : data.status}.
         Ghi đúng nội dung chuyển khoản để đối soát.
       </p>
+      {data.simulated && data.status === "PENDING" && data.pledgeId ? (
+        <SimulatedPaySteps pledgeId={data.pledgeId} qrUrl={data.transfer.qrUrl} />
+      ) : null}
     </div>
   );
 }
