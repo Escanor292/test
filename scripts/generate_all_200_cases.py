@@ -463,3 +463,4 @@ with open(OUTPUT_JS, "w", encoding="utf-8") as f:
     f.write("module.exports = { FULL_200_TCS };\n")
 
 print(f"Successfully generated {len(all_tcs)} test cases!")
+
