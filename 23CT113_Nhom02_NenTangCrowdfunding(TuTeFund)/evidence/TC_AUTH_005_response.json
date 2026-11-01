@@ -1,0 +1,7 @@
+{
+  "testCaseId": "TC_AUTH_005",
+  "status": "FAIL",
+  "executionTimestamp": "2026-11-01T14:00:15.688928+00:00",
+  "verification": "src/auth.config.ts khai báo Google provider bằng biến môi trường. Chưa có client đã gắn và không có bước 2FA trong luồng đăng nhập.",
+  "criteriaSource": "Đối chiếu mã nguồn. Chức năng chưa tích hợp nên không đạt kết quả mong đợi."
+}

@@ -1,0 +1,7 @@
+{
+  "testCaseId": "TC_PLED_009",
+  "status": "FAIL",
+  "executionTimestamp": "2026-11-01T14:00:15.688928+00:00",
+  "verification": "Luồng tiền thật không gọi được. settle chỉ là /api/admin/pledges/:id/settle giả lập.",
+  "criteriaSource": "Đối chiếu mã nguồn. Chức năng chưa tích hợp nên không đạt kết quả mong đợi."
+}

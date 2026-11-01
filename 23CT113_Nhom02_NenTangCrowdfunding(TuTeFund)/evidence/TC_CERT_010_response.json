@@ -1,0 +1,7 @@
+{
+  "testCaseId": "TC_CERT_010",
+  "status": "FAIL",
+  "executionTimestamp": "2026-11-01T14:00:15.688928+00:00",
+  "verification": "Tử Tế Sổ xuất XML mẫu. Không có token ký số và không có API Tổng cục Thuế.",
+  "criteriaSource": "Đối chiếu mã nguồn. Chức năng chưa tích hợp nên không đạt kết quả mong đợi."
+}

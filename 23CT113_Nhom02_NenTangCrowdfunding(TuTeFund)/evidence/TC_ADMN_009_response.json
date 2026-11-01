@@ -1,0 +1,7 @@
+{
+  "testCaseId": "TC_ADMN_009",
+  "status": "FAIL",
+  "executionTimestamp": "2026-11-01T14:00:15.688928+00:00",
+  "verification": "Repo không có kịch bản k6 hoặc JMeter. Không chỗ nào đặt ngưỡng 500 CCU hay 2000ms.",
+  "criteriaSource": "Đối chiếu mã nguồn. Chức năng chưa tích hợp nên không đạt kết quả mong đợi."
+}
