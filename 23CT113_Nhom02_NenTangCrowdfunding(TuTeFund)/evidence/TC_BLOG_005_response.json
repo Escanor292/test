@@ -1,13 +1,36 @@
 {
   "testCaseId": "TC_BLOG_005",
-  "status": "PASS",
-  "executionTimestamp": "2026-11-01T13:21:07.149695Z",
+  "description": "Chưa đăng nhập mở editor",
+  "status": "FAIL",
+  "executionTimestamp": "2026-11-01T13:27:33.707Z",
   "steps": [
     {
-      "url": "https://test-gamma-azure-65.vercel.app/auth/login?callbackUrl=https%3A%2F%2Ftest-gamma-azure-65.vercel.app%2Fauth%2Fsignin",
-      "shot": "evidence/TC_BLOG_005.png"
+      "hops": [
+        {
+          "status": 307,
+          "url": "https://test-gamma-azure-65.vercel.app/upgrade?_rsc=dkjcIlmf5o9BVUl_",
+          "location": "/auth/login?callbackUrl=https%3A%2F%2Ftest-gamma-azure-65.vercel.app%2Fupgrade"
+        },
+        {
+          "status": 307,
+          "url": "https://test-gamma-azure-65.vercel.app/auth/signin?_rsc=1Nf4b8aOSonRXMOR",
+          "location": "/auth/login?callbackUrl=https%3A%2F%2Ftest-gamma-azure-65.vercel.app%2Fauth%2Fsignin"
+        },
+        {
+          "status": 307,
+          "url": "https://test-gamma-azure-65.vercel.app/gop-y?_rsc=dkjcIlmf5o9BVUl_",
+          "location": "/auth/login?callbackUrl=https%3A%2F%2Ftest-gamma-azure-65.vercel.app%2Fgop-y"
+        },
+        {
+          "status": 307,
+          "url": "https://test-gamma-azure-65.vercel.app/auth/forgot-password?_rsc=j55_PTWy1L9i_IyX",
+          "location": "/auth/login?callbackUrl=https%3A%2F%2Ftest-gamma-azure-65.vercel.app%2Fauth%2Fforgot-password"
+        }
+      ],
+      "finalUrl": "https://test-gamma-azure-65.vercel.app/auth/login?callbackUrl=https%3A%2F%2Ftest-gamma-azure-65.vercel.app%2Fauth%2Fsignin"
     }
   ],
-  "verification": "Khách mở /blog/editor. Trang editor đẩy sang /auth/signin, rồi tới /auth/login?callbackUrl=.../auth/signin. Không phải callbackUrl=/blog/editor. Ảnh là trang đăng nhập thật sau bước đó.",
-  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > cột Kết quả mong đợi"
+  "verification": "Mở /blog/editor khi chưa đăng nhập. URL cuối https://test-gamma-azure-65.vercel.app/auth/login?callbackUrl=https%3A%2F%2Ftest-gamma-azure-65.vercel.app%2Fauth%2Fsignin. Không phải /auth/login?callbackUrl=/blog/editor. Middleware để /blog là route công khai; editor tự đẩy /auth/signin.",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > Kết quả mong đợi",
+  "role": "guest"
 }

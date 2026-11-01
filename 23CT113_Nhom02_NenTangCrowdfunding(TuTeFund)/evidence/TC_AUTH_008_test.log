@@ -1,0 +1,15 @@
+src/app/api/auth/register/route.ts
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+
+    const user = await prisma.users.create({
+      data: {
+        id: crypto.randomUUID(),
+        name: name.trim(),
+        displayName: name.trim(),
+        email: normalizedEmail,
+        password: hashedPassword,
+        role: isOrganization ? "CREATOR" : "BACKER",
+        isOrganization: Boolean(isOrganization),
+        status: "NORMAL",
+        updatedAt: new Date(),

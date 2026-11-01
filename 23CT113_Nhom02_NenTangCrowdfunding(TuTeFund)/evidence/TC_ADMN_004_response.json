@@ -1,11 +1,19 @@
 {
   "testCaseId": "TC_ADMN_004",
-  "description": "Khóa tài khoản và chặn thao tác",
-  "status": "PASS",
-  "executionTimestamp": "2026-11-01T12:51:10.257Z",
+  "description": "Khóa tài khoản BLOCKED",
+  "status": "FAIL",
+  "executionTimestamp": "2026-11-01T13:27:46.736Z",
   "steps": [
     {
-      "endpoint": "https://test-gamma-azure-65.vercel.app/api/admin/users/85d86f33-6e3b-42f6-9db3-899cc03d39d3/update-status",
+      "endpoint": "https://test-gamma-azure-65.vercel.app/api/auth/register",
+      "method": "POST",
+      "response": {
+        "statusCode": 201,
+        "id": "ddfa4ee5-b13b-432e-8857-8048dcc45f25"
+      }
+    },
+    {
+      "endpoint": "https://test-gamma-azure-65.vercel.app/api/admin/users/ddfa4ee5-b13b-432e-8857-8048dcc45f25/update-status",
       "method": "POST",
       "payload": {
         "status": "BLOCKED"
@@ -18,7 +26,7 @@
       }
     },
     {
-      "endpoint": "https://test-gamma-azure-65.vercel.app/api/admin/users/85d86f33-6e3b-42f6-9db3-899cc03d39d3/update-status",
+      "endpoint": "https://test-gamma-azure-65.vercel.app/api/admin/users/ddfa4ee5-b13b-432e-8857-8048dcc45f25/update-status",
       "method": "POST",
       "payload": {
         "status": "BANNED"
@@ -28,16 +36,16 @@
         "body": {
           "message": "Đã cập nhật trạng thái thành công",
           "users": {
-            "id": "85d86f33-6e3b-42f6-9db3-899cc03d39d3",
-            "name": "ban.qa",
-            "email": "ban.qa.1793537464705@crowdfunding.vn",
+            "id": "ddfa4ee5-b13b-432e-8857-8048dcc45f25",
+            "name": "Block QA",
+            "email": "block.qa.1793539661458@crowdfunding.vn",
             "role": "BACKER",
             "status": "BANNED"
           },
           "user": {
-            "id": "85d86f33-6e3b-42f6-9db3-899cc03d39d3",
-            "name": "ban.qa",
-            "email": "ban.qa.1793537464705@crowdfunding.vn",
+            "id": "ddfa4ee5-b13b-432e-8857-8048dcc45f25",
+            "name": "Block QA",
+            "email": "block.qa.1793539661458@crowdfunding.vn",
             "role": "BACKER",
             "status": "BANNED"
           }
@@ -45,40 +53,15 @@
       }
     },
     {
-      "endpoint": "https://test-gamma-azure-65.vercel.app/api/auth/session",
-      "method": "GET",
-      "response": {
-        "status": "BANNED",
-        "email": "ban.qa.1793537464705@crowdfunding.vn"
-      }
+      "loginAfter": true,
+      "followStatus": 403,
+      "page": "https://test-gamma-azure-65.vercel.app/profile/ddfa4ee5-b13b-432e-8857-8048dcc45f25"
     },
     {
-      "endpoint": "https://test-gamma-azure-65.vercel.app/api/users/41deb2c1-79d3-46d7-989e-36ef071f0237/follow",
-      "method": "POST",
-      "response": {
-        "statusCode": 403,
-        "body": {
-          "error": "Tài khoản này không được theo dõi người dùng.",
-          "code": "PERMISSION_DENIED"
-        }
-      }
-    },
-    {
-      "endpoint": "restore",
-      "method": "POST",
-      "response": {
-        "statusCode": 200,
-        "body": {
-          "id": "85d86f33-6e3b-42f6-9db3-899cc03d39d3",
-          "name": "ban.qa",
-          "email": "ban.qa.1793537464705@crowdfunding.vn",
-          "role": "BACKER",
-          "status": "NORMAL"
-        }
-      }
+      "restore": 200
     }
   ],
-  "verification": "BLOCKED → HTTP 400 Trạng thái không hợp lệ. Chỉ chấp nhận NORMAL, PRO, hoặc BANNED.. BANNED → HTTP 200 status=BANNED. Đăng nhập lại vẫn có session status=BANNED. Follow bị HTTP 403. Trang /banned hiện thông báo khóa. Đã trả NORMAL HTTP 200.",
-  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Đối chiếu body, không nới mã HTTP.",
+  "verification": "User block.qa.1793539661458@crowdfunding.vn. BLOCKED HTTP 400 {\"error\":\"Trạng thái không hợp lệ. Chỉ chấp nhận NORMAL, PRO, hoặc BANNED.\"}. BANNED HTTP 200 status=BANNED. Đăng nhập sau khóa ok=true. Follow HTTP 403. Trang https://test-gamma-azure-65.vercel.app/profile/ddfa4ee5-b13b-432e-8857-8048dcc45f25 TửTế Fund Trang chủ Giới thiệu Khám phá Blog Người dùng VI EN Nâng cấp Creator B Ghi chú... B Chế độ xem Nâng cấp Creator Block QA Tham gia tháng 11 năm 2026 0 người theo dõi · 0 đang theo dõi ID: ddfa4ee5-b13b-432e-8857-8048dcc45f25 Sao ch. Đã trả NORMAL HTTP 200.",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > Kết quả mong đợi",
   "role": "admin"
 }

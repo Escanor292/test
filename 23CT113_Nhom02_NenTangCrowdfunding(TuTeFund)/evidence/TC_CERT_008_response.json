@@ -1,13 +1,38 @@
 {
   "testCaseId": "TC_CERT_008",
-  "status": "PASS",
-  "executionTimestamp": "2026-11-01T13:21:07.149648Z",
+  "description": "Bảng dòng tiền gây quỹ",
+  "status": "FAIL",
+  "executionTimestamp": "2026-11-01T13:27:40.713Z",
   "steps": [
     {
-      "url": "https://test-gamma-azure-65.vercel.app/so",
-      "shot": "evidence/TC_CERT_008.png"
+      "endpoint": "https://test-gamma-azure-65.vercel.app/api/campaigns/sach-giao-duc-vung-cao/accounting",
+      "method": "GET",
+      "response": {
+        "statusCode": 200,
+        "summary": {
+          "gross": 0,
+          "actual": 0,
+          "reversed": 0,
+          "transactionCount": 0
+        },
+        "campaign": {
+          "id": "948e362e-4795-4a83-a7a8-0b897523d72f",
+          "title": "Phát triển bộ sách giáo dục di động cho trẻ em vùng cao",
+          "campaignCode": "CF-20261025-SEED1",
+          "status": "ACTIVE",
+          "goalAmount": 150000000,
+          "currentAmount": 45200000,
+          "historicalClosedTotal": 0,
+          "closedAt": null
+        }
+      }
+    },
+    {
+      "url": "https://test-gamma-azure-65.vercel.app/dashboard/creator/statement/948e362e-4795-4a83-a7a8-0b897523d72f",
+      "text": "TửTế Fund Trang chủ Giới thiệu Khám phá Blog Người dùng VI EN 6 4 Gây quỹ ngay T Quay lại Dashboard Báo cáo giao dịch Xuất CSV In báo cáo BÁO CÁO ĐỐI SOÁT CHIẾN DỊCH Tổng thực tế được tính lại từ các giao dịch chưa bị đảo CHIẾN DỊCH Phát triển bộ sách giáo dục di động cho trẻ em vùng cao MÃ CHIẾN DỊCH CF-20261025-SEED1 MỤC TIÊU 150.000.000 VNĐ ĐÓNG CHIẾN DỊCH Chưa đóng TỔNG KHI KẾT THÚC 0 VNĐ TỔNG THỰC TẾ 0 VNĐ ĐÃ ĐẢO/TRỪ 0 VNĐ GIAO DỊCH HỢP LỆ 0 STT NGƯỜI ỦNG HỘ SẢN PHẨM ĐÓNG GÓP / ACCOUNTING T"
     }
   ],
-  "verification": "Admin vào /so, mã ca Hà Kế toán 4444, mở Ngân hàng. Sổ hiện Vietcombank 0000000001 và các dòng thu 420.000, 290.000, 350.000 cùng khoản chi Phí nền tảng Shopee -18.500.",
-  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > cột Kết quả mong đợi"
+  "verification": "Sao kê /dashboard/creator/statement/948e362e-4795-4a83-a7a8-0b897523d72f HTTP trang có bảng=true, tổng đã nhận=true, chữ giải ngân=false. API accounting HTTP 200 summary={\"gross\":0,\"actual\":0,\"reversed\":0,\"transactionCount\":0}.",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > Kết quả mong đợi",
+  "role": "creator"
 }

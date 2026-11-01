@@ -1,27 +1,92 @@
 {
   "testCaseId": "TC_REWD_008",
-  "description": "Tải lên quà tặng kỹ thuật số",
+  "description": "Quà số và quyền tải sau thanh toán",
   "status": "PASS",
-  "executionTimestamp": "2026-11-01T11:52:09.201Z",
-  "request": {
-    "endpoint": "https://test-gamma-azure-65.vercel.app/api/rewards/5eaa4329-f05b-43dc-8a94-a47c3fb3ea7d/digital-assets",
-    "method": "POST",
-    "authenticated": true,
-    "payload": {
-      "assetUrl": "https://example.com/qa-rerun-ebook.pdf"
-    }
-  },
-  "response": {
-    "statusCode": 201,
-    "location": null,
-    "body": {
-      "asset": {
-        "id": "cmvxrsko800073ww8pzj47xd8",
-        "status": "AVAILABLE"
+  "executionTimestamp": "2026-11-01T13:28:39.481Z",
+  "steps": [
+    {
+      "endpoint": "https://test-gamma-azure-65.vercel.app/api/rewards/dc9484fe-01a5-47cf-b41a-329b3ab54520/toggle",
+      "method": "PATCH",
+      "payload": {
+        "isActive": true
+      }
+    },
+    {
+      "endpoint": "https://test-gamma-azure-65.vercel.app/api/payments",
+      "method": "POST",
+      "payload": {
+        "campaignId": "948e362e-4795-4a83-a7a8-0b897523d72f",
+        "rewardId": "dc9484fe-01a5-47cf-b41a-329b3ab54520",
+        "amount": 50000,
+        "shippingMethod": "DOWNLOAD"
+      },
+      "response": {
+        "statusCode": 200,
+        "body": {
+          "message": "Chuyen khoan vao tai khoan ngan hang trung gian. San giu den ngay dong chien dich roi moi chi ho hoac hoan.",
+          "bucket": "CAMPAIGN",
+          "pledgeId": "80a108d5-7e41-44e8-b371-4caf7e857a80",
+          "paymentUrl": "https://test-navy.vercel.app/thanh-toan/chuyen-khoan?pledge=80a108d5-7e41-44e8-b371-4caf7e857a80",
+          "paymentProvider": "BANK_ESCROW",
+          "transfer": {
+            "bankName": "Vietcombank",
+            "accountNumber": "0123456789",
+            "accountHolder": "CONG TY TUTE FUND",
+            "content": "TUTE 80A108D57E",
+            "amount": 50000
+          },
+          "isPreorder": false,
+          "chargeAmount": 50000,
+          "depositAmount": 0,
+          "remainingAmount": 0
+        }
+      }
+    },
+    {
+      "endpoint": "https://test-gamma-azure-65.vercel.app/api/admin/pledges/80a108d5-7e41-44e8-b371-4caf7e857a80/settle",
+      "method": "POST",
+      "response": {
+        "statusCode": 200,
+        "body": {
+          "ok": true,
+          "docs": {
+            "ok": true,
+            "skipped": "reward-held"
+          }
+        }
+      }
+    },
+    {
+      "endpoint": "https://test-gamma-azure-65.vercel.app/api/purchases/digital",
+      "method": "GET",
+      "response": {
+        "statusCode": 200,
+        "matched": {
+          "pledgeId": "80a108d5-7e41-44e8-b371-4caf7e857a80",
+          "purchasedAt": "2026-11-01T13:28:38.795Z",
+          "quantity": 1,
+          "reward": {
+            "id": "dc9484fe-01a5-47cf-b41a-329b3ab54520",
+            "title": "Goi tai QA 1793539668328",
+            "fulfillmentType": "DOWNLOAD",
+            "productImages": []
+          },
+          "category": "other",
+          "asset": {
+            "id": "cmvxv8oa20008s92i0bzczsce",
+            "assetType": "DOWNLOAD",
+            "assetUrl": "https://example.com/qa-ebook-1793539668616.pdf",
+            "deliveryEmail": "test1@gmail.com",
+            "status": "DELIVERED",
+            "deliveredAt": "2026-11-01T13:28:39.145Z"
+          },
+          "href": "/purchases?item=80a108d5-7e41-44e8-b371-4caf7e857a80",
+          "availability": "READY"
+        }
       }
     }
-  },
-  "verification": "Đã tạo reward_digital_assets cmvxrsko800073ww8pzj47xd8",
-  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Không nới mã HTTP.",
-  "role": "creator"
+  ],
+  "verification": "Tạo asset AVAILABLE, đơn 80a108d5-7e41-44e8-b371-4caf7e857a80 settle ok=true. Kho đồ của backer có quyền tải: READY, status=DELIVERED, url=https://example.com/qa-ebook-1793539668616.pdf.",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > Kết quả mong đợi",
+  "role": "backer"
 }

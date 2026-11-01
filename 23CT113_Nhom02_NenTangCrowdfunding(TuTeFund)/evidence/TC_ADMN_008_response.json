@@ -1,151 +1,169 @@
 {
   "testCaseId": "TC_ADMN_008",
-  "description": "Admin truy vấn báo cáo phân tích hành vi",
-  "status": "PASS",
-  "executionTimestamp": "2026-11-01T08:54:04.549Z",
-  "request": {
-    "endpoint": "https://test-gamma-azure-65.vercel.app/api/admin/analytics/behavior",
-    "method": "GET",
-    "authenticated": true,
-    "headers": {
-      "Content-Type": "none",
-      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
-    },
-    "payload": null
-  },
-  "response": {
-    "statusCode": 200,
-    "headers": {
-      "content-type": "application/json",
-      "date": "Sun, 01 Nov 2026 08:54:05 GMT"
-    },
-    "body": {
-      "days": 7,
-      "enabled": true,
-      "ttlOptions": [
-        30,
-        90,
-        180,
-        365
-      ],
-      "ttlDays": 180,
-      "topPages": [
-        {
-          "path": "/auth/login",
-          "views": 90
-        },
-        {
-          "path": "/",
-          "views": 65
-        },
-        {
-          "path": "/dashboard",
-          "views": 13
-        },
-        {
-          "path": "/campaigns",
-          "views": 12
-        },
-        {
-          "path": "/campaigns/sach-giao-duc-vung-cao",
-          "views": 12
-        },
-        {
-          "path": "/chat",
-          "views": 11
-        },
-        {
-          "path": "/campaigns/album-mam-sang-1792935598155-fa04r",
-          "views": 11
-        },
-        {
-          "path": "/lookup",
-          "views": 7
-        },
-        {
-          "path": "/dashboard/creator",
-          "views": 7
-        },
-        {
-          "path": "/campaigns/bo-loc-nuoc-cho-ban-lang-1792935597160-7x2vf",
-          "views": 6
-        },
-        {
-          "path": "/blog/bai-viet-khong-ton-tai-999",
-          "views": 6
-        },
-        {
-          "path": "/blog",
-          "views": 6
-        },
-        {
-          "path": "/campaigns/chien-dich-khong-ton-tai-999",
-          "views": 6
-        },
-        {
-          "path": "/blog/editor",
-          "views": 5
-        },
-        {
-          "path": "/profile/41deb2c1-79d3-46d7-989e-36ef071f0237",
-          "views": 5
+  "description": "Phân tích lượt xem và tỷ lệ mục tiêu",
+  "status": "FAIL",
+  "executionTimestamp": "2026-11-01T13:27:41.458Z",
+  "steps": [
+    {
+      "endpoint": "https://test-gamma-azure-65.vercel.app/api/admin/analytics/behavior",
+      "method": "GET",
+      "response": {
+        "statusCode": 200,
+        "body": {
+          "days": 7,
+          "enabled": true,
+          "ttlOptions": [
+            30,
+            90,
+            180,
+            365
+          ],
+          "ttlDays": 180,
+          "topPages": [
+            {
+              "path": "/auth/login",
+              "views": 105
+            },
+            {
+              "path": "/",
+              "views": 75
+            },
+            {
+              "path": "/campaigns/sach-giao-duc-vung-cao",
+              "views": 16
+            },
+            {
+              "path": "/dashboard/creator",
+              "views": 13
+            },
+            {
+              "path": "/chat",
+              "views": 12
+            },
+            {
+              "path": "/dashboard",
+              "views": 12
+            },
+            {
+              "path": "/campaigns/album-mam-sang-1792935598155-fa04r",
+              "views": 11
+            },
+            {
+              "path": "/campaigns",
+              "views": 11
+            },
+            {
+              "path": "/lookup",
+              "views": 8
+            },
+            {
+              "path": "/campaigns/chien-dich-khong-ton-tai-999",
+              "views": 8
+            },
+            {
+              "path": "/blog/bai-viet-khong-ton-tai-999",
+              "views": 8
+            },
+            {
+              "path": "/dashboard/creator/rewards/qa-pledge-active-1793534038977",
+              "views": 7
+            },
+            {
+              "path": "/blog",
+              "views": 7
+            },
+            {
+              "path": "/blog/editor",
+              "views": 7
+            },
+            {
+              "path": "/campaigns/bo-loc-nuoc-cho-ban-lang-1792935597160-7x2vf",
+              "views": 6
+            }
+          ],
+          "longestDwell": [],
+          "topCtas": [],
+          "daily": [
+            {
+              "date": "2026-10-25",
+              "pageViews": 58,
+              "pageLeaves": 155,
+              "ctaClicks": 3
+            },
+            {
+              "date": "2026-10-26",
+              "pageViews": 11,
+              "pageLeaves": 18,
+              "ctaClicks": 0
+            },
+            {
+              "date": "2026-10-27",
+              "pageViews": 0,
+              "pageLeaves": 1,
+              "ctaClicks": 0
+            },
+            {
+              "date": "2026-10-28",
+              "pageViews": 40,
+              "pageLeaves": 62,
+              "ctaClicks": 0
+            },
+            {
+              "date": "2026-10-29",
+              "pageViews": 24,
+              "pageLeaves": 36,
+              "ctaClicks": 0
+            },
+            {
+              "date": "2026-10-30",
+              "pageViews": 24,
+              "pageLeaves": 38,
+              "ctaClicks": 0
+            },
+            {
+              "date": "2026-11-01",
+              "pageViews": 239,
+              "pageLeaves": 375,
+              "ctaClicks": 0
+            }
+          ],
+          "totals": {
+            "pageViews": 396,
+            "pageLeaves": 685,
+            "ctaClicks": 3
+          }
         }
-      ],
-      "longestDwell": [],
-      "topCtas": [],
-      "daily": [
-        {
-          "date": "2026-10-25",
-          "pageViews": 73,
-          "pageLeaves": 196,
-          "ctaClicks": 3
-        },
-        {
-          "date": "2026-10-26",
-          "pageViews": 11,
-          "pageLeaves": 18,
-          "ctaClicks": 0
-        },
-        {
-          "date": "2026-10-27",
-          "pageViews": 0,
-          "pageLeaves": 1,
-          "ctaClicks": 0
-        },
-        {
-          "date": "2026-10-28",
-          "pageViews": 40,
-          "pageLeaves": 62,
-          "ctaClicks": 0
-        },
-        {
-          "date": "2026-10-29",
-          "pageViews": 24,
-          "pageLeaves": 36,
-          "ctaClicks": 0
-        },
-        {
-          "date": "2026-10-30",
-          "pageViews": 24,
-          "pageLeaves": 38,
-          "ctaClicks": 0
-        },
-        {
-          "date": "2026-11-01",
-          "pageViews": 147,
-          "pageLeaves": 242,
-          "ctaClicks": 0
-        }
-      ],
-      "totals": {
-        "pageViews": 319,
-        "pageLeaves": 593,
-        "ctaClicks": 3
+      }
+    },
+    {
+      "endpoint": "https://test-gamma-azure-65.vercel.app/api/campaigns?status=ACTIVE&limit=5",
+      "method": "GET",
+      "response": {
+        "statusCode": 200,
+        "sample": [
+          {
+            "title": "QA pledge active 1793534038977",
+            "goalAmount": 5000000,
+            "currentAmount": 50000,
+            "progressPercent": 1
+          },
+          {
+            "title": "QA pledge min 1793533992164",
+            "goalAmount": 5000000,
+            "currentAmount": 0,
+            "progressPercent": 0
+          },
+          {
+            "title": "QA gui duyet 1793533927378",
+            "goalAmount": 5000000,
+            "currentAmount": 0,
+            "progressPercent": 0
+          }
+        ]
       }
     }
-  },
-  "verification": "HTTP 200 | tieu chi Excel [200] -> KHOP",
-  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
-  "role": "admin",
-  "attempts": 1
+  ],
+  "verification": "GET /api/admin/analytics/behavior HTTP 200. Có lượt xem=true. Có tỷ lệ hoàn thành mục tiêu=false. Khóa body: days, enabled, ttlOptions, ttlDays, topPages, longestDwell, topCtas, daily, totals. Tỷ lệ mục tiêu chỉ có ở /api/campaigns, ví dụ [{\"title\":\"QA pledge active 1793534038977\",\"goalAmount\":5000000,\"currentAmount\":50000,\"progressPercent\":1},{\"title\":\"QA pledge min 1793533992164\",\"goalAmount\":5000000,\"currentAmount\":0,\"progressPercent\":0},{\"title\":\"QA gui duyet 1793533927378\",\"goalAmount\":5000000,\"currentAmount\":0,\"progressPercent\":0}].",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > Kết quả mong đợi",
+  "role": "admin"
 }

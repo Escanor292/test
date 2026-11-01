@@ -1,45 +1,38 @@
 {
   "testCaseId": "TC_AUTH_008",
-  "description": "Đăng ký thành công tài khoản Backer",
+  "description": "Đăng ký Backer và băm bcrypt",
   "status": "PASS",
-  "executionTimestamp": "2026-11-01T08:53:57.699Z",
-  "request": {
-    "endpoint": "https://test-gamma-azure-65.vercel.app/api/auth/register",
-    "method": "POST",
-    "authenticated": false,
-    "headers": {
-      "Content-Type": "application/json",
-      "Cookie": "none"
+  "executionTimestamp": "2026-11-01T13:27:48.056Z",
+  "steps": [
+    {
+      "endpoint": "https://test-gamma-azure-65.vercel.app/api/auth/register",
+      "method": "POST",
+      "response": {
+        "statusCode": 201,
+        "body": {
+          "success": true,
+          "message": "Đăng ký tài khoản thành công",
+          "user": {
+            "id": "4893c73e-63cf-4813-b600-ecb3670a7d17",
+            "name": "Bcrypt QA",
+            "email": "bcrypt.qa.1793539666743@crowdfunding.vn",
+            "role": "BACKER",
+            "isOrganization": false,
+            "createdAt": "2026-11-01T13:27:47.125Z"
+          }
+        }
+      }
     },
-    "payload": {
-      "name": "Real Backer QA",
-      "email": "backer.qa.1793523236725@crowdfunding.vn",
-      "password": "ValidPassword@123",
-      "confirmPassword": "ValidPassword@123",
-      "acceptTerms": true
-    }
-  },
-  "response": {
-    "statusCode": 201,
-    "headers": {
-      "content-type": "application/json",
-      "date": "Sun, 01 Nov 2026 08:53:58 GMT"
-    },
-    "body": {
-      "success": true,
-      "message": "Đăng ký tài khoản thành công",
-      "user": {
-        "id": "41deecc1-e254-4ee3-a30e-5d6df5208f61",
-        "name": "Real Backer QA",
-        "email": "backer.qa.1793523236725@crowdfunding.vn",
-        "role": "BACKER",
-        "isOrganization": false,
-        "createdAt": "2026-11-01T08:53:58.573Z"
+    {
+      "endpoint": "https://test-gamma-azure-65.vercel.app/api/auth/callback/credentials",
+      "method": "POST",
+      "response": {
+        "session": true,
+        "role": "BACKER"
       }
     }
-  },
-  "verification": "HTTP 201 | tieu chi Excel [200,201] -> KHOP",
-  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
-  "role": "guest",
-  "attempts": 1
+  ],
+  "verification": "Đăng ký HTTP 201 role=BACKER. Đăng nhập lại ok=true. Response không trả password=true. Route register băm bcrypt.genSalt(10) rồi bcrypt.hash trước khi ghi users=true.",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > Kết quả mong đợi",
+  "role": "guest"
 }
