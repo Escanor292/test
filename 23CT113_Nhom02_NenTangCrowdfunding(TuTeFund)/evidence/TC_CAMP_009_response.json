@@ -1,0 +1,22 @@
+{
+  "testCaseId": "TC_CAMP_009",
+  "description": "Chi tiết chiến dịch sach-giao-duc-vung-cao",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T11:53:19.061Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/campaigns/sach-giao-duc-vung-cao",
+    "method": "GET"
+  },
+  "response": {
+    "statusCode": 200,
+    "location": null,
+    "body": {
+      "title": "Phát triển bộ sách giáo dục di động cho trẻ em vùng cao",
+      "goalAmount": 150000000,
+      "currentAmount": 45200000
+    }
+  },
+  "verification": "Đúng 150.000.000 / 45.200.000",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Không nới mã HTTP.",
+  "role": "guest"
+}

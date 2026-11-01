@@ -1,32 +1,48 @@
 {
   "testCaseId": "TC_BLOG_010",
-  "description": "Admin phê duyệt xuất bản bài viết blog",
+  "description": "Admin phê duyệt xuất bản bài viết",
   "status": "PASS",
-  "executionTimestamp": "2026-11-01T08:54:04.008Z",
+  "executionTimestamp": "2026-11-01T11:52:12.383Z",
   "request": {
-    "endpoint": "https://test-gamma-azure-65.vercel.app/api/admin/blog/posts/test-post-id/review",
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/admin/blog/posts/307e2ea0-ea7e-44bb-ab31-061842d5cf0b/review",
     "method": "PATCH",
     "authenticated": true,
-    "headers": {
-      "Content-Type": "application/json",
-      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
-    },
     "payload": {
-      "status": "PUBLISHED"
+      "status": "PUBLISHED",
+      "id": "307e2ea0-ea7e-44bb-ab31-061842d5cf0b"
     }
   },
   "response": {
-    "statusCode": 404,
-    "headers": {
-      "content-type": "application/json",
-      "date": "Sun, 01 Nov 2026 08:54:04 GMT"
-    },
+    "statusCode": 200,
+    "location": null,
     "body": {
-      "error": "Post not found"
+      "id": "307e2ea0-ea7e-44bb-ab31-061842d5cf0b",
+      "authorId": "41deb2c1-79d3-46d7-989e-36ef071f0237",
+      "campaignId": null,
+      "projectId": null,
+      "mongoContentId": null,
+      "title": "QA xuat ban 1793533931645",
+      "slug": "qa-xuat-ban-1793533931645",
+      "excerpt": null,
+      "coverImage": null,
+      "status": "PUBLISHED",
+      "type": "PLATFORM",
+      "visibility": "PUBLIC",
+      "publishedAt": "2026-11-01T11:52:12.304Z",
+      "createdAt": "2026-11-01T11:52:11.886Z",
+      "updatedAt": "2026-11-01T11:52:12.315Z",
+      "deletedAt": null,
+      "viewCount": 0,
+      "likeCount": 0,
+      "commentCount": 0,
+      "bookmarkCount": 0,
+      "isFeatured": false,
+      "wordCount": 9,
+      "readingTimeMinutes": 1,
+      "content": "<p>Bai viet nhap de kiem thu duyet xuat ban.</p>"
     }
   },
-  "verification": "HTTP 404 | tieu chi Excel [200,404] -> KHOP",
-  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
-  "role": "admin",
-  "attempts": 1
+  "verification": "Bài 307e2ea0-ea7e-44bb-ab31-061842d5cf0b status=PUBLISHED",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Không nới mã HTTP.",
+  "role": "admin"
 }

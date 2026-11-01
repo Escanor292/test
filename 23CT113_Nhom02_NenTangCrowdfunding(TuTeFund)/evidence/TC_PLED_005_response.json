@@ -1,34 +1,25 @@
 {
   "testCaseId": "TC_PLED_005",
-  "description": "Cổng VNPay trả HTTP 410 ESCROW_BANK_ONLY (FAIL theo spec ví)",
-  "status": "PASS",
-  "executionTimestamp": "2026-11-01T08:54:01.284Z",
+  "description": "Cổng VNPay",
+  "status": "FAIL",
+  "executionTimestamp": "2026-11-01T11:52:11.644Z",
   "request": {
     "endpoint": "https://test-gamma-azure-65.vercel.app/api/payment/vnpay/create",
     "method": "POST",
     "authenticated": false,
-    "headers": {
-      "Content-Type": "application/json",
-      "Cookie": "none"
-    },
     "payload": {
-      "amount": 50000,
-      "campaignId": "test"
+      "amount": 50000
     }
   },
   "response": {
     "statusCode": 410,
-    "headers": {
-      "content-type": "application/json",
-      "date": "Sun, 01 Nov 2026 08:54:02 GMT"
-    },
+    "location": null,
     "body": {
       "error": "Cổng thanh toán này đã tắt. Tử Tế Fund dùng tài khoản ngân hàng trung gian; creator không liên kết PayOS/MoMo/VNPay/SePay.",
       "code": "ESCROW_BANK_ONLY"
     }
   },
-  "verification": "HTTP 410 | tieu chi Excel [410] -> KHOP",
-  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
-  "role": "guest",
-  "attempts": 1
+  "verification": "Kỳ vọng tạo phiên VNPay. Thực tế HTTP 410 {\"error\":\"Cổng thanh toán này đã tắt. Tử Tế Fund dùng tài khoản ngân hàng trung gian; creator không liên kết PayOS/MoMo/VNPay/SePay.\",\"code\":\"ESCROW_BANK_ONLY\"}",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Không nới mã HTTP.",
+  "role": "guest"
 }

@@ -2,30 +2,23 @@
   "testCaseId": "TC_AUTH_003",
   "description": "Từ chối đăng nhập sai mật khẩu",
   "status": "PASS",
-  "executionTimestamp": "2026-11-01T08:53:57.060Z",
+  "executionTimestamp": "2026-11-01T11:52:04.649Z",
   "request": {
     "endpoint": "https://test-gamma-azure-65.vercel.app/api/auth/callback/credentials",
     "method": "POST",
     "authenticated": false,
-    "headers": {
-      "Content-Type": "application/json",
-      "Cookie": "none"
-    },
     "payload": {
-      "csrfToken": "playwright-real-csrf",
       "email": "admin@crowdfunding.vn",
-      "password": "WrongPassword@999"
+      "password": "WrongPassword@999",
+      "csrfToken": "[REAL]"
     }
   },
   "response": {
     "statusCode": 302,
-    "headers": {
-      "date": "Sun, 01 Nov 2026 08:53:57 GMT"
-    },
+    "location": "https://test-navy.vercel.app/auth/login?error=CredentialsSignin&code=credentials",
     "body": null
   },
-  "verification": "HTTP 302 | tieu chi Excel [200,302,401] -> KHOP",
-  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
-  "role": "guest",
-  "attempts": 1
+  "verification": "Sai mật khẩu không cấp session. Redirect/body có CredentialsSignin. HTTP 302",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Không nới mã HTTP.",
+  "role": "guest"
 }

@@ -1,32 +1,28 @@
 {
   "testCaseId": "TC_CAMP_012",
   "description": "Từ chối hủy chiến dịch khi đã có pledge",
-  "status": "PASS",
-  "executionTimestamp": "2026-11-01T08:53:59.854Z",
+  "status": "FAIL",
+  "executionTimestamp": "2026-11-01T11:52:11.051Z",
   "request": {
-    "endpoint": "https://test-gamma-azure-65.vercel.app/api/campaigns/sach-giao-duc-vung-cao/cancel",
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/campaigns/ddd2cfab-2589-4dac-802e-496551b316c5/cancel",
     "method": "POST",
     "authenticated": true,
-    "headers": {
-      "Content-Type": "application/json",
-      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
-    },
     "payload": {
-      "reason": "Huy chien dich"
+      "campaignId": "ddd2cfab-2589-4dac-802e-496551b316c5",
+      "pledge": "5bc25f81-f633-458f-b30d-872554f17f24"
     }
   },
   "response": {
-    "statusCode": 404,
-    "headers": {
-      "content-type": "application/json",
-      "date": "Sun, 01 Nov 2026 08:54:00 GMT"
-    },
+    "statusCode": 200,
+    "location": null,
     "body": {
-      "error": "Du an khong ton tai"
+      "success": true,
+      "message": "Du an da duoc huy. Da xu ly hoan so cho 0/0 giao dich.",
+      "refundedCount": 0,
+      "note": "Sổ sách. Chi hoàn ngân hàng làm tay vì chưa có NH trung gian."
     }
   },
-  "verification": "HTTP 404 | tieu chi Excel [400,404] -> KHOP",
-  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
-  "role": "admin",
-  "attempts": 1
+  "verification": "Kỳ vọng từ chối hủy khi đã có pledge. Thực tế HTTP 200 {\"success\":true,\"message\":\"Du an da duoc huy. Da xu ly hoan so cho 0/0 giao dich.\",\"refundedCount\":0,\"note\":\"Sổ sách. Chi hoàn ngân hàng làm tay vì chưa có NH trung gian.\"}",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Không nới mã HTTP.",
+  "role": "creator"
 }

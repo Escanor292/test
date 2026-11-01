@@ -1,33 +1,25 @@
 {
   "testCaseId": "TC_COMM_003",
-  "description": "Từ chối góp ý quá ngắn",
-  "status": "PASS",
-  "executionTimestamp": "2026-11-01T08:54:02.297Z",
+  "description": "Chặn góp ý quá ngắn trên giao diện",
+  "status": "FAIL",
+  "executionTimestamp": "2026-11-01T11:53:25.067Z",
   "request": {
-    "endpoint": "https://test-gamma-azure-65.vercel.app/api/feedback",
-    "method": "POST",
-    "authenticated": true,
-    "headers": {
-      "Content-Type": "application/json",
-      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
-    },
+    "endpoint": "https://test-gamma-azure-65.vercel.app/gop-y",
+    "method": "UI",
     "payload": {
-      "message": "ngan",
-      "pageUrl": "/campaigns"
+      "message": "ngan"
     }
   },
   "response": {
     "statusCode": 400,
-    "headers": {
-      "content-type": "application/json",
-      "date": "Sun, 01 Nov 2026 08:54:03 GMT"
-    },
+    "location": null,
     "body": {
-      "error": "Góp ý cần ít nhất 10 ký tự"
+      "uiBlocked": false,
+      "requestFired": true,
+      "url": "https://test-gamma-azure-65.vercel.app/gop-y"
     }
   },
-  "verification": "HTTP 400 | tieu chi Excel [400,401] -> KHOP",
-  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
-  "role": "admin",
-  "attempts": 1
+  "verification": "UI không chặn trước khi gọi API. disabled=false requestFired=true",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Không nới mã HTTP.",
+  "role": "backer"
 }

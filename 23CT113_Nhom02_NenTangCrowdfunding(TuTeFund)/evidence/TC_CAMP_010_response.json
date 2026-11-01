@@ -1,0 +1,18 @@
+{
+  "testCaseId": "TC_CAMP_010",
+  "description": "Trang 404 chiến dịch không tồn tại",
+  "status": "FAIL",
+  "executionTimestamp": "2026-11-01T11:53:21.271Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/campaigns/chien-dich-khong-ton-tai-999",
+    "method": "GET"
+  },
+  "response": {
+    "statusCode": 200,
+    "location": null,
+    "body": "TửTế Fund\nTrang chủ\nGiới thiệu\nKhám phá\nBlog\nNgười dùng\nVI\nEN\nĐăng nhập\nGây quỹ ngay\n404\nThis page could not be found.\nTửTế Fund\n\nLấy sự tử tế trồng tương lai. Nền tảng gây quỹ cộng đồng minh bạch #2 Việt Nam.\n\nKhám phá\nChiến dịch\nGiới thiệu\nTra cứu\nHỗ trợ\nHướng dẫn Creator\nNâng cấp Creator\nĐiều kho"
+  },
+  "verification": "HTTP 200 TửTế Fund\nTrang chủ\nGiới thiệu\nKhám phá\nBlog\nNgười dùng\nVI\nEN\nĐăng nhập\nGây quỹ ngay\n404\nThis page could not be found.\nTửTế Fund\n\nLấy sự tử tế trồng tương lai. ",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Không nới mã HTTP.",
+  "role": "guest"
+}

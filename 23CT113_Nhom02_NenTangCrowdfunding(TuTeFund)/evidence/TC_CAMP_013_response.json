@@ -2,31 +2,28 @@
   "testCaseId": "TC_CAMP_013",
   "description": "Admin duyệt chiến dịch sang ACTIVE",
   "status": "PASS",
-  "executionTimestamp": "2026-11-01T08:53:59.947Z",
+  "executionTimestamp": "2026-11-01T11:52:08.339Z",
   "request": {
-    "endpoint": "https://test-gamma-azure-65.vercel.app/api/admin/campaigns/b5bca5b6-07d7-4ff0-948a-d646aaee85c1/review",
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/admin/campaigns/e70b2e51-d577-4de9-9252-97cb4a9cdf65/review",
     "method": "PATCH",
     "authenticated": true,
-    "headers": {
-      "Content-Type": "application/json",
-      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
-    },
     "payload": {
       "status": "ACTIVE"
     }
   },
   "response": {
-    "statusCode": 409,
-    "headers": {
-      "content-type": "application/json",
-      "date": "Sun, 01 Nov 2026 08:54:00 GMT"
-    },
+    "statusCode": 200,
+    "location": null,
     "body": {
-      "error": "Chỉ chiến dịch đang chờ duyệt mới có thể được xử lý"
+      "campaign": {
+        "id": "e70b2e51-d577-4de9-9252-97cb4a9cdf65",
+        "title": "QA gui duyet 1793533927378",
+        "status": "ACTIVE",
+        "updatedAt": "2026-11-01T11:52:08.274Z"
+      }
     }
   },
-  "verification": "HTTP 409 | tieu chi Excel [200,201,409] -> KHOP",
-  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
-  "role": "admin",
-  "attempts": 1
+  "verification": "Chiến dịch e70b2e51-d577-4de9-9252-97cb4a9cdf65 chuyển ACTIVE",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Không nới mã HTTP.",
+  "role": "admin"
 }

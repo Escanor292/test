@@ -17,14 +17,16 @@ if (!fs.existsSync(EVIDENCE_DIR)) {
   fs.mkdirSync(EVIDENCE_DIR, { recursive: true });
 }
 
-// Clean old files in evidence to start completely fresh
-const oldFiles = fs.readdirSync(EVIDENCE_DIR);
-for (const f of oldFiles) {
-  if (f !== '.gitkeep') {
-    fs.unlinkSync(path.join(EVIDENCE_DIR, f));
+// Không xóa evidence có sẵn. Muốn chạy lại từ đầu: FRESH_EVIDENCE=1
+if (process.env.FRESH_EVIDENCE === '1') {
+  const oldFiles = fs.readdirSync(EVIDENCE_DIR);
+  for (const f of oldFiles) {
+    if (f !== '.gitkeep') fs.unlinkSync(path.join(EVIDENCE_DIR, f));
   }
+  console.log(`Cleaned ${oldFiles.length} old evidence files.`);
+} else {
+  console.log('Giữ evidence hiện có. Các ca đã chấm lại nằm trong scripts/rerun_false_passes.mjs.');
 }
-console.log(`Cleaned ${oldFiles.length} old evidence files.`);
 
 // Helper to make real HTTPS requests
 function realHttpRequest(urlPath, options = {}, payload = null, cookies = []) {
@@ -1033,7 +1035,7 @@ Target: src/lib/password-reset.ts
 Assertion: PASSWORD_RESET_TTL_MS === 1800000 ms (30 minutes)
 Actual Evaluated Value: ${ttlVal} ms (${ttlVal / 60000} minutes)
 Assertion Result: ${tcAuth010Passed ? 'PASSED' : 'FAILED'}
-Test Status: PASS
+Test Status: ${tcAuth010Passed ? 'PASS' : 'FAIL'}
 `;
   fs.writeFileSync(path.join(EVIDENCE_DIR, 'TC_AUTH_010_test.log'), tcAuth010Log, 'utf-8');
 
@@ -1069,7 +1071,7 @@ Target: src/hooks/useCall.ts
 Assertion: CALL_TIMEOUT_MS === 45000 ms (45 seconds call timeout)
 Actual Evaluated Value: ${timeoutVal} ms
 Assertion Result: ${tcChat004Passed ? 'PASSED' : 'FAILED'}
-Test Status: PASS
+Test Status: ${tcChat004Passed ? 'PASS' : 'FAIL'}
 `;
   fs.writeFileSync(path.join(EVIDENCE_DIR, 'TC_CHAT_004_test.log'), tcChat004Log, 'utf-8');
 

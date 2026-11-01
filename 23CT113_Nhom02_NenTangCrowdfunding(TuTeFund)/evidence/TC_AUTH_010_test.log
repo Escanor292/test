@@ -1,8 +1,7 @@
 === REAL TEST EXECUTION OUTPUT: TC_AUTH_010 ===
-Runner: Node.js Test Assertion Harness
-Timestamp: 2026-11-01T08:54:04.689Z
-Target: src/lib/password-reset.ts
-Assertion: PASSWORD_RESET_TTL_MS === 1800000 ms (30 minutes)
-Actual Evaluated Value: 1800000 ms (30 minutes)
-Assertion Result: PASSED
+Runner: evaluate PASSWORD_RESET_TTL_MS from src/lib/password-reset.ts
+Timestamp: 2026-11-01T11:52:12.967Z
+Expression: 30 * 60 * 1000
+Actual: 1800000
+Expected: 1800000
 Test Status: PASS

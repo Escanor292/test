@@ -2,31 +2,43 @@
   "testCaseId": "TC_CHAT_005",
   "description": "Gửi tín hiệu cuộc gọi thoại call-signal",
   "status": "PASS",
-  "executionTimestamp": "2026-11-01T08:54:04.191Z",
+  "executionTimestamp": "2026-11-01T11:52:12.967Z",
   "request": {
-    "endpoint": "https://test-gamma-azure-65.vercel.app/api/chat/messages",
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/chat/conversations/cmvxrsnct000h3ww8qwj801dv/messages",
     "method": "POST",
     "authenticated": true,
-    "headers": {
-      "Content-Type": "application/json",
-      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
-    },
     "payload": {
-      "conversationId": "conv-123",
-      "type": "call-signal",
-      "content": "START_CALL"
+      "type": "call-signal"
     }
   },
   "response": {
-    "statusCode": 404,
-    "headers": {
-      "content-type": "text/html; charset=utf-8",
-      "date": "Sun, 01 Nov 2026 08:54:05 GMT"
-    },
-    "body": "<!DOCTYPE html><!--Lih_KBsFA9lZNfCh2xCiW--><html lang=\"vi\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\"/><link rel=\"preload\" href=\"/_next/static/media/0c7826ffb3acea36-s.p.woff2\" as=\"font\" crossorigin=\"\" type=\"font/woff2\"/><link rel=\"preload\" href=\"/_next/static/media/4ead58c4dcc3f285-s.p.woff2\" as=\"font\" crossorigin=\"\" type=\"font/woff2\"/><link rel=\"preload\" href=\"/_next/static/media/692df4da22e71021-s.p.woff2\" as=\"font\" crossorigin=\"\" type=\"font/woff2\"/><link rel=\"preload\" href=\"/_next/static/media/6a9c36ea9dc9b36b-s.p.woff2\" as=\"font\" crossorigin=\"\" type=\"font/woff2\"/><link rel=\"preload\" href=\"/_next/static/media/eaead17c7dbfcd5d-s.p.woff2\" as=\"font\" crossorigin=\"\" type=\"font/woff2\"/><link rel=\"preload\" href=\"/_next/static/media/ee40bb094c99a29a-s.p.woff2\" as=\"font\" crossorigin=\"\" type=\"font/woff2\"/><link rel=\"stylesheet\" href=\"/_next/static/css/ee3cdf3ba91a9e06.css\" data-precedence=\"next\"/><link rel=\"stylesheet\""
+    "statusCode": 200,
+    "location": null,
+    "body": {
+      "message": {
+        "id": "cmvxrsnkm000j3ww8k56b52l8",
+        "conversationId": "cmvxrsnct000h3ww8qwj801dv",
+        "senderId": "3d6f4392-04ef-4fd0-aa44-35886060df5e",
+        "senderName": "Test Backer",
+        "senderAvatar": null,
+        "text": "{\"type\":\"offer\",\"sdp\":\"qa-rerun\"}",
+        "type": "call-signal",
+        "attachments": [],
+        "readBy": [
+          "3d6f4392-04ef-4fd0-aa44-35886060df5e"
+        ],
+        "isDeleted": false,
+        "sensitive": false,
+        "revealedBy": [],
+        "createdAt": "2026-11-01T11:52:12.887Z",
+        "updatedAt": "2026-11-01T11:52:12.887Z",
+        "message_reactions": [],
+        "_id": "cmvxrsnkm000j3ww8k56b52l8",
+        "reactions": []
+      }
+    }
   },
-  "verification": "HTTP 404 | tieu chi Excel [200,404] -> KHOP",
-  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
-  "role": "admin",
-  "attempts": 1
+  "verification": "Đã tạo message cmvxrsnkm000j3ww8k56b52l8 type=call-signal trong hội thoại cmvxrsnct000h3ww8qwj801dv",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Không nới mã HTTP.",
+  "role": "backer"
 }
