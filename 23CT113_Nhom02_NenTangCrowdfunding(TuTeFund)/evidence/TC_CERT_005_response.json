@@ -1,30 +1,19 @@
 {
   "testCaseId": "TC_CERT_005",
-  "description": "Chứng nhận đóng góp không tồn tại",
-  "status": "PASS",
-  "executionTimestamp": "2026-11-01T08:54:01.938Z",
+  "description": "/chung-tu/CT-INVALID-999",
+  "status": "FAIL",
+  "executionTimestamp": "2026-11-01T12:24:46.008Z",
   "request": {
-    "endpoint": "https://test-gamma-azure-65.vercel.app/api/lookup?code=CT-INVALID-999",
+    "endpoint": "https://test-gamma-azure-65.vercel.app/chung-tu/CT-INVALID-999",
     "method": "GET",
     "authenticated": false,
-    "headers": {
-      "Content-Type": "none",
-      "Cookie": "none"
-    },
     "payload": null
   },
   "response": {
-    "statusCode": 404,
-    "headers": {
-      "content-type": "application/json",
-      "date": "Sun, 01 Nov 2026 08:54:02 GMT"
-    },
-    "body": {
-      "error": "Khong tim thay giao dich nao voi ma nay"
-    }
+    "statusCode": 200,
+    "body": "TửTế Fund Trang chủ Giới thiệu Khám phá Blog Người dùng VI EN Đăng nhập Gây quỹ ngay 404 This page could not be found. TửTế Fund Lấy sự tử tế trồng tương lai. Nền tảng gây quỹ cộng đồng minh bạch #2 Việt Nam. Khám phá Chiến dịch Giới thiệu Tra cứu Hỗ trợ Hướng dẫn Creator Nâng cấ"
   },
-  "verification": "HTTP 404 | tieu chi Excel [404] -> KHOP",
-  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
+  "verification": "GET /chung-tu/CT-INVALID-999 trả HTTP 200, không phải 404. TửTế Fund Trang chủ Giới thiệu Khám phá Blog Người dùng VI EN Đăng nhập Gây quỹ ngay 404 This page could not be found. TửTế Fund Lấy sự tử tế trồng tương lai. Nền tảng gây quỹ cộng đồng minh bạch #2 Việt Nam. Khám phá Chiến dịch Giới thiệu Tra cứu Hỗ trợ Hướng dẫn Creator Nâng cấ",
   "role": "guest",
-  "attempts": 1
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Không nới mã HTTP."
 }

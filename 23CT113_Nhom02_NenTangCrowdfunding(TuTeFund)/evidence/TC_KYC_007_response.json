@@ -1,28 +1,35 @@
 {
   "testCaseId": "TC_KYC_007",
-  "description": "Truy vấn trạng thái KYC thành công với session",
+  "description": "Truy vấn trạng thái KYC",
   "status": "PASS",
-  "executionTimestamp": "2026-11-01T08:53:58.520Z",
+  "executionTimestamp": "2026-11-01T12:23:53.535Z",
   "request": {
     "endpoint": "https://test-gamma-azure-65.vercel.app/api/kyc/status",
     "method": "GET",
     "authenticated": true,
-    "headers": {
-      "Content-Type": "none",
-      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
-    },
-    "payload": null
+    "payload": {
+      "email": "KYC Status QA.1793535831681@crowdfunding.vn"
+    }
   },
   "response": {
     "statusCode": 200,
-    "headers": {
-      "content-type": "application/json",
-      "date": "Sun, 01 Nov 2026 08:53:59 GMT"
-    },
+    "location": null,
     "body": {
       "ekycEnabled": true,
       "kycMode": "EKYC",
-      "kyc": null,
+      "kyc": {
+        "status": "PENDING",
+        "fullName": "KYC Status QA",
+        "idCardType": "CCCD",
+        "verifiedAt": null,
+        "riskLevel": "LOW",
+        "rejectedReason": null,
+        "method": "MANUAL",
+        "provider": null,
+        "faceMatchScore": null,
+        "livenessPassed": null,
+        "ocrEdited": null
+      },
       "limit": {
         "maxPerTransaction": 20000000,
         "maxPerDay": 50000000,
@@ -30,8 +37,7 @@
       }
     }
   },
-  "verification": "HTTP 200 | tieu chi Excel [200] -> KHOP",
-  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
-  "role": "admin",
-  "attempts": 1
+  "verification": "HTTP 200, kyc.status=PENDING, tài khoản KYC Status QA.1793535831681@crowdfunding.vn.",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Không nới mã HTTP.",
+  "role": "BACKER"
 }

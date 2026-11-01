@@ -1,35 +1,32 @@
 {
   "testCaseId": "TC_KYC_006",
-  "description": "Từ chối hồ sơ tổ chức thiếu mã số thuế",
+  "description": "Từ chối hồ sơ tổ chức khi thiếu MST và ĐKKD",
   "status": "PASS",
-  "executionTimestamp": "2026-11-01T08:53:58.416Z",
+  "executionTimestamp": "2026-11-01T12:23:50.837Z",
   "request": {
     "endpoint": "https://test-gamma-azure-65.vercel.app/api/user/upgrade-creator",
     "method": "POST",
     "authenticated": true,
-    "headers": {
-      "Content-Type": "application/json",
-      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
-    },
     "payload": {
-      "type": "ORGANIZATION",
-      "organizationName": "To Chuc Thien Nguyen QA",
+      "type": "organization",
+      "fullName": "Nguyen Thi To Chuc",
+      "idCardNumber": "079123456789",
+      "idCardFrontImage": "https://placehold.co/600x400.png?text=QA-FRONT",
+      "idCardBackImage": "https://placehold.co/600x400.png?text=QA-BACK",
+      "companyName": "To Chuc Thien Nguyen QA",
       "taxCode": "",
-      "businessLicenseImage": ""
+      "businessLicense": "",
+      "email": "KYC To Chuc QA.1793535829224@crowdfunding.vn"
     }
   },
   "response": {
     "statusCode": 400,
-    "headers": {
-      "content-type": "application/json",
-      "date": "Sun, 01 Nov 2026 08:53:59 GMT"
-    },
+    "location": null,
     "body": {
-      "error": "Thieu ho ten hoac so giay to"
+      "error": "Doanh nghiep can MST hoac giay DKKD"
     }
   },
-  "verification": "HTTP 400 | tieu chi Excel [400] -> KHOP",
-  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
-  "role": "backer",
-  "attempts": 1
+  "verification": "HTTP 400 đúng câu \"Doanh nghiep can MST hoac giay DKKD\". Đã có họ tên, số giấy tờ và ảnh CCCD. Tài khoản KYC To Chuc QA.1793535829224@crowdfunding.vn.",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Không nới mã HTTP.",
+  "role": "backer"
 }

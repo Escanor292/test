@@ -1,36 +1,33 @@
 {
   "testCaseId": "TC_CAMP_004",
-  "description": "Từ chối tạo chiến dịch để trống tiêu đề",
+  "description": "Từ chối tạo chiến dịch khi để trống tiêu đề",
   "status": "PASS",
-  "executionTimestamp": "2026-11-01T08:53:59.287Z",
+  "executionTimestamp": "2026-11-01T12:23:49.223Z",
   "request": {
     "endpoint": "https://test-gamma-azure-65.vercel.app/api/campaigns",
     "method": "POST",
     "authenticated": true,
-    "headers": {
-      "Content-Type": "application/json",
-      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
-    },
     "payload": {
       "title": "",
-      "goalAmount": 100000000
+      "tagline": "Mo ta ngan van co, de loi rot xuong tieu de.",
+      "description": "<p>Noi dung chi tiet du de qua buoc kiem tra, khong keu goi tien that.</p>",
+      "goalAmount": 5000000,
+      "category": "Giáo dục",
+      "type": "DONATION",
+      "fundingModel": "ALL_OR_NOTHING"
     }
   },
   "response": {
     "statusCode": 400,
-    "headers": {
-      "content-type": "application/json",
-      "date": "Sun, 01 Nov 2026 08:54:00 GMT"
-    },
+    "location": null,
     "body": {
       "error": {
-        "message": "Danh mục chính không hợp lệ",
+        "message": "Ten chien dich la bat buoc",
         "code": "VALIDATION_ERROR"
       }
     }
   },
-  "verification": "HTTP 400 | tieu chi Excel [400] -> KHOP",
-  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
-  "role": "admin",
-  "attempts": 1
+  "verification": "HTTP 400 đúng câu \"Ten chien dich la bat buoc\". Danh mục đã hợp lệ, chỉ để trống tiêu đề.",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Không nới mã HTTP.",
+  "role": "CREATOR"
 }

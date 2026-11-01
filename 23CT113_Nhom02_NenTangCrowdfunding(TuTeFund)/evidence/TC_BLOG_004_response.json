@@ -1,0 +1,19 @@
+{
+  "testCaseId": "TC_BLOG_004",
+  "description": "/blog/bai-viet-khong-ton-tai-999",
+  "status": "FAIL",
+  "executionTimestamp": "2026-11-01T12:24:44.481Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/blog/bai-viet-khong-ton-tai-999",
+    "method": "GET",
+    "authenticated": false,
+    "payload": null
+  },
+  "response": {
+    "statusCode": 200,
+    "body": "TửTế Fund Trang chủ Giới thiệu Khám phá Blog Người dùng VI EN Đăng nhập Gây quỹ ngay 404 This page could not be found. TửTế Fund Lấy sự tử tế trồng tương lai. Nền tảng gây quỹ cộng đồng minh bạch #2 Việt Nam. Khám phá Chiến dịch Giới thiệu Tra cứu Hỗ trợ Hướng dẫn Creator Nâng cấ"
+  },
+  "verification": "GET /blog/bai-viet-khong-ton-tai-999 trả HTTP 200, không phải 404. TửTế Fund Trang chủ Giới thiệu Khám phá Blog Người dùng VI EN Đăng nhập Gây quỹ ngay 404 This page could not be found. TửTế Fund Lấy sự tử tế trồng tương lai. Nền tảng gây quỹ cộng đồng minh bạch #2 Việt Nam. Khám phá Chiến dịch Giới thiệu Tra cứu Hỗ trợ Hướng dẫn Creator Nâng cấ",
+  "role": "guest",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Không nới mã HTTP."
+}

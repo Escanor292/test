@@ -1,35 +1,28 @@
 {
   "testCaseId": "TC_PLED_003",
-  "description": "Từ chối ủng hộ chiến dịch không ACTIVE",
+  "description": "Từ chối ủng hộ khi chiến dịch đã đóng",
   "status": "PASS",
-  "executionTimestamp": "2026-11-01T08:54:01.098Z",
+  "executionTimestamp": "2026-11-01T12:23:55.596Z",
   "request": {
     "endpoint": "https://test-gamma-azure-65.vercel.app/api/payments",
     "method": "POST",
     "authenticated": true,
-    "headers": {
-      "Content-Type": "application/json",
-      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
-    },
     "payload": {
-      "campaignId": "chien-dich-da-dong-999",
+      "campaignId": "ddd2cfab-2589-4dac-802e-496551b316c5",
       "amount": 50000,
       "paymentMethod": "ONLINE",
-      "guestEmail": "test1@gmail.com"
+      "displayName": "QA Closed Campaign",
+      "guestEmail": "qa.closed.pledge@crowdfunding.vn"
     }
   },
   "response": {
     "statusCode": 404,
-    "headers": {
-      "content-type": "application/json",
-      "date": "Sun, 01 Nov 2026 08:54:01 GMT"
-    },
+    "location": null,
     "body": {
-      "error": "Chiến dịch không tồn tại"
+      "error": "Chiến dịch không tồn tại hoặc chưa mở nhận ủng hộ"
     }
   },
-  "verification": "HTTP 404 | tieu chi Excel [400,404] -> KHOP",
-  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
-  "role": "backer",
-  "attempts": 1
+  "verification": "Chiến dịch thật ddd2cfab-2589-4dac-802e-496551b316c5 \"QA huy co pledge 1793533929510\" status=FAILED. Từ chối ủng hộ HTTP 404: {\"error\":\"Chiến dịch không tồn tại hoặc chưa mở nhận ủng hộ\"}",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Không nới mã HTTP.",
+  "role": "backer"
 }

@@ -1,33 +1,36 @@
 {
   "testCaseId": "TC_COMM_010",
   "description": "Chặn đánh giá khi chưa từng ủng hộ",
-  "status": "PASS",
-  "executionTimestamp": "2026-11-01T08:54:03.275Z",
+  "status": "FAIL",
+  "executionTimestamp": "2026-11-01T12:23:59.440Z",
   "request": {
     "endpoint": "https://test-gamma-azure-65.vercel.app/api/campaigns/sach-giao-duc-vung-cao/reviews",
     "method": "POST",
-    "authenticated": false,
-    "headers": {
-      "Content-Type": "application/json",
-      "Cookie": "none"
-    },
+    "authenticated": true,
     "payload": {
       "rating": 1,
-      "comment": "Chưa ủng hộ thử đánh giá"
+      "comment": "QA chua tung ung ho, khong duoc phep danh gia",
+      "email": "Chua Ung Ho QA.1793535837980@crowdfunding.vn"
     }
   },
   "response": {
-    "statusCode": 401,
-    "headers": {
-      "content-type": "application/json",
-      "date": "Sun, 01 Nov 2026 08:54:04 GMT"
-    },
+    "statusCode": 200,
+    "location": null,
     "body": {
-      "error": "Unauthorized"
+      "id": "51eae114-2555-4321-9d15-25552bb58609",
+      "userId": "5949ce68-b11f-480b-be5a-75df2d877852",
+      "campaignId": "948e362e-4795-4a83-a7a8-0b897523d72f",
+      "rating": 1,
+      "comment": "QA chua tung ung ho, khong duoc phep danh gia",
+      "imageUrl": null,
+      "createdAt": "2026-11-01T12:23:59.368Z",
+      "users": {
+        "name": "Chua Ung Ho QA",
+        "avatar": null
+      }
     }
   },
-  "verification": "HTTP 401 | tieu chi Excel [401,403] -> KHOP",
-  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
-  "role": "guest",
-  "attempts": 1
+  "verification": "User đã đăng nhập Chua Ung Ho QA.1793535837980@crowdfunding.vn nhưng không bị chặn vì chưa ủng hộ. HTTP 200 {\"id\":\"51eae114-2555-4321-9d15-25552bb58609\",\"userId\":\"5949ce68-b11f-480b-be5a-75df2d877852\",\"campaignId\":\"948e362e-4795-4a83-a7a8-0b897523d72f\",\"rating\":1,\"comment\":\"QA chua tung ung ho, khong duoc phep danh gia\",\"imageUrl\":null,\"createdAt",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Không nới mã HTTP.",
+  "role": "backer"
 }

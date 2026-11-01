@@ -1,0 +1,20 @@
+{
+  "testCaseId": "TC_CHAT_001",
+  "description": "Chưa đăng nhập vào chat thì chuyển login",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T12:24:50.843Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/chat",
+    "method": "GET",
+    "authenticated": false,
+    "payload": null
+  },
+  "response": {
+    "statusCode": 200,
+    "location": "https://test-gamma-azure-65.vercel.app/auth/login?callbackUrl=https%3A%2F%2Ftest-gamma-azure-65.vercel.app%2Fchat",
+    "body": "https://test-gamma-azure-65.vercel.app/auth/login?callbackUrl=https%3A%2F%2Ftest-gamma-azure-65.vercel.app%2Fchat"
+  },
+  "verification": "Chưa đăng nhập vào /chat thì trình duyệt tới https://test-gamma-azure-65.vercel.app/auth/login?callbackUrl=https%3A%2F%2Ftest-gamma-azure-65.vercel.app%2Fchat. Response HTTP 200. Ảnh không gắn banner.",
+  "role": "guest",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Không nới mã HTTP."
+}

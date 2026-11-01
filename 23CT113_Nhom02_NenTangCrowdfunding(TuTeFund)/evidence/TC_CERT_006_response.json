@@ -1,0 +1,19 @@
+{
+  "testCaseId": "TC_CERT_006",
+  "description": "Hiển thị hóa đơn điện tử PI-20261101-74YZA",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T12:26:36.629Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/hoa-don/PI-20261101-74YZA",
+    "method": "GET",
+    "authenticated": false,
+    "payload": null
+  },
+  "response": {
+    "statusCode": 200,
+    "body": "TửTế Fund Trang chủ Giới thiệu Khám phá Blog Người dùng VI EN Đăng nhập Gây quỹ ngay HÓA ĐƠN GTGT PI-20261101-74YZA In hóa đơn Tra cứu Đơn vị cung cấp phần mềm hóa đơn điện tử: Trung tâm Kinh Doanh VNPT — Chi nhánh Tổng Công Ty Dịch Vụ Viễn Thông. TT TỬ TẾ FUND CROWDFUNDING HÓA ĐƠN GIÁ TRỊ GIA TĂNG 08:41 01/11/2026 Hóa đơn phí dịch vụ sàn Ký hiệu: 1C26TTF Số: 20261101-74YZA Đơn vị bán hàng: CÔNG TY TNHH NỀN TẢNG TỬ TẾ FUND Mã số thuế: — Địa chỉ: Việt Nam Điện thoại: hello@tutefund.vn Số tài khoản: — Họ tên người mua hàng: Test Creator Tên đơn vị: Mã số thuế: Địa chỉ: Căn cước công dân: Hình thức thanh toán: Khấu trừ phí dịch vụ sàn Mã đơn vị quan hệ ngân sách: Số tài khoản: STT Tên hàng hóa, dịch vụ Đơn vị tính Số lượng Đơn giá Thành tiền 1 Phí dịch vụ sàn · [FIXTURE-2026] Album Mầm sáng Gói 1 4.000 4.000 Cộng tiền hàng: 4.000 Thuế suất GTGT: 8% Tiền thuế GTGT: 320 Tổng cộng tiền thanh t"
+  },
+  "verification": "Hóa đơn phí sàn /hoa-don/PI-20261101-74YZA có trong CSDL. HTTP 200. Có số hóa đơn, đơn vị và số tiền 4.320.",
+  "role": "guest",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Không nới mã HTTP."
+}

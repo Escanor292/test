@@ -135,22 +135,6 @@ async function main() {
   console.log("[UI] TC_CAMP_010: /campaigns/chien-dich-khong-ton-tai-999");
   await page.goto(`${LIVE_URL}/campaigns/chien-dich-khong-ton-tai-999`, { waitUntil: 'domcontentloaded', timeout: 25000 });
   await page.waitForTimeout(2000);
-  await page.evaluate(() => {
-    const b = document.createElement('div');
-    b.id = 'tc-camp-010-badge';
-    b.style.position = 'fixed';
-    b.style.top = '0';
-    b.style.left = '0';
-    b.style.right = '0';
-    b.style.backgroundColor = '#0284c7';
-    b.style.color = '#ffffff';
-    b.style.padding = '8px 16px';
-    b.style.fontWeight = 'bold';
-    b.style.textAlign = 'center';
-    b.style.zIndex = '999999';
-    b.innerText = 'TC_CAMP_010: HTTP 404 - Chiến dịch không tồn tại (/campaigns/chien-dich-khong-ton-tai-999)';
-    document.body.prepend(b);
-  });
   await page.screenshot({ path: path.join(EVIDENCE_DIR, 'TC_CAMP_010.png') });
 
   // 6. TC_REWD_006: Gói phần thưởng trong chiến dịch
@@ -195,22 +179,6 @@ async function main() {
   console.log("[UI] TC_BLOG_004: /blog/bai-viet-khong-ton-tai-999");
   await page.goto(`${LIVE_URL}/blog/bai-viet-khong-ton-tai-999`, { waitUntil: 'domcontentloaded', timeout: 25000 });
   await page.waitForTimeout(2000);
-  await page.evaluate(() => {
-    const b = document.createElement('div');
-    b.id = 'tc-blog-004-badge';
-    b.style.position = 'fixed';
-    b.style.top = '0';
-    b.style.left = '0';
-    b.style.right = '0';
-    b.style.backgroundColor = '#334155';
-    b.style.color = '#ffffff';
-    b.style.padding = '8px 16px';
-    b.style.fontWeight = 'bold';
-    b.style.textAlign = 'center';
-    b.style.zIndex = '999999';
-    b.innerText = 'TC_BLOG_004: HTTP 404 - Bài viết blog không tồn tại (/blog/bai-viet-khong-ton-tai-999)';
-    document.body.prepend(b);
-  });
   await page.screenshot({ path: path.join(EVIDENCE_DIR, 'TC_BLOG_004.png') });
 
   // 13. TC_BLOG_005: Middleware chặn người dùng chưa đăng nhập mở editor blog -> Redirect login
@@ -223,22 +191,6 @@ async function main() {
   console.log("[UI] TC_CHAT_001: /chat (unauthenticated -> redirect)");
   await page.goto(`${LIVE_URL}/chat`, { waitUntil: 'domcontentloaded', timeout: 25000 });
   await page.waitForTimeout(2000);
-  await page.evaluate(() => {
-    const b = document.createElement('div');
-    b.id = 'tc-chat-001-badge';
-    b.style.position = 'fixed';
-    b.style.top = '0';
-    b.style.left = '0';
-    b.style.right = '0';
-    b.style.backgroundColor = '#dc2626';
-    b.style.color = '#ffffff';
-    b.style.padding = '8px 16px';
-    b.style.fontWeight = 'bold';
-    b.style.textAlign = 'center';
-    b.style.zIndex = '999999';
-    b.innerText = 'TC_CHAT_001: Chuyển hướng bảo mật /chat sang /auth/login?callbackUrl=/chat';
-    document.body.prepend(b);
-  });
   await page.screenshot({ path: path.join(EVIDENCE_DIR, 'TC_CHAT_001.png') });
 
   // 15. TC_ADMN_001: Chặn truy cập admin khi chưa đăng nhập
@@ -317,19 +269,19 @@ async function main() {
       tid: 'TC_AUTH_002',
       url: '/api/auth/callback/credentials',
       method: 'POST',
-      payload: { csrfToken: 'playwright-real-csrf', email: 'admin@crowdfunding.vn', password: 'Admin@123456' },
-      expectedCode: [200, 302],
+      payload: { email: 'admin@crowdfunding.vn', password: 'Admin@123456' },
+      expectedCode: [302],
       useAuth: false,
-      desc: 'Đăng nhập thông tin hợp lệ'
+      desc: 'Đăng nhập thông tin hợp lệ — không dùng CSRF giả; ca này được chấm bằng session trong rerun_false_passes.mjs'
     },
     {
       tid: 'TC_AUTH_003',
       url: '/api/auth/callback/credentials',
       method: 'POST',
-      payload: { csrfToken: 'playwright-real-csrf', email: 'admin@crowdfunding.vn', password: 'WrongPassword@999' },
-      expectedCode: [200, 302, 401],
+      payload: { email: 'admin@crowdfunding.vn', password: 'WrongPassword@999' },
+      expectedCode: [302],
       useAuth: false,
-      desc: 'Từ chối đăng nhập sai mật khẩu'
+      desc: 'Từ chối đăng nhập sai mật khẩu — phải có CSRF thật và không được cấp session'
     },
     {
       tid: 'TC_AUTH_006',
@@ -940,6 +892,11 @@ async function main() {
   ];
 
   for (const c of apiCases) {
+    const outPath = path.join(EVIDENCE_DIR, `${c.tid}_response.json`);
+    if (fs.existsSync(outPath) && process.env.FRESH_EVIDENCE !== '1') {
+      console.log(`  -> Giữ evidence đã chấm: ${c.tid}`);
+      continue;
+    }
     const cookiesToUse = c.auth === 'backer' ? backerCookies
       : c.auth === 'creator' ? creatorCookies
       : (c.useAuth ? adminCookies : []);
@@ -1008,7 +965,6 @@ async function main() {
       attempts: times
     };
 
-    const outPath = path.join(EVIDENCE_DIR, `${c.tid}_response.json`);
     fs.writeFileSync(outPath, JSON.stringify(logOutput, null, 2), 'utf-8');
     console.log(`  -> Saved ${c.tid}_response.json (HTTP ${res.statusCode})`);
   }

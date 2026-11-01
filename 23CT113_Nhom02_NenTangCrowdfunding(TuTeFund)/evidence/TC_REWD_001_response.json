@@ -1,34 +1,57 @@
 {
   "testCaseId": "TC_REWD_001",
-  "description": "Từ chối tạo phần thưởng với minAmount = 0",
-  "status": "PASS",
-  "executionTimestamp": "2026-11-01T08:54:00.151Z",
+  "description": "Từ chối phần thưởng khi minAmount <= 0",
+  "status": "FAIL",
+  "executionTimestamp": "2026-11-01T12:23:55.012Z",
   "request": {
     "endpoint": "https://test-gamma-azure-65.vercel.app/api/rewards",
     "method": "POST",
     "authenticated": true,
-    "headers": {
-      "Content-Type": "application/json",
-      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
-    },
     "payload": {
-      "title": "Goi qua mien phi",
+      "title": "Goi QA so tien toi thieu",
+      "description": "Kiem thu minAmount khong duoc nho hon hoac bang 0",
+      "campaignId": "4bacb5a1-2797-40ec-9b59-d74a9d8d36e4",
+      "fulfillmentType": "DOWNLOAD",
       "minAmount": 0,
-      "campaignId": "test-camp"
+      "alsoTried": -1
     }
   },
   "response": {
     "statusCode": 400,
-    "headers": {
-      "content-type": "application/json",
-      "date": "Sun, 01 Nov 2026 08:54:01 GMT"
-    },
+    "location": null,
     "body": {
-      "error": "Missing required fields"
+      "zero": {
+        "error": "Missing required fields"
+      },
+      "negative": {
+        "status": 200,
+        "body": {
+          "id": "a60cd2e9-1534-4105-b559-8a3d8719cd4d",
+          "campaignId": "4bacb5a1-2797-40ec-9b59-d74a9d8d36e4",
+          "projectId": null,
+          "title": "Goi QA am",
+          "description": "Kiem thu minAmount khong duoc nho hon hoac bang 0",
+          "createdAt": "2026-11-01T12:23:54.608Z",
+          "deliveryDate": null,
+          "isPreorder": false,
+          "onlineDepositPercent": 30,
+          "codDepositPercent": 50,
+          "isActive": false,
+          "isIncludedInProject": false,
+          "maxQuantity": null,
+          "minAmount": "-1",
+          "maxAmount": null,
+          "stock": null,
+          "productImages": [],
+          "productVideo": null,
+          "updatedAt": "2026-11-01T12:23:54.608Z",
+          "availability": "AVAILABLE",
+          "fulfillmentType": "DOWNLOAD"
+        }
+      }
     }
   },
-  "verification": "HTTP 400 | tieu chi Excel [400] -> KHOP",
-  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
-  "role": "admin",
-  "attempts": 1
+  "verification": "Không chứng minh được từ chối mọi mức <= 0. campaignId=4bacb5a1-2797-40ec-9b59-d74a9d8d36e4. 0: HTTP 400 {\"error\":\"Missing required fields\"}. -1: HTTP 200 {\"id\":\"a60cd2e9-1534-4105-b559-8a3d8719cd4d\",\"campaignId\":\"4bacb5a1-2797-40ec-9b59-d74a9d8d36e4\",\"projectId\":null,\"title\":\"Goi QA am\",\"description\":\"Kiem thu minAmount khong duoc n",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Không nới mã HTTP.",
+  "role": "CREATOR"
 }
