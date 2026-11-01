@@ -1,0 +1,17 @@
+{
+  "testCaseId": "TC_CHAT_003",
+  "description": "Cuộc gọi dùng WebSocket",
+  "status": "FAIL",
+  "executionTimestamp": "2026-11-01T12:51:10.259Z",
+  "steps": [
+    {
+      "file": "src/hooks/useCall.ts",
+      "pollLine": 33,
+      "pollVal": "1200",
+      "hasWs": false
+    }
+  ],
+  "verification": "=== TC_CHAT_003 2026-11-01T12:51:10.258Z ===\nFile: src/hooks/useCall.ts\nWebSocket: false\nPOLL_MS dòng 33: const POLL_MS = 1200;\nMong đợi: kết nối WebSocket full-duplex\nThực tế: short-polling 1200 ms, không có WebSocket\nKết quả: FAIL",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Đối chiếu body, không nới mã HTTP.",
+  "role": "source"
+}

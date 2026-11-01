@@ -460,12 +460,12 @@ async function main() {
     },
     {
       tid: 'TC_CAMP_007',
-      url: '/api/campaigns',
+      url: '/api/campaigns?status=ACTIVE&limit=50',
       method: 'GET',
       payload: null,
       expectedCode: [200],
       useAuth: false,
-      desc: 'Truy vấn danh sách chiến dịch công khai'
+      desc: 'Truy vấn danh sách chiến dịch công khai đang ACTIVE'
     },
     {
       tid: 'TC_CAMP_008',
@@ -799,10 +799,10 @@ async function main() {
       tid: 'TC_BLOG_006',
       url: '/api/blog/posts',
       method: 'POST',
-      payload: { title: '', content: 'Noi dung khong co tieu de' },
+      payload: { title: '', content: '', type: 'PLATFORM', visibility: 'PUBLIC' },
       expectedCode: [400],
       useAuth: true,
-      desc: 'Từ chối tạo bài viết khi để trống tiêu đề'
+      desc: 'Từ chối tạo bài viết khi để trống tiêu đề. Nội dung trống khi đã có tiêu đề vẫn được nhận (xem TC_BLOG_006_response.json).'
     },
     {
       tid: 'TC_BLOG_007',

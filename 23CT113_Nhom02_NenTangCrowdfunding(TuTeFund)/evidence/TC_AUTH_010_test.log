@@ -1,7 +1,6 @@
-=== REAL TEST EXECUTION OUTPUT: TC_AUTH_010 ===
-Runner: evaluate PASSWORD_RESET_TTL_MS from src/lib/password-reset.ts
-Timestamp: 2026-11-01T11:52:12.967Z
-Expression: 30 * 60 * 1000
-Actual: 1800000
-Expected: 1800000
-Test Status: PASS
+=== TC_AUTH_010 2026-11-01T12:51:10.258Z ===
+File: src/lib/password-reset.ts:4
+Dòng: export const PASSWORD_RESET_TTL_MS = 30 * 60 * 1000;
+Giá trị: 1800000 ms = 30 phút
+Mong đợi: 1800000 ms (30 phút)
+Kết quả: PASS

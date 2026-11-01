@@ -1,0 +1,16 @@
+{
+  "testCaseId": "TC_AUTH_010",
+  "description": "TTL đặt lại mật khẩu 30 phút",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T12:51:10.258Z",
+  "steps": [
+    {
+      "file": "src/lib/password-reset.ts",
+      "line": 4,
+      "valueMs": 1800000
+    }
+  ],
+  "verification": "=== TC_AUTH_010 2026-11-01T12:51:10.258Z ===\nFile: src/lib/password-reset.ts:4\nDòng: export const PASSWORD_RESET_TTL_MS = 30 * 60 * 1000;\nGiá trị: 1800000 ms = 30 phút\nMong đợi: 1800000 ms (30 phút)\nKết quả: PASS",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Đối chiếu body, không nới mã HTTP.",
+  "role": "source"
+}

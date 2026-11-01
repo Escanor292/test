@@ -1,0 +1,16 @@
+{
+  "testCaseId": "TC_CHAT_004",
+  "description": "Timeout cuộc gọi 45 giây",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T12:51:10.259Z",
+  "steps": [
+    {
+      "file": "src/hooks/useCall.ts",
+      "line": 34,
+      "valueMs": 45000
+    }
+  ],
+  "verification": "=== TC_CHAT_004 2026-11-01T12:51:10.258Z ===\nFile: src/hooks/useCall.ts:34\nDòng: const CALL_TIMEOUT_MS = 45000;\nGiá trị: 45000 ms\nMong đợi: 45000 ms\nKết quả: PASS",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Đối chiếu body, không nới mã HTTP.",
+  "role": "source"
+}

@@ -1,33 +1,51 @@
 {
   "testCaseId": "TC_BLOG_006",
-  "description": "Từ chối tạo bài viết khi để trống tiêu đề",
-  "status": "PASS",
-  "executionTimestamp": "2026-11-01T08:54:03.508Z",
-  "request": {
-    "endpoint": "https://test-gamma-azure-65.vercel.app/api/blog/posts",
-    "method": "POST",
-    "authenticated": true,
-    "headers": {
-      "Content-Type": "application/json",
-      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+  "description": "Từ chối bài viết thiếu tiêu đề",
+  "status": "FAIL",
+  "executionTimestamp": "2026-11-01T12:50:54.063Z",
+  "steps": [
+    {
+      "endpoint": "https://test-gamma-azure-65.vercel.app/api/blog/posts",
+      "method": "POST",
+      "payload": {
+        "title": "",
+        "content": "",
+        "type": "PLATFORM",
+        "visibility": "PUBLIC"
+      },
+      "response": {
+        "statusCode": 400,
+        "body": {
+          "error": "Missing required fields: title, type, visibility"
+        }
+      }
     },
-    "payload": {
-      "title": "",
-      "content": "Noi dung khong co tieu de"
-    }
-  },
-  "response": {
-    "statusCode": 400,
-    "headers": {
-      "content-type": "application/json",
-      "date": "Sun, 01 Nov 2026 08:54:04 GMT"
+    {
+      "endpoint": "https://test-gamma-azure-65.vercel.app/api/blog/posts",
+      "method": "POST",
+      "payload": {
+        "title": "(có tiêu đề)",
+        "content": "",
+        "type": "PLATFORM",
+        "visibility": "PUBLIC"
+      },
+      "response": {
+        "statusCode": 201,
+        "body": "{\"id\":\"04edbddc-623b-42d8-95b2-ad3ac9911d66\",\"authorId\":\"41deb2c1-79d3-46d7-989e-36ef071f0237\",\"campaignId\":null,\"title\":\"QA khong noi dung 1793537453321\",\"slug\":\"qa-khong-noi-dung-1793537453321\",\"excerpt\":null,\"coverImage\":null,\"status\":\"DRAFT\",\"type\":\"PLATFORM\",\"visibility\":\"PUBLIC\",\"publishedAt\":null,\"createdAt\":\"2026-11-01T12:50:53.572Z\",\"updatedAt\":\"2026-11-01T12:50:53.571Z\",\"viewCount\":0,\"likeCount\":0,\"commentCount\":0,\"bookmarkCount\":0,\"isFeatured\":false,\"wordCount\":0,\"readingTimeMinutes\":…"
+      }
     },
-    "body": {
-      "error": "Missing required fields: title, type, visibility"
+    {
+      "endpoint": "DELETE bài thử",
+      "method": "DELETE",
+      "response": {
+        "statusCode": 200,
+        "body": {
+          "success": true
+        }
+      }
     }
-  },
-  "verification": "HTTP 400 | tieu chi Excel [400] -> KHOP",
-  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
-  "role": "admin",
-  "attempts": 1
+  ],
+  "verification": "FAIL. Tiêu đề trống nhưng đã gửi type=PLATFORM và visibility=PUBLIC → HTTP 400: Missing required fields: title, type, visibility. Nội dung trống khi đã có tiêu đề → HTTP 201, bài được tạo rồi xóa (DELETE HTTP 200). Hệ thống không yêu cầu nhập nội dung.",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Đối chiếu body, không nới mã HTTP.",
+  "role": "admin"
 }

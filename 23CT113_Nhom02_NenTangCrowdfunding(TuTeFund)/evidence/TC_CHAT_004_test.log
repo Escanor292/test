@@ -1,6 +1,6 @@
-=== REAL TEST EXECUTION OUTPUT: TC_CHAT_004 ===
-Runner: read src/hooks/useCall.ts and evaluate
-Timestamp: 2026-11-01T11:52:12.968Z
-CALL_TIMEOUT_MS: 45000
-Expected: 45000
-Test Status: PASS
+=== TC_CHAT_004 2026-11-01T12:51:10.258Z ===
+File: src/hooks/useCall.ts:34
+Dòng: const CALL_TIMEOUT_MS = 45000;
+Giá trị: 45000 ms
+Mong đợi: 45000 ms
+Kết quả: PASS

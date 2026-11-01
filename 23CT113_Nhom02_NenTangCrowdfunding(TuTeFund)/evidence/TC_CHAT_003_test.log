@@ -1,7 +1,7 @@
-=== REAL TEST EXECUTION OUTPUT: TC_CHAT_003 ===
-Runner: read src/hooks/useCall.ts and evaluate
-Timestamp: 2026-11-01T11:52:12.968Z
+=== TC_CHAT_003 2026-11-01T12:51:10.258Z ===
+File: src/hooks/useCall.ts
 WebSocket: false
-POLL_MS: 1200
-Expected: WebSocket full-duplex, no polling
-Test Status: FAIL
+POLL_MS dòng 33: const POLL_MS = 1200;
+Mong đợi: kết nối WebSocket full-duplex
+Thực tế: short-polling 1200 ms, không có WebSocket
+Kết quả: FAIL

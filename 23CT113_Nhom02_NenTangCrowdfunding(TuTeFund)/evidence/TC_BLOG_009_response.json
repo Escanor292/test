@@ -1,30 +1,49 @@
 {
   "testCaseId": "TC_BLOG_009",
-  "description": "Like bài viết thành công khi đã có session",
+  "description": "Like tăng số đếm và lưu bookmark",
   "status": "PASS",
-  "executionTimestamp": "2026-11-01T08:54:03.884Z",
-  "request": {
-    "endpoint": "https://test-gamma-azure-65.vercel.app/api/blog/posts/nhat-ky-gieo-mam-tuan-dau-1792935602192-5puqh/like",
-    "method": "POST",
-    "authenticated": true,
-    "headers": {
-      "Content-Type": "application/json",
-      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+  "executionTimestamp": "2026-11-01T12:50:56.954Z",
+  "steps": [
+    {
+      "endpoint": "https://test-gamma-azure-65.vercel.app/api/blog/posts/qa-xuat-ban-1793533931645",
+      "method": "GET",
+      "response": {
+        "statusCode": 200,
+        "likeCount": 0,
+        "bookmarkCount": 0
+      }
     },
-    "payload": {}
-  },
-  "response": {
-    "statusCode": 200,
-    "headers": {
-      "content-type": "application/json",
-      "date": "Sun, 01 Nov 2026 08:54:04 GMT"
+    {
+      "endpoint": "https://test-gamma-azure-65.vercel.app/api/blog/posts/qa-xuat-ban-1793533931645/like",
+      "method": "POST",
+      "response": {
+        "statusCode": 200,
+        "body": {
+          "liked": true
+        }
+      }
     },
-    "body": {
-      "liked": true
+    {
+      "endpoint": "https://test-gamma-azure-65.vercel.app/api/blog/posts/qa-xuat-ban-1793533931645/bookmark",
+      "method": "POST",
+      "response": {
+        "statusCode": 200,
+        "body": {
+          "bookmarked": true
+        }
+      }
+    },
+    {
+      "endpoint": "https://test-gamma-azure-65.vercel.app/api/blog/posts/qa-xuat-ban-1793533931645",
+      "method": "GET",
+      "response": {
+        "statusCode": 200,
+        "likeCount": 1,
+        "bookmarkCount": 1
+      }
     }
-  },
-  "verification": "HTTP 200 | tieu chi Excel [200,201] -> KHOP",
-  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
-  "role": "admin",
-  "attempts": 1
+  ],
+  "verification": "Bài qa-xuat-ban-1793533931645. Like 0 → 1 (liked=true). Bookmark 0 → 1 (bookmarked=true).",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cột Kết quả mong đợi. Đối chiếu body, không nới mã HTTP.",
+  "role": "backer"
 }
