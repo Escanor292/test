@@ -1,0 +1,32 @@
+{
+  "testCaseId": "TC_PLED_002",
+  "description": "Từ chối ủng hộ khi số tiền không đủ nhận thưởng",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:14.426Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/payment/bank-transfer",
+    "method": "POST",
+    "authenticated": false,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "none"
+    },
+    "payload": {
+      "campaignId": "sach-giao-duc-vung-cao",
+      "amount": 5000,
+      "rewardId": "reward-250k"
+    }
+  },
+  "response": {
+    "statusCode": 401,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 07:12:15 GMT"
+    },
+    "body": {
+      "success": false,
+      "message": "Unauthorized"
+    }
+  },
+  "verification": "HTTP 401 verified against expected [400]"
+}

@@ -1,0 +1,28 @@
+{
+  "testCaseId": "TC_AUTH_002",
+  "description": "Đăng nhập thông tin hợp lệ",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:10.835Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/auth/callback/credentials",
+    "method": "POST",
+    "authenticated": false,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "none"
+    },
+    "payload": {
+      "csrfToken": "playwright-real-csrf",
+      "email": "admin@crowdfunding.vn",
+      "password": "Admin@123456"
+    }
+  },
+  "response": {
+    "statusCode": 302,
+    "headers": {
+      "date": "Sun, 01 Nov 2026 07:12:11 GMT"
+    },
+    "body": null
+  },
+  "verification": "HTTP 302 verified against expected [200,302]"
+}

@@ -1,0 +1,33 @@
+{
+  "testCaseId": "TC_COMM_010",
+  "description": "Chặn đánh giá khi chưa từng ủng hộ",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T08:54:03.275Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/campaigns/sach-giao-duc-vung-cao/reviews",
+    "method": "POST",
+    "authenticated": false,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "none"
+    },
+    "payload": {
+      "rating": 1,
+      "comment": "Chưa ủng hộ thử đánh giá"
+    }
+  },
+  "response": {
+    "statusCode": 401,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 08:54:04 GMT"
+    },
+    "body": {
+      "error": "Unauthorized"
+    }
+  },
+  "verification": "HTTP 401 | tieu chi Excel [401,403] -> KHOP",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
+  "role": "guest",
+  "attempts": 1
+}

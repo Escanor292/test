@@ -1,0 +1,28 @@
+{
+  "testCaseId": "TC_CERT_009",
+  "description": "Truy vấn sao kê sổ cái minh bạch thành công với quyền Admin",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T08:54:02.130Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/so/ledger",
+    "method": "GET",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "none",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": null
+  },
+  "response": {
+    "statusCode": 200,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 08:54:03 GMT"
+    },
+    "body": null
+  },
+  "verification": "HTTP 200 | tieu chi Excel [200] -> KHOP",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
+  "role": "admin",
+  "attempts": 1
+}

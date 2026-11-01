@@ -1,0 +1,30 @@
+{
+  "testCaseId": "TC_COMM_005",
+  "description": "Giới hạn tần suất gửi góp ý (Rate Limit 429)",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:15.806Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/feedback",
+    "method": "POST",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": {
+      "content": "Spam liên tục phản hồi",
+      "pageUrl": "/so"
+    }
+  },
+  "response": {
+    "statusCode": 400,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 07:12:16 GMT"
+    },
+    "body": {
+      "error": "Góp ý cần ít nhất 10 ký tự"
+    }
+  },
+  "verification": "HTTP 400 verified against expected [200,429]"
+}

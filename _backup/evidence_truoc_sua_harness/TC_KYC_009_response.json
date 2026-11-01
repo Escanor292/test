@@ -1,0 +1,27 @@
+{
+  "testCaseId": "TC_KYC_009",
+  "description": "Admin phê duyệt hồ sơ KYC",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:12.395Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/admin/kyc/test-kyc-id/review",
+    "method": "POST",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": {
+      "status": "VERIFIED",
+      "rejectionReason": null
+    }
+  },
+  "response": {
+    "statusCode": 405,
+    "headers": {
+      "date": "Sun, 01 Nov 2026 07:12:13 GMT"
+    },
+    "body": null
+  },
+  "verification": "HTTP 405 verified against expected [200,404,405]"
+}

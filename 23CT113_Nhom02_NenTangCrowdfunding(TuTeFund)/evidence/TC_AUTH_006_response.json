@@ -1,0 +1,36 @@
+{
+  "testCaseId": "TC_AUTH_006",
+  "description": "Từ chối đăng ký mật khẩu ngắn < 6 ký tự",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T08:53:57.159Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/auth/register",
+    "method": "POST",
+    "authenticated": false,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "none"
+    },
+    "payload": {
+      "name": "Nguyen Van A",
+      "email": "nguyenvana@test.vn",
+      "password": "123",
+      "confirmPassword": "123",
+      "acceptTerms": true
+    }
+  },
+  "response": {
+    "statusCode": 400,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 08:53:58 GMT"
+    },
+    "body": {
+      "error": "Mật khẩu phải có ít nhất 6 ký tự"
+    }
+  },
+  "verification": "HTTP 400 | tieu chi Excel [400] -> KHOP",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
+  "role": "guest",
+  "attempts": 1
+}

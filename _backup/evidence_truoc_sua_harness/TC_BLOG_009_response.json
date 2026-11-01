@@ -1,0 +1,27 @@
+{
+  "testCaseId": "TC_BLOG_009",
+  "description": "Like bài viết thành công khi đã có session",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:16.799Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/blog/posts/hanh-trinh-gieo-chu-vung-cao/like",
+    "method": "POST",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": {}
+  },
+  "response": {
+    "statusCode": 404,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 07:12:17 GMT"
+    },
+    "body": {
+      "error": "Post not found"
+    }
+  },
+  "verification": "HTTP 404 verified against expected [200]"
+}

@@ -1,0 +1,43 @@
+{
+  "testCaseId": "TC_COMM_009",
+  "description": "Backer gửi đánh giá chiến dịch",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T08:54:03.176Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/campaigns/sach-giao-duc-vung-cao/reviews",
+    "method": "POST",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": {
+      "rating": 5,
+      "comment": "Dự án rất ý nghĩa, sách đã được chuyển tận nơi"
+    }
+  },
+  "response": {
+    "statusCode": 200,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 08:54:04 GMT"
+    },
+    "body": {
+      "id": "1cb38340-0d8d-40b8-9420-24a96d12621b",
+      "userId": "41deb2c1-79d3-46d7-989e-36ef071f0237",
+      "campaignId": "948e362e-4795-4a83-a7a8-0b897523d72f",
+      "rating": 5,
+      "comment": "Dự án rất ý nghĩa, sách đã được chuyển tận nơi",
+      "imageUrl": null,
+      "createdAt": "2026-11-01T08:54:04.051Z",
+      "users": {
+        "name": "Admin",
+        "avatar": null
+      }
+    }
+  },
+  "verification": "HTTP 200 | tieu chi Excel [200,201,403] -> KHOP",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
+  "role": "admin",
+  "attempts": 1
+}

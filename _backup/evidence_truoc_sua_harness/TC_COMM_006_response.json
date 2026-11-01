@@ -1,0 +1,30 @@
+{
+  "testCaseId": "TC_COMM_006",
+  "description": "Từ chối gửi báo cáo vi phạm khi chưa đăng nhập",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:15.891Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/reports",
+    "method": "POST",
+    "authenticated": false,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "none"
+    },
+    "payload": {
+      "targetId": "camp-123",
+      "reason": "Nội dung phản cảm"
+    }
+  },
+  "response": {
+    "statusCode": 401,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 07:12:16 GMT"
+    },
+    "body": {
+      "error": "Bạn cần đăng nhập để gửi báo cáo"
+    }
+  },
+  "verification": "HTTP 401 verified against expected [401]"
+}

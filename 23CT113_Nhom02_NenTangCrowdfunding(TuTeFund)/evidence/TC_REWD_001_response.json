@@ -1,0 +1,34 @@
+{
+  "testCaseId": "TC_REWD_001",
+  "description": "Từ chối tạo phần thưởng với minAmount = 0",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T08:54:00.151Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/rewards",
+    "method": "POST",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": {
+      "title": "Goi qua mien phi",
+      "minAmount": 0,
+      "campaignId": "test-camp"
+    }
+  },
+  "response": {
+    "statusCode": 400,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 08:54:01 GMT"
+    },
+    "body": {
+      "error": "Missing required fields"
+    }
+  },
+  "verification": "HTTP 400 | tieu chi Excel [400] -> KHOP",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
+  "role": "admin",
+  "attempts": 1
+}

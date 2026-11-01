@@ -1,0 +1,56 @@
+{
+  "testCaseId": "TC_REWD_003",
+  "description": "Tạo phần thưởng hợp lệ",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T08:54:00.359Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/rewards",
+    "method": "POST",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": {
+      "title": "Gói Thiệp Tri Ân",
+      "minAmount": 50000,
+      "quantity": 100,
+      "description": "Thiệp cảm ơn",
+      "campaignId": "b5bca5b6-07d7-4ff0-948a-d646aaee85c1"
+    }
+  },
+  "response": {
+    "statusCode": 200,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 08:54:01 GMT"
+    },
+    "body": {
+      "id": "45f388b5-3492-4baf-8c40-02e3b7557538",
+      "campaignId": "b5bca5b6-07d7-4ff0-948a-d646aaee85c1",
+      "projectId": "cmvnvk7ga0005kktoeegkx7t3",
+      "title": "Gói Thiệp Tri Ân",
+      "description": "Thiệp cảm ơn",
+      "createdAt": "2026-11-01T08:54:01.230Z",
+      "deliveryDate": null,
+      "isPreorder": false,
+      "onlineDepositPercent": 30,
+      "codDepositPercent": 50,
+      "isActive": false,
+      "isIncludedInProject": true,
+      "maxQuantity": null,
+      "minAmount": "50000",
+      "maxAmount": null,
+      "stock": null,
+      "productImages": [],
+      "productVideo": null,
+      "updatedAt": "2026-11-01T08:54:01.229Z",
+      "availability": "AVAILABLE",
+      "fulfillmentType": "PHYSICAL"
+    }
+  },
+  "verification": "HTTP 200 | tieu chi Excel [200,201] -> KHOP",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
+  "role": "creator",
+  "attempts": 1
+}

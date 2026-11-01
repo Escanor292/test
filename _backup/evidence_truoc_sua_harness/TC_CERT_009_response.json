@@ -1,0 +1,25 @@
+{
+  "testCaseId": "TC_CERT_009",
+  "description": "Truy vấn sao kê sổ cái minh bạch thành công với quyền Admin",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:15.409Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/so/ledger",
+    "method": "GET",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "none",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": null
+  },
+  "response": {
+    "statusCode": 200,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 07:12:16 GMT"
+    },
+    "body": null
+  },
+  "verification": "HTTP 200 verified against expected [200]"
+}

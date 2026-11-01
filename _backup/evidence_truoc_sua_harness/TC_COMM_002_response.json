@@ -1,0 +1,30 @@
+{
+  "testCaseId": "TC_COMM_002",
+  "description": "Từ chối gửi góp ý khi chưa đăng nhập",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:15.533Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/feedback",
+    "method": "POST",
+    "authenticated": false,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "none"
+    },
+    "payload": {
+      "content": "Góp ý giao diện rất đẹp",
+      "pageUrl": "/campaigns"
+    }
+  },
+  "response": {
+    "statusCode": 401,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 07:12:16 GMT"
+    },
+    "body": {
+      "error": "Bạn cần đăng nhập để gửi góp ý"
+    }
+  },
+  "verification": "HTTP 401 verified against expected [401]"
+}

@@ -1,0 +1,32 @@
+{
+  "testCaseId": "TC_AUTH_009",
+  "description": "Yêu cầu token khôi phục mật khẩu",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T08:53:57.824Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/auth/forgot-password",
+    "method": "POST",
+    "authenticated": false,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "none"
+    },
+    "payload": {
+      "email": "admin@crowdfunding.vn"
+    }
+  },
+  "response": {
+    "statusCode": 202,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 08:53:58 GMT"
+    },
+    "body": {
+      "message": "Nếu email tồn tại trong hệ thống, hướng dẫn đặt lại mật khẩu đã được gửi."
+    }
+  },
+  "verification": "HTTP 202 | tieu chi Excel [200,201,202] -> KHOP",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
+  "role": "guest",
+  "attempts": 1
+}

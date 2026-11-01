@@ -1,0 +1,27 @@
+{
+  "testCaseId": "TC_REWD_007",
+  "description": "Trả về 404 khi tra cứu phần thưởng không tồn tại",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:14.167Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/rewards/invalid-id-999",
+    "method": "GET",
+    "authenticated": false,
+    "headers": {
+      "Content-Type": "none",
+      "Cookie": "none"
+    },
+    "payload": null
+  },
+  "response": {
+    "statusCode": 404,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 07:12:14 GMT"
+    },
+    "body": {
+      "error": "Reward not found"
+    }
+  },
+  "verification": "HTTP 404 verified against expected [404]"
+}

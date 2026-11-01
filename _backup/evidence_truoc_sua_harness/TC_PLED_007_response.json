@@ -1,0 +1,31 @@
+{
+  "testCaseId": "TC_PLED_007",
+  "description": "Admin đối soát xác nhận tiền đã vào tài khoản trung gian",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:14.919Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/admin/pledges/test-pledge-id/settle",
+    "method": "POST",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": {
+      "status": "SUCCESS",
+      "transactionRef": "FT2611019999"
+    }
+  },
+  "response": {
+    "statusCode": 400,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 07:12:15 GMT"
+    },
+    "body": {
+      "error": "Không đối soát được lệnh này",
+      "reason": "not-found"
+    }
+  },
+  "verification": "HTTP 400 verified against expected [200,404]"
+}

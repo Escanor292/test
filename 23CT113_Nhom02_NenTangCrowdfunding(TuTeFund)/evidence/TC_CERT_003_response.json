@@ -1,0 +1,30 @@
+{
+  "testCaseId": "TC_CERT_003",
+  "description": "Báo lỗi không tìm thấy mã chứng thư",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T08:54:01.865Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/lookup?code=MA_KHONG_TON_TAI_99999",
+    "method": "GET",
+    "authenticated": false,
+    "headers": {
+      "Content-Type": "none",
+      "Cookie": "none"
+    },
+    "payload": null
+  },
+  "response": {
+    "statusCode": 404,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 08:54:02 GMT"
+    },
+    "body": {
+      "error": "Khong tim thay giao dich nao voi ma nay"
+    }
+  },
+  "verification": "HTTP 404 | tieu chi Excel [404] -> KHOP",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
+  "role": "guest",
+  "attempts": 1
+}

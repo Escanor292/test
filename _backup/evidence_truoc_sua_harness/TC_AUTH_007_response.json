@@ -1,0 +1,33 @@
+{
+  "testCaseId": "TC_AUTH_007",
+  "description": "Từ chối đăng ký chưa đồng ý điều khoản",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:11.304Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/auth/register",
+    "method": "POST",
+    "authenticated": false,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "none"
+    },
+    "payload": {
+      "name": "Tran Thi B",
+      "email": "tranthib@test.vn",
+      "password": "SecurePassword@123",
+      "confirmPassword": "SecurePassword@123",
+      "acceptTerms": false
+    }
+  },
+  "response": {
+    "statusCode": 400,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 07:12:12 GMT"
+    },
+    "body": {
+      "error": "Bạn cần đồng ý Điều khoản sử dụng và Chính sách bảo mật để tạo tài khoản."
+    }
+  },
+  "verification": "HTTP 400 verified against expected [400]"
+}

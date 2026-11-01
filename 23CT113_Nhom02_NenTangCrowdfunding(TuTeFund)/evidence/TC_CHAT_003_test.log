@@ -1,0 +1,11 @@
+=== REAL TEST EXECUTION OUTPUT: TC_CHAT_003 ===
+Runner: Node.js Protocol & Architecture Verifier
+Timestamp: 2026-11-01T08:54:04.691Z
+Target: src/hooks/useCall.ts
+Expected: WebSocket full-duplex realtime connection
+Actual Findings:
+- WebSocket implementation detected: false
+- Short-polling interval detected: POLL_MS = 1200 ms
+Defect Analysis: System currently falls back to HTTP short-polling (1.2s), no WebSocket server found.
+Assertion Result: FAILED (Confirmed Defect / System Limitation)
+Test Status: FAIL (Logged as BUG-001)

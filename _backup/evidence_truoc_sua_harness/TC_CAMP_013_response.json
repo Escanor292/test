@@ -1,0 +1,26 @@
+{
+  "testCaseId": "TC_CAMP_013",
+  "description": "Admin duyệt chiến dịch sang ACTIVE",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:13.579Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/admin/campaigns/test-camp-id/review",
+    "method": "POST",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": {
+      "status": "ACTIVE"
+    }
+  },
+  "response": {
+    "statusCode": 405,
+    "headers": {
+      "date": "Sun, 01 Nov 2026 07:12:14 GMT"
+    },
+    "body": null
+  },
+  "verification": "HTTP 405 verified against expected [200,404,405]"
+}

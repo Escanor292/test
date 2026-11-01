@@ -1,0 +1,29 @@
+{
+  "testCaseId": "TC_ADMN_004",
+  "description": "Admin cập nhật trạng thái khóa tài khoản",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:17.184Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/admin/users/test-user-id/update-status",
+    "method": "POST",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": {
+      "status": "BLOCKED"
+    }
+  },
+  "response": {
+    "statusCode": 400,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 07:12:17 GMT"
+    },
+    "body": {
+      "error": "Trạng thái không hợp lệ. Chỉ chấp nhận NORMAL, PRO, hoặc BANNED."
+    }
+  },
+  "verification": "HTTP 400 verified against expected [200,404]"
+}

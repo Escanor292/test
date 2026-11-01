@@ -1,0 +1,26 @@
+{
+  "testCaseId": "TC_BLOG_011",
+  "description": "Chặn duyệt blog khi không có quyền Admin",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:16.986Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/admin/blog/posts/test-post-id/review",
+    "method": "POST",
+    "authenticated": false,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "none"
+    },
+    "payload": {
+      "status": "PUBLISHED"
+    }
+  },
+  "response": {
+    "statusCode": 405,
+    "headers": {
+      "date": "Sun, 01 Nov 2026 07:12:17 GMT"
+    },
+    "body": null
+  },
+  "verification": "HTTP 405 verified against expected [401,403]"
+}

@@ -1,0 +1,8 @@
+=== REAL TEST EXECUTION OUTPUT: TC_CHAT_004 ===
+Runner: Node.js Test Assertion Harness
+Timestamp: 2026-11-01T08:54:04.693Z
+Target: src/hooks/useCall.ts
+Assertion: CALL_TIMEOUT_MS === 45000 ms (45 seconds call timeout)
+Actual Evaluated Value: 45000 ms
+Assertion Result: PASSED
+Test Status: PASS

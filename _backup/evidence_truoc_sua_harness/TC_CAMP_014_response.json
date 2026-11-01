@@ -1,0 +1,26 @@
+{
+  "testCaseId": "TC_CAMP_014",
+  "description": "Admin ghim chiến dịch tiêu biểu isFeatured",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:13.658Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/admin/campaigns/test-camp-id/feature",
+    "method": "POST",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": {
+      "isFeatured": true
+    }
+  },
+  "response": {
+    "statusCode": 405,
+    "headers": {
+      "date": "Sun, 01 Nov 2026 07:12:14 GMT"
+    },
+    "body": null
+  },
+  "verification": "HTTP 405 verified against expected [200,404,405]"
+}

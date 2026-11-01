@@ -1,0 +1,30 @@
+{
+  "testCaseId": "TC_CAMP_011",
+  "description": "Creator gửi duyệt chiến dịch DRAFT",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:13.361Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/campaigns/sach-giao-duc-vung-cao/submit",
+    "method": "POST",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": {
+      "action": "SUBMIT_FOR_REVIEW"
+    }
+  },
+  "response": {
+    "statusCode": 200,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 07:12:14 GMT"
+    },
+    "body": {
+      "success": true,
+      "status": "ACTIVE"
+    }
+  },
+  "verification": "HTTP 200 verified against expected [200,400,404]"
+}

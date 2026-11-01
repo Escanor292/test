@@ -1,0 +1,32 @@
+{
+  "testCaseId": "TC_CAMP_012",
+  "description": "Từ chối hủy chiến dịch khi đã có pledge",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T08:53:59.854Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/campaigns/sach-giao-duc-vung-cao/cancel",
+    "method": "POST",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": {
+      "reason": "Huy chien dich"
+    }
+  },
+  "response": {
+    "statusCode": 404,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 08:54:00 GMT"
+    },
+    "body": {
+      "error": "Du an khong ton tai"
+    }
+  },
+  "verification": "HTTP 404 | tieu chi Excel [400,404] -> KHOP",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
+  "role": "admin",
+  "attempts": 1
+}

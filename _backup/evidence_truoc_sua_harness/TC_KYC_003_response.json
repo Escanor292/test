@@ -1,0 +1,31 @@
+{
+  "testCaseId": "TC_KYC_003",
+  "description": "Từ chối khi thiếu họ tên và số giấy tờ",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:11.951Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/user/upgrade-creator",
+    "method": "POST",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": {
+      "type": "PERSONAL",
+      "fullName": "",
+      "idCardNumber": ""
+    }
+  },
+  "response": {
+    "statusCode": 403,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 07:12:12 GMT"
+    },
+    "body": {
+      "error": "Tai khoan nay da la Creator"
+    }
+  },
+  "verification": "HTTP 403 verified against expected [400]"
+}

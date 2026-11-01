@@ -1,0 +1,27 @@
+{
+  "testCaseId": "TC_CERT_005",
+  "description": "Chứng nhận đóng góp không tồn tại",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:15.239Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/lookup?type=cert&id=INVALID-CODE-999",
+    "method": "GET",
+    "authenticated": false,
+    "headers": {
+      "Content-Type": "none",
+      "Cookie": "none"
+    },
+    "payload": null
+  },
+  "response": {
+    "statusCode": 400,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 07:12:16 GMT"
+    },
+    "body": {
+      "error": "Vui long cung cap ma giao dich hoac ma chung tu"
+    }
+  },
+  "verification": "HTTP 400 verified against expected [400,404]"
+}

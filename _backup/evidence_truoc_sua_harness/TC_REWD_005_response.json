@@ -1,0 +1,26 @@
+{
+  "testCaseId": "TC_REWD_005",
+  "description": "Chặn tắt gói thưởng khi không có quyền",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:14.077Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/rewards/test-reward-id/toggle",
+    "method": "POST",
+    "authenticated": false,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "none"
+    },
+    "payload": {
+      "isActive": false
+    }
+  },
+  "response": {
+    "statusCode": 405,
+    "headers": {
+      "date": "Sun, 01 Nov 2026 07:12:14 GMT"
+    },
+    "body": null
+  },
+  "verification": "HTTP 405 verified against expected [401,403,405]"
+}

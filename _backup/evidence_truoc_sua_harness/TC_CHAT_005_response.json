@@ -1,0 +1,29 @@
+{
+  "testCaseId": "TC_CHAT_005",
+  "description": "Gửi tín hiệu cuộc gọi thoại call-signal",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:17.096Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/chat/messages",
+    "method": "POST",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": {
+      "conversationId": "conv-123",
+      "type": "call-signal",
+      "content": "START_CALL"
+    }
+  },
+  "response": {
+    "statusCode": 404,
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "date": "Sun, 01 Nov 2026 07:12:17 GMT"
+    },
+    "body": "<!DOCTYPE html><!--Lih_KBsFA9lZNfCh2xCiW--><html lang=\"vi\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\"/><link rel=\"preload\" href=\"/_next/static/media/0c7826ffb3acea36-s.p.woff2\" as=\"font\" crossorigin=\"\" type=\"font/woff2\"/><link rel=\"preload\" href=\"/_next/static/media/4ead58c4dcc3f285-s.p.woff2\" as=\"font\" crossorigin=\"\" type=\"font/woff2\"/><link rel=\"preload\" href=\"/_next/static/media/692df4da22e71021-s.p.woff2\" as=\"font\" crossorigin=\"\" type=\"font/woff2\"/><link rel=\"preload\" href=\"/_next/static/media/6a9c36ea9dc9b36b-s.p.woff2\" as=\"font\" crossorigin=\"\" type=\"font/woff2\"/><link rel=\"preload\" href=\"/_next/static/media/eaead17c7dbfcd5d-s.p.woff2\" as=\"font\" crossorigin=\"\" type=\"font/woff2\"/><link rel=\"preload\" href=\"/_next/static/media/ee40bb094c99a29a-s.p.woff2\" as=\"font\" crossorigin=\"\" type=\"font/woff2\"/><link rel=\"stylesheet\" href=\"/_next/static/css/ee3cdf3ba91a9e06.css\" data-precedence=\"next\"/><link rel=\"stylesheet\""
+  },
+  "verification": "HTTP 404 verified against expected [200,201,404]"
+}

@@ -1,0 +1,207 @@
+{
+  "testCaseId": "TC_BLOG_002",
+  "description": "Truy vấn danh sách bài viết blog công khai",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:16.433Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/blog/posts",
+    "method": "GET",
+    "authenticated": false,
+    "headers": {
+      "Content-Type": "none",
+      "Cookie": "none"
+    },
+    "payload": null
+  },
+  "response": {
+    "statusCode": 200,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 07:12:17 GMT"
+    },
+    "body": {
+      "posts": [
+        {
+          "id": "ff1777d9-695b-4fe8-95c8-63e2c31d4c7f",
+          "authorId": "8fae5847-948a-4905-b720-c2f8900d26f4",
+          "campaignId": "52f6d289-0553-4530-bbba-11b0eef7ea3d",
+          "projectId": "cmvnvk6bw0001kktouinyfhzs",
+          "title": "[FIXTURE-2026] Nhật ký gieo mầm tuần đầu",
+          "slug": "nhat-ky-gieo-mam-tuan-dau-1792935602192-5puqh",
+          "excerpt": "Tóm tắt fixture: Nhật ký gieo mầm tuần đầu.",
+          "coverImage": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=82",
+          "status": "PUBLISHED",
+          "type": "STORY",
+          "visibility": "PUBLIC",
+          "publishedAt": "2026-10-24T13:39:51.275Z",
+          "createdAt": "2026-10-25T13:40:02.195Z",
+          "updatedAt": "2026-10-25T13:39:51.275Z",
+          "viewCount": 2,
+          "likeCount": 0,
+          "commentCount": 0,
+          "bookmarkCount": 0,
+          "isFeatured": true,
+          "wordCount": 220,
+          "readingTimeMinutes": 2,
+          "rejectionReason": null,
+          "reviewedAt": null,
+          "scheduledAt": null,
+          "author": {
+            "id": "8fae5847-948a-4905-b720-c2f8900d26f4",
+            "name": "Test Creator",
+            "avatar": null
+          },
+          "campaign": {
+            "id": "52f6d289-0553-4530-bbba-11b0eef7ea3d",
+            "title": "[FIXTURE-2026] Trồng 1.000 cây quanh trường học",
+            "slug": "trong-1-000-cay-quanh-truong-hoc-1792935596814-4q43m",
+            "project": {
+              "id": "cmvnvk6bw0001kktouinyfhzs",
+              "title": "[FIXTURE-2026] Vườn học xanh cho trẻ em vùng cao",
+              "slug": "vuon-hoc-xanh-cho-tre-em-vung-cao-1792935593994-33tuo"
+            }
+          },
+          "project": {
+            "id": "cmvnvk6bw0001kktouinyfhzs",
+            "title": "[FIXTURE-2026] Vườn học xanh cho trẻ em vùng cao",
+            "slug": "vuon-hoc-xanh-cho-tre-em-vung-cao-1792935593994-33tuo"
+          },
+          "categories": [],
+          "tags": []
+        },
+        {
+          "id": "bb4c6b8c-bf65-4cad-b04f-fa4c3b82b160",
+          "authorId": "8fae5847-948a-4905-b720-c2f8900d26f4",
+          "campaignId": "0221e5ad-f3e2-4282-913b-91472fab6825",
+          "projectId": "cmvnvk7ga0005kktoeegkx7t3",
+          "title": "[FIXTURE-2026] Tác động sau 100 ngày",
+          "slug": "tac-dong-sau-100-ngay-1792935603634-5lh32",
+          "excerpt": "Tóm tắt fixture: Tác động sau 100 ngày.",
+          "coverImage": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=82",
+          "status": "PUBLISHED",
+          "type": "IMPACT_REPORT",
+          "visibility": "PUBLIC",
+          "publishedAt": "2026-10-22T13:39:51.275Z",
+          "createdAt": "2026-10-25T13:40:03.637Z",
+          "updatedAt": "2026-10-25T13:39:51.275Z",
+          "viewCount": 34,
+          "likeCount": 6,
+          "commentCount": 2,
+          "bookmarkCount": 2,
+          "isFeatured": false,
+          "wordCount": 280,
+          "readingTimeMinutes": 4,
+          "rejectionReason": null,
+          "reviewedAt": null,
+          "scheduledAt": null,
+          "author": {
+            "id": "8fae5847-948a-4905-b720-c2f8900d26f4",
+            "name": "Test Creator",
+            "avatar": null
+          },
+          "campaign": {
+            "id": "0221e5ad-f3e2-4282-913b-91472fab6825",
+            "title": "[FIXTURE-2026] Tập 1: Người giữ lửa",
+            "slug": "tap-1-nguoi-giu-lua-1792935597273-mi9l4",
+            "project": {
+              "id": "cmvnvk7ga0005kktoeegkx7t3",
+              "title": "[FIXTURE-2026] Lớp học kỹ năng số cộng đồng",
+              "slug": "lop-hoc-ky-nang-so-cong-dong-1792935595449-nq4fs"
+            }
+          },
+          "project": {
+            "id": "cmvnvk7ga0005kktoeegkx7t3",
+            "title": "[FIXTURE-2026] Lớp học kỹ năng số cộng đồng",
+            "slug": "lop-hoc-ky-nang-so-cong-dong-1792935595449-nq4fs"
+          },
+          "categories": [],
+          "tags": []
+        },
+        {
+          "id": "535e0ab7-6214-4fc6-a783-63ce30bf300d",
+          "authorId": "23a78b4c-a483-413c-8a9f-02a7a34e8de5",
+          "campaignId": null,
+          "title": "[FIXTURE-2026] Bài viết độc lập về sống xanh",
+          "slug": "bai-viet-doc-lap-ve-song-xanh-1792935604230-ipanx",
+          "excerpt": "Tóm tắt fixture: Bài viết độc lập về sống xanh.",
+          "coverImage": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=82",
+          "status": "PUBLISHED",
+          "type": "PLATFORM",
+          "visibility": "PUBLIC",
+          "publishedAt": "2026-10-19T13:39:51.275Z",
+          "createdAt": "2026-10-25T13:40:04.232Z",
+          "updatedAt": "2026-10-25T13:39:51.275Z",
+          "viewCount": 85,
+          "likeCount": 15,
+          "commentCount": 1,
+          "bookmarkCount": 2,
+          "isFeatured": false,
+          "wordCount": 370,
+          "readingTimeMinutes": 7,
+          "rejectionReason": null,
+          "reviewedAt": null,
+          "scheduledAt": null,
+          "author": {
+            "id": "23a78b4c-a483-413c-8a9f-02a7a34e8de5",
+            "name": "Test Creator Pro",
+            "avatar": null
+          },
+          "categories": [],
+          "tags": []
+        },
+        {
+          "id": "caab9b61-d626-4614-a89a-de6c39f7537f",
+          "authorId": "8fae5847-948a-4905-b720-c2f8900d26f4",
+          "campaignId": "b5bca5b6-07d7-4ff0-948a-d646aaee85c1",
+          "projectId": "cmvnvk7ga0005kktoeegkx7t3",
+          "title": "[FIXTURE-2026] Hướng dẫn nhận sản phẩm số",
+          "slug": "huong-dan-nhan-san-pham-so-1792935604816-ogxen",
+          "excerpt": "Tóm tắt fixture: Hướng dẫn nhận sản phẩm số.",
+          "coverImage": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=82",
+          "status": "PUBLISHED",
+          "type": "PLATFORM",
+          "visibility": "PUBLIC",
+          "publishedAt": "2026-10-16T13:39:51.275Z",
+          "createdAt": "2026-10-25T13:40:04.818Z",
+          "updatedAt": "2026-10-25T13:39:51.275Z",
+          "viewCount": 136,
+          "likeCount": 24,
+          "commentCount": 0,
+          "bookmarkCount": 2,
+          "isFeatured": true,
+          "wordCount": 460,
+          "readingTimeMinutes": 4,
+          "rejectionReason": null,
+          "reviewedAt": null,
+          "scheduledAt": null,
+          "author": {
+            "id": "8fae5847-948a-4905-b720-c2f8900d26f4",
+            "name": "Test Creator",
+            "avatar": null
+          },
+          "campaign": {
+            "id": "b5bca5b6-07d7-4ff0-948a-d646aaee85c1",
+            "title": "[FIXTURE-2026] Album Mầm sáng",
+            "slug": "album-mam-sang-1792935598155-fa04r",
+            "project": {
+              "id": "cmvnvk7ga0005kktoeegkx7t3",
+              "title": "[FIXTURE-2026] Lớp học kỹ năng số cộng đồng",
+              "slug": "lop-hoc-ky-nang-so-cong-dong-1792935595449-nq4fs"
+            }
+          },
+          "project": {
+            "id": "cmvnvk7ga0005kktoeegkx7t3",
+            "title": "[FIXTURE-2026] Lớp học kỹ năng số cộng đồng",
+            "slug": "lop-hoc-ky-nang-so-cong-dong-1792935595449-nq4fs"
+          },
+          "categories": [],
+          "tags": []
+        }
+      ],
+      "total": 4,
+      "page": 1,
+      "limit": 10
+    }
+  },
+  "verification": "HTTP 200 verified against expected [200]"
+}

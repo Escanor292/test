@@ -1,0 +1,31 @@
+{
+  "testCaseId": "TC_AUTH_003",
+  "description": "Từ chối đăng nhập sai mật khẩu",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T08:53:57.060Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/auth/callback/credentials",
+    "method": "POST",
+    "authenticated": false,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "none"
+    },
+    "payload": {
+      "csrfToken": "playwright-real-csrf",
+      "email": "admin@crowdfunding.vn",
+      "password": "WrongPassword@999"
+    }
+  },
+  "response": {
+    "statusCode": 302,
+    "headers": {
+      "date": "Sun, 01 Nov 2026 08:53:57 GMT"
+    },
+    "body": null
+  },
+  "verification": "HTTP 302 | tieu chi Excel [200,302,401] -> KHOP",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
+  "role": "guest",
+  "attempts": 1
+}

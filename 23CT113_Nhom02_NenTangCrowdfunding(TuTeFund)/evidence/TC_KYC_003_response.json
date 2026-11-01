@@ -1,0 +1,34 @@
+{
+  "testCaseId": "TC_KYC_003",
+  "description": "Từ chối khi thiếu họ tên và số giấy tờ",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T08:53:58.217Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/user/upgrade-creator",
+    "method": "POST",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": {
+      "type": "PERSONAL",
+      "fullName": "",
+      "idCardNumber": ""
+    }
+  },
+  "response": {
+    "statusCode": 400,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 08:53:59 GMT"
+    },
+    "body": {
+      "error": "Thieu ho ten hoac so giay to"
+    }
+  },
+  "verification": "HTTP 400 | tieu chi Excel [400] -> KHOP",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
+  "role": "backer",
+  "attempts": 1
+}

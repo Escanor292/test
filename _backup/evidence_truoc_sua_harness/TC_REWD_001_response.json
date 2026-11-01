@@ -1,0 +1,31 @@
+{
+  "testCaseId": "TC_REWD_001",
+  "description": "Từ chối tạo phần thưởng với minAmount = 0",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:13.745Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/rewards",
+    "method": "POST",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": {
+      "title": "Goi qua mien phi",
+      "minAmount": 0,
+      "campaignId": "test-camp"
+    }
+  },
+  "response": {
+    "statusCode": 400,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 07:12:14 GMT"
+    },
+    "body": {
+      "error": "Missing required fields"
+    }
+  },
+  "verification": "HTTP 400 verified against expected [400]"
+}

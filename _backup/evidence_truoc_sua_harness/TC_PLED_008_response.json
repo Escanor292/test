@@ -1,0 +1,29 @@
+{
+  "testCaseId": "TC_PLED_008",
+  "description": "Chặn đối soát khi không có quyền Admin",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:14.995Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/admin/pledges/test-pledge-id/settle",
+    "method": "POST",
+    "authenticated": false,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "none"
+    },
+    "payload": {
+      "status": "SUCCESS"
+    }
+  },
+  "response": {
+    "statusCode": 403,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 07:12:15 GMT"
+    },
+    "body": {
+      "error": "Forbidden"
+    }
+  },
+  "verification": "HTTP 403 verified against expected [401,403]"
+}

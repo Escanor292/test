@@ -1,0 +1,33 @@
+{
+  "testCaseId": "TC_PLED_001",
+  "description": "Sinh mã VietQR và thông tin chuyển khoản ủng hộ",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:14.351Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/payment/bank-transfer",
+    "method": "POST",
+    "authenticated": false,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "none"
+    },
+    "payload": {
+      "campaignId": "sach-giao-duc-vung-cao",
+      "amount": 100000,
+      "donorName": "Nguyen Backer",
+      "donorEmail": "donor@gmail.com"
+    }
+  },
+  "response": {
+    "statusCode": 401,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 07:12:15 GMT"
+    },
+    "body": {
+      "success": false,
+      "message": "Unauthorized"
+    }
+  },
+  "verification": "HTTP 401 verified against expected [200,201]"
+}

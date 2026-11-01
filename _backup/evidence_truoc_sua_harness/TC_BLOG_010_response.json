@@ -1,0 +1,26 @@
+{
+  "testCaseId": "TC_BLOG_010",
+  "description": "Admin phê duyệt xuất bản bài viết blog",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:16.879Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/admin/blog/posts/test-post-id/review",
+    "method": "POST",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": {
+      "status": "PUBLISHED"
+    }
+  },
+  "response": {
+    "statusCode": 405,
+    "headers": {
+      "date": "Sun, 01 Nov 2026 07:12:17 GMT"
+    },
+    "body": null
+  },
+  "verification": "HTTP 405 verified against expected [200,404]"
+}

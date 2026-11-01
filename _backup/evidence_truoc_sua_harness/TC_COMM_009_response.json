@@ -1,0 +1,40 @@
+{
+  "testCaseId": "TC_COMM_009",
+  "description": "Backer gửi đánh giá chiến dịch",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:16.225Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/campaigns/sach-giao-duc-vung-cao/reviews",
+    "method": "POST",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": {
+      "rating": 5,
+      "comment": "Dự án rất ý nghĩa, sách đã được chuyển tận nơi"
+    }
+  },
+  "response": {
+    "statusCode": 200,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 07:12:16 GMT"
+    },
+    "body": {
+      "id": "ea0a0657-7777-4ba9-b4c5-28c443b7bf25",
+      "userId": "41deb2c1-79d3-46d7-989e-36ef071f0237",
+      "campaignId": "948e362e-4795-4a83-a7a8-0b897523d72f",
+      "rating": 5,
+      "comment": "Dự án rất ý nghĩa, sách đã được chuyển tận nơi",
+      "imageUrl": null,
+      "createdAt": "2026-11-01T07:12:16.978Z",
+      "users": {
+        "name": "Admin",
+        "avatar": null
+      }
+    }
+  },
+  "verification": "HTTP 200 verified against expected [200,201,403]"
+}

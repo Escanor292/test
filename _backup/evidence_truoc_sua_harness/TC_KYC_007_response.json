@@ -1,0 +1,34 @@
+{
+  "testCaseId": "TC_KYC_007",
+  "description": "Truy vấn trạng thái KYC thành công với session",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:12.216Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/kyc/status",
+    "method": "GET",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "none",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": null
+  },
+  "response": {
+    "statusCode": 200,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 07:12:12 GMT"
+    },
+    "body": {
+      "ekycEnabled": true,
+      "kycMode": "EKYC",
+      "kyc": null,
+      "limit": {
+        "maxPerTransaction": 20000000,
+        "maxPerDay": 50000000,
+        "maxTransactionsPerDay": 5
+      }
+    }
+  },
+  "verification": "HTTP 200 verified against expected [200]"
+}

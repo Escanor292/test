@@ -1,0 +1,27 @@
+{
+  "testCaseId": "TC_KYC_008",
+  "description": "Từ chối truy vấn KYC khi không có session",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:12.288Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/kyc/status",
+    "method": "GET",
+    "authenticated": false,
+    "headers": {
+      "Content-Type": "none",
+      "Cookie": "none"
+    },
+    "payload": null
+  },
+  "response": {
+    "statusCode": 401,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 07:12:13 GMT"
+    },
+    "body": {
+      "error": "Unauthorized"
+    }
+  },
+  "verification": "HTTP 401 verified against expected [401]"
+}

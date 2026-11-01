@@ -1,0 +1,32 @@
+{
+  "testCaseId": "TC_REWD_003",
+  "description": "Tạo phần thưởng hợp lệ",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:13.908Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/rewards",
+    "method": "POST",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": {
+      "title": "Gói Thiệp Tri Ân",
+      "minAmount": 50000,
+      "quantity": 100,
+      "description": "Thiệp cảm ơn"
+    }
+  },
+  "response": {
+    "statusCode": 400,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 07:12:14 GMT"
+    },
+    "body": {
+      "error": "Can them chien dich hoac du an de tao san pham"
+    }
+  },
+  "verification": "HTTP 400 verified against expected [200,201,400]"
+}

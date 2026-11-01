@@ -1,0 +1,65 @@
+{
+  "testCaseId": "TC_BLOG_007",
+  "description": "Lưu bài viết nháp DRAFT thành công",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T08:54:03.650Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/blog/posts",
+    "method": "POST",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": {
+      "title": "Cập nhật tiến độ dự án số 1",
+      "content": "Đã hoàn tất mua sách đợt 1",
+      "type": "PLATFORM",
+      "visibility": "PUBLIC",
+      "status": "DRAFT"
+    }
+  },
+  "response": {
+    "statusCode": 201,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 08:54:04 GMT"
+    },
+    "body": {
+      "id": "ffea8a91-9619-4a2b-aae7-c9e4312e91bb",
+      "authorId": "41deb2c1-79d3-46d7-989e-36ef071f0237",
+      "campaignId": null,
+      "title": "Cập nhật tiến độ dự án số 1",
+      "slug": "cap-nhat-tien-do-du-an-so-1-4",
+      "excerpt": null,
+      "coverImage": null,
+      "status": "DRAFT",
+      "type": "PLATFORM",
+      "visibility": "PUBLIC",
+      "publishedAt": null,
+      "createdAt": "2026-11-01T08:54:04.498Z",
+      "updatedAt": "2026-11-01T08:54:04.497Z",
+      "viewCount": 0,
+      "likeCount": 0,
+      "commentCount": 0,
+      "bookmarkCount": 0,
+      "isFeatured": false,
+      "wordCount": 7,
+      "readingTimeMinutes": 1,
+      "rejectionReason": null,
+      "reviewedAt": null,
+      "scheduledAt": null,
+      "author": {
+        "id": "41deb2c1-79d3-46d7-989e-36ef071f0237",
+        "name": "Admin",
+        "avatar": null
+      },
+      "categories": [],
+      "tags": []
+    }
+  },
+  "verification": "HTTP 201 | tieu chi Excel [201] -> KHOP",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
+  "role": "admin",
+  "attempts": 1
+}

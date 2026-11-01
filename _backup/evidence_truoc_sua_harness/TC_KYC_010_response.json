@@ -1,0 +1,26 @@
+{
+  "testCaseId": "TC_KYC_010",
+  "description": "Chặn người dùng thông thường gọi API duyệt KYC",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:12.496Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/admin/kyc/test-kyc-id/review",
+    "method": "POST",
+    "authenticated": false,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "none"
+    },
+    "payload": {
+      "status": "VERIFIED"
+    }
+  },
+  "response": {
+    "statusCode": 405,
+    "headers": {
+      "date": "Sun, 01 Nov 2026 07:12:13 GMT"
+    },
+    "body": null
+  },
+  "verification": "HTTP 405 verified against expected [401,403,405]"
+}

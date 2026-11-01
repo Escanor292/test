@@ -1,0 +1,31 @@
+{
+  "testCaseId": "TC_BLOG_007",
+  "description": "Lưu bài viết nháp DRAFT thành công",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:16.610Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/blog/posts",
+    "method": "POST",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": {
+      "title": "Cập nhật tiến độ dự án số 1",
+      "content": "Đã hoàn tất mua sách đợt 1",
+      "status": "DRAFT"
+    }
+  },
+  "response": {
+    "statusCode": 400,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 07:12:17 GMT"
+    },
+    "body": {
+      "error": "Missing required fields: title, type, visibility"
+    }
+  },
+  "verification": "HTTP 400 verified against expected [200,201]"
+}

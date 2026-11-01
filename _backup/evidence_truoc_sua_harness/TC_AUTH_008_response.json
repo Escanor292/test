@@ -1,0 +1,42 @@
+{
+  "testCaseId": "TC_AUTH_008",
+  "description": "Đăng ký thành công tài khoản Backer",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:11.508Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/auth/register",
+    "method": "POST",
+    "authenticated": false,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "none"
+    },
+    "payload": {
+      "name": "Real Backer QA",
+      "email": "backer.qa.1793517130470@crowdfunding.vn",
+      "password": "ValidPassword@123",
+      "confirmPassword": "ValidPassword@123",
+      "acceptTerms": true
+    }
+  },
+  "response": {
+    "statusCode": 201,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 07:12:12 GMT"
+    },
+    "body": {
+      "success": true,
+      "message": "Đăng ký tài khoản thành công",
+      "user": {
+        "id": "9d08a6c9-48a0-441c-a981-2bc050d5ab73",
+        "name": "Real Backer QA",
+        "email": "backer.qa.1793517130470@crowdfunding.vn",
+        "role": "BACKER",
+        "isOrganization": false,
+        "createdAt": "2026-11-01T07:12:12.277Z"
+      }
+    }
+  },
+  "verification": "HTTP 201 verified against expected [200,201]"
+}

@@ -1,0 +1,33 @@
+{
+  "testCaseId": "TC_CAMP_002",
+  "description": "Từ chối khi tài khoản không phải Creator",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T07:12:12.783Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/campaigns",
+    "method": "POST",
+    "authenticated": false,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "none"
+    },
+    "payload": {
+      "title": "Quyen gop sach vo",
+      "goalAmount": 20000000
+    }
+  },
+  "response": {
+    "statusCode": 401,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 07:12:13 GMT"
+    },
+    "body": {
+      "error": {
+        "message": "Authentication required",
+        "code": "UNAUTHORIZED"
+      }
+    }
+  },
+  "verification": "HTTP 401 verified against expected [401,403]"
+}

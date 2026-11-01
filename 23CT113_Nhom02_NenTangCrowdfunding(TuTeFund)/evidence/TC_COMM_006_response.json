@@ -1,0 +1,35 @@
+{
+  "testCaseId": "TC_COMM_006",
+  "description": "Từ chối gửi báo cáo vi phạm khi chưa đăng nhập",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T08:54:02.859Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/reports",
+    "method": "POST",
+    "authenticated": false,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "none"
+    },
+    "payload": {
+      "targetType": "CAMPAIGN",
+      "targetId": "b5bca5b6-07d7-4ff0-948a-d646aaee85c1",
+      "reason": "INAPPROPRIATE",
+      "description": "Nội dung phản cảm, hình ảnh không phù hợp với trẻ em."
+    }
+  },
+  "response": {
+    "statusCode": 401,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 08:54:03 GMT"
+    },
+    "body": {
+      "error": "Bạn cần đăng nhập để gửi báo cáo"
+    }
+  },
+  "verification": "HTTP 401 | tieu chi Excel [401] -> KHOP",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
+  "role": "guest",
+  "attempts": 1
+}

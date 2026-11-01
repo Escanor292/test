@@ -1,0 +1,30 @@
+{
+  "testCaseId": "TC_CERT_002",
+  "description": "Yêu cầu cung cấp mã giao dịch hoặc mã chứng từ",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T08:54:01.779Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/lookup",
+    "method": "GET",
+    "authenticated": false,
+    "headers": {
+      "Content-Type": "none",
+      "Cookie": "none"
+    },
+    "payload": null
+  },
+  "response": {
+    "statusCode": 400,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 08:54:02 GMT"
+    },
+    "body": {
+      "error": "Vui long cung cap ma giao dich hoac ma chung tu"
+    }
+  },
+  "verification": "HTTP 400 | tieu chi Excel [400] -> KHOP",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
+  "role": "guest",
+  "attempts": 1
+}

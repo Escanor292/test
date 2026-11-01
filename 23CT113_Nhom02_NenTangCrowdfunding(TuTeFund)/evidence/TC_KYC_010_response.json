@@ -1,0 +1,32 @@
+{
+  "testCaseId": "TC_KYC_010",
+  "description": "Chặn người dùng thông thường gọi API duyệt KYC",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T08:53:58.803Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/admin/kyc/test-kyc-id/review",
+    "method": "PATCH",
+    "authenticated": true,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "__Secure-authjs.session-token=[PRESENT]"
+    },
+    "payload": {
+      "action": "APPROVE"
+    }
+  },
+  "response": {
+    "statusCode": 403,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 08:53:59 GMT"
+    },
+    "body": {
+      "error": "Forbidden"
+    }
+  },
+  "verification": "HTTP 403 | tieu chi Excel [403] -> KHOP",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
+  "role": "backer",
+  "attempts": 1
+}

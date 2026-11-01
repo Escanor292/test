@@ -1,0 +1,34 @@
+{
+  "testCaseId": "TC_PLED_006",
+  "description": "Cổng PayOS trả HTTP 410 ESCROW_BANK_ONLY",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T08:54:01.405Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/payment/payos/create",
+    "method": "POST",
+    "authenticated": false,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cookie": "none"
+    },
+    "payload": {
+      "amount": 50000,
+      "campaignId": "test"
+    }
+  },
+  "response": {
+    "statusCode": 410,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 01 Nov 2026 08:54:02 GMT"
+    },
+    "body": {
+      "error": "Cổng thanh toán này đã tắt. Tử Tế Fund dùng tài khoản ngân hàng trung gian; creator không liên kết PayOS/MoMo/VNPay/SePay.",
+      "code": "ESCROW_BANK_ONLY"
+    }
+  },
+  "verification": "HTTP 410 | tieu chi Excel [410] -> KHOP",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > TC List > cot \"Ket qua mong doi\"",
+  "role": "guest",
+  "attempts": 1
+}
