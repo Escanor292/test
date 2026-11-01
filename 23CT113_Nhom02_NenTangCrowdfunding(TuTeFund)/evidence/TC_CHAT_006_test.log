@@ -1,0 +1,11 @@
+src/hooks/useCall.ts
+startPolling() chỉ xuất hiện ở:
+  startCall() — người chủ động gọi
+  acceptIncoming() — sau khi người nhận đã bấm nghe
+
+Người nhận chỉ chuyển phase incoming khi poll thấy sig.type === 'call' lúc phase idle.
+Không có useEffect nào gọi startPolling khi mở hội thoại.
+Vì vậy máy bên kia không hiện cuộc gọi và không xin quyền camera.
+
+getUserMedia video: { width: 640, height: 480 } — không phải HD.
+CALL_TIMEOUT_MS = 45000: người gọi tự kết thúc 'Không có ai bắt máy' sau 45 giây.

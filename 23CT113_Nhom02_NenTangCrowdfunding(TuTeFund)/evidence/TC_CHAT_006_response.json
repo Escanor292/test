@@ -1,0 +1,21 @@
+{
+  "testCaseId": "TC_CHAT_006",
+  "status": "FAIL",
+  "executionTimestamp": "2026-11-01T13:56:45.434328+00:00",
+  "verification": "FAIL. Người gọi gửi tin type=call rồi mới startPolling (useCall.ts startCall). startPolling chỉ được gọi ở người gọi và ở acceptIncoming. Người nhận ở phase idle không poll, nên không bao giờ setPhase('incoming') và không gọi getUserMedia. Tin call-signal cũng bị ẩn khỏi khung chat. Camera nếu có bật chỉ xin 640x480, không phải HD.",
+  "steps": [
+    {
+      "file": "src/hooks/useCall.ts",
+      "startCall": "startPolling() chỉ trong startCall và acceptIncoming"
+    },
+    {
+      "file": "src/hooks/useCall.ts",
+      "incoming": "phase idle + sig.type call chỉ xử lý bên trong vòng poll"
+    },
+    {
+      "file": "src/hooks/useCall.ts",
+      "camera": "getUserMedia video width 640 height 480"
+    }
+  ],
+  "criteriaSource": "Kết quả mong đợi: video HD hiện ở máy bên kia. Thực tế bên kia không có nút bật máy."
+}
