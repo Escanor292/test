@@ -148,7 +148,32 @@ def strip_placeholders(slide):
         ph._element.getparent().remove(ph._element)
 
 
+ON_DARK = RGBColor(0xE6, 0xEC, 0xF6)  # chu sang tren dai mau dam cuoi slide
+FONT = "Times New Roman"
+BUMP = 5  # tang ~5 co chu cho de doc (yeu cau 02/11/2026)
+
+
+def _set_font(run):
+    run.font.name = FONT
+
+
+def _est_height(items, w, h, bump):
+    """Uoc chieu cao chu (inch) de khong tran khung khi tang co."""
+    tot = 0.0
+    for it in items:
+        size = it.get("size", 19) + it.get("bump", bump)
+        per = max(8, int((w - 0.1) * 72 / (0.50 * size)))
+        lines = 0
+        for seg in str(it["text"]).splitlines():
+            lines += max(1, -(-len(seg) // per))
+        tot += lines * size * it.get("line_spacing", 1.05) / 72 + it.get("space_after", 9) / 72
+    return tot
+
+
 def textbox(slide, l, t, w, h, items, align=PP_ALIGN.LEFT, anchor=MSO_ANCHOR.TOP):
+    bump = BUMP
+    while bump > 0 and _est_height(items, w, h, bump) > h:
+        bump -= 1
     tb = slide.shapes.add_textbox(Inches(l), Inches(t), Inches(w), Inches(h))
     tf = tb.text_frame
     tf.word_wrap = True
@@ -163,10 +188,10 @@ def textbox(slide, l, t, w, h, items, align=PP_ALIGN.LEFT, anchor=MSO_ANCHOR.TOP
         p.line_spacing = it.get("line_spacing", 1.05)
         r = p.add_run()
         r.text = it["text"]
-        r.font.size = Pt(it.get("size", 19))
+        r.font.size = Pt(it.get("size", 19) + it.get("bump", bump))
         r.font.bold = it.get("bold", False)
         r.font.italic = it.get("italic", False)
-        r.font.name = "Arial"
+        _set_font(r)
         r.font.color.rgb = it.get("color", INK)
     return tb
 
@@ -194,10 +219,13 @@ def content_slide(eyebrow, title, bullets, footer_no, table=None, note=None, row
     accent_line(s, 2.9, 2.32, 3.0)
     y = 2.68
     if bullets:
-        n_line = sum(max(1, len(b) // 105 + 1) for b in bullets)
-        textbox(s, 0.95, y, 18.1, min(1.2 + 0.36 * n_line, 7.0),
+        n_line = sum(max(1, -(-len(b) // 78)) for b in bullets)
+        table_h = (row_h * table[0]) if table is not None else 0.0
+        avail = (9.55 - table_h - (0.55 if note else 0.0)) - y
+        h_bul = min(1.3 + 0.42 * n_line, max(1.1, avail))
+        textbox(s, 0.95, y, 18.1, h_bul,
                 [dict(text=b, size=19, space_after=9) for b in bullets])
-        y += 0.42 * n_line + 0.25
+        y += h_bul + 0.12
     if table is not None:
         rows, cols, data = table
         h = row_h * rows
@@ -214,17 +242,17 @@ def content_slide(eyebrow, title, bullets, footer_no, table=None, note=None, row
                 p = cell.text_frame.paragraphs[0]
                 r = p.add_run()
                 r.text = str(val)
-                r.font.size = Pt(15 if ri == 0 else 14)
+                r.font.size = Pt((15 if ri == 0 else 14) + BUMP)
                 r.font.bold = (ri == 0)
-                r.font.name = "Arial"
+                _set_font(r)
                 r.font.color.rgb = RGBColor(0xFF, 0xFF, 0xFF) if ri == 0 else INK
                 cell.margin_left = cell.margin_right = Inches(0.07)
                 cell.margin_top = cell.margin_bottom = 0
                 cell.vertical_anchor = MSO_ANCHOR.MIDDLE
     if note:
-        textbox(s, 0.95, 10.02, 18.1, 0.45, [dict(text=note, size=13, italic=True, color=SUB, space_after=0)])
-    textbox(s, 0.95, 10.5, 15.0, 0.4, [dict(text=FOOT, size=11, color=SUB, space_after=0)])
-    textbox(s, 18.2, 10.5, 1.2, 0.4, [dict(text=str(footer_no), size=12, color=SUB, space_after=0)],
+        textbox(s, 0.95, 9.68, 18.1, 0.42, [dict(text=note, size=14, bump=2, italic=True, color=ON_DARK, space_after=0)])
+    textbox(s, 0.95, 10.5, 15.0, 0.4, [dict(text=FOOT, size=11, bump=1, color=ON_DARK, space_after=0)])
+    textbox(s, 18.2, 10.5, 1.2, 0.4, [dict(text=str(footer_no), size=12, bump=1, color=ON_DARK, space_after=0)],
             align=PP_ALIGN.RIGHT)
     return s
 
