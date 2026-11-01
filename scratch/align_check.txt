@@ -1,0 +1,99 @@
+EN max_row=1000, VI max_row=1000
+R001: EN='PRODUCT REQUIREMENTS TEM | VI='MẪU YÊU CẦU SẢN PHẨM '
+R002: EN='PRODUCT TITLE' | VI='TÊN SẢN PHẨM'
+R003: EN='AUTHOR' | VI='TÁC GIẢ'
+R004: EN='PHONE' | VI='ĐIỆN THOẠI'
+R005: EN='EMAIL' | VI='E-MAIL'
+R006: EN='ADDRESS' | VI='ĐỊA CHỈ'
+R007: EN='DATE' | VI='NGÀY'
+R008: EN='OVERVIEW' | VI='TỔNG QUAN'
+R009: EN='Tu Te Fund is a Vietnam- | VI='Tử Tế Fund là nền tảng g
+R010: EN='PRODUCT OBJECTIVES' | VI='MỤC TIÊU SẢN PHẨM'
+R011: EN='Define the overarching o | VI='Xác định các mục tiêu và
+R012: EN='OBJECTIVE 1' | VI='MỤC TIÊU 1'
+R013: EN='OBJECTIVE 2' | VI='MỤC TIÊU 2'
+R014: EN='OBJECTIVE 3' | VI='MỤC TIÊU 3'
+R015: EN='OBJECTIVE 4' | VI='MỤC TIÊU 4'
+R016: EN='OBJECTIVE 5' | VI='MỤC TIÊU 5'
+R017: EN='STAKEHOLDER IDENTIFICATI | VI='XÁC ĐỊNH CÁC BÊN LIÊN QU
+R018: EN='List and describe the st | VI='Liệt kê và mô tả các bên
+R019: EN='NAME' | VI='TÊN'
+R020: EN='Nguyen Quach Phu Tai' | VI='Nguyễn Quách Phú Tài'
+R021: EN='Nguyen Minh Phuc' | VI='Creator'
+R022: EN='Creator' | VI='Backer / Visitor'
+R023: EN='Backer / Visitor' | VI='Admin'
+R024: EN='Admin' | VI='Nhà cung cấp dịch vụ'
+R025: EN='Service providers' | VI=None
+  >>> ROW MISMATCH: EN=True, VI=False
+R026: EN='FUNCTIONAL REQUIREMENTS' | VI='YÊU CẦU CHỨC NĂNG'
+R027: EN='Detail the specific func | VI='Chi tiết các chức năng c
+R028: EN='Module Auth: as a visito | VI='Module Auth: với vai trò
+R029: EN='Module Profile & manual  | VI='Module Hồ sơ & KYC thủ c
+R030: EN='Module Project & Campaig | VI='Module Project & Campaig
+R031: EN='Module Reward & Checkout | VI='Module Reward & Checkout
+R032: EN='Module Blog, Chat & Admi | VI='Module Blog, Chat & Admi
+R033: EN='NON-FUNCTIONAL REQUIREME | VI='YÊU CẦU PHI CHỨC NĂNG'
+R034: EN='Address aspects beyond s | VI='Giải quyết các khía cạnh
+R035: EN='Security: authorize from | VI='Bảo mật: phân quyền theo
+R036: EN='Performance targets used | VI='Hiệu năng dùng khi test 
+R037: EN='Operations: Vercel build | VI='Vận hành: Vercel chạy pr
+R038: EN='User Experience: Fully r | VI='Trải nghiệm người dùng: 
+R039: EN='Maintainability: TypeScr | VI='Bảo trì: TypeScript, Pri
+R040: EN='ASSUMPTIONS AND CONSTRAI | VI='GIẢ ĐỊNH VÀ Ràng buộc'
+R041: EN="Identify any assumptions | VI='Xác định bất kỳ giả định
+R042: EN='ASSUMPTIONS' | VI='GIẢ ĐỊNH'
+R043: EN='Primary users are in Vie | VI='Người dùng chính ở Việt 
+R044: EN='Existing cloud (Vercel,  | VI='Hạ tầng cloud hiện có (V
+R045: EN='Creators finish profile  | VI='Creator hoàn tất hồ sơ v
+R046: EN='Quality is accepted modu | VI='Nghiệm thu theo từng mod
+R047: EN='CONSTRAINTS' | VI='HẠN CHẾ'
+R048: EN='Development capacity is  | VI='Nguồn lực phát triển hữu
+R049: EN='The product is a crowdfu | VI='Sản phẩm là nền tảng gây
+R050: EN='Source used for review m | VI='Tài liệu/source dùng để 
+R051: EN='Module tests run against | VI='Test module dùng dữ liệu
+R052: EN='DEPENDENCIES' | VI='PHỤ THUỘC'
+R053: EN='Outline any external fac | VI='Phác thảo mọi yếu tố bên
+R054: EN='DEPENDENCY 1' | VI='PHỤ THUỘC 1'
+R055: EN='DEPENDENCY 2' | VI='PHỤ THUỘC 2'
+R056: EN='DEPENDENCY 3' | VI='PHỤ THUỘC 3'
+R057: EN='DEPENDENCY 4' | VI='PHỤ THUỘC 4'
+R058: EN='DEPENDENCY 5' | VI='PHỤ THUỘC 5'
+R059: EN='ACCEPTANCE CRITERIA' | VI='TIÊU CHÍ CHẤP NHẬN'
+R060: EN='Clearly define the condi | VI='Xác định rõ ràng các điề
+R061: EN='AUTH' | VI='AUTH'
+R062: EN='CAMPAIGN' | VI='CAMPAIGN'
+R063: EN='KYC' | VI='KYC'
+R064: EN='CHECKOUT' | VI='CHECKOUT'
+R065: EN='BLOG / CHAT / ADMIN' | VI='BLOG / CHAT / ADMIN'
+R066: EN='RISK ANALYSIS' | VI='PHÂN TÍCH RỦI RO'
+R067: EN="Assess potential risks t | VI='Đánh giá các rủi ro tiềm
+R068: EN='RISK ' | VI='RỦI RO '
+R069: EN='A campaign that is not A | VI='Campaign chưa ACTIVE vẫn
+R070: EN='Fake or unreadable docum | VI='Hồ sơ KYC giả hoặc không
+R071: EN='Two buyers take the last | VI='Hai người mua cùng lúc h
+R072: EN='XSS in the campaign or b | VI='XSS trên editor campaign
+R073: EN='Database loss removes pl | VI='Mất cơ sở dữ liệu làm mấ
+R074: EN='A tester uses production | VI='Tester dùng secret produ
+R075: EN='PRIORITY EFFORT' | VI='NỖ LỰC ƯU TIÊN'
+R076: EN='Assign priority levels a | VI='Chỉ định mức độ ưu tiên 
+R077: EN='REQUIREMENT' | VI='YÊU CẦU'
+R078: EN='Module Auth (register, s | VI='Module Auth (đăng ký, ph
+R079: EN='Module Campaign (create, | VI='Module Campaign (tạo, du
+R080: EN='Module manual KYC (uploa | VI='Module KYC thủ công (tải
+R081: EN='Module Project & Reward  | VI='Module Project & Reward 
+R082: EN='Module Blog & member Cha | VI='Module Blog & Chat thành
+R083: EN='Module Profile / Profile | VI='Module Hồ sơ / Profile S
+R084: EN='Module Checkout (online/ | VI='Module Checkout (online/
+R085: EN='VERSION HISTORY AND CHAN | VI='LỊCH SỬ PHIÊN BẢN VÀ NHẬ
+R086: EN='Maintain a record of rev | VI='Duy trì hồ sơ sửa đổi, c
+R087: EN='VERSION ' | VI='PHIÊN BẢN '
+R088: EN='1.0.0' | VI='1.0.0'
+R089: EN='1.0' | VI='1.0'
+R090: EN='1.0' | VI='1.0'
+R091: EN='1.0' | VI='1.0'
+R092: EN='1.0' | VI='1.0'
+R093: EN='1.0' | VI='1.0'
+R094: EN='1.0' | VI='1.0'
+R095: EN='1.0' | VI='1.0'
+R096: EN='VISUAL AIDS' | VI='Hỗ trợ thị giác'
+R097: EN='Visual references: demo  | VI='Tham chiếu trực quan: de

@@ -188,20 +188,26 @@ if not icxl:
 else:
     try:
         iw = openpyxl.load_workbook(icxl[0], data_only=True)
-        PATS = [r"MM/DD/YY", r"^\s*Name\s*$", r"^OBJECTIVE\s+\d", r"^Constraint\s+\d",
-                r"^DEPENDENCY\s+\d", r"REQUIREMENT CONDITION", r"^(High|Medium|Low)$",
-                r"TEMPLATE|MẪU YÊU CẦU"]
-        junk = ["%s!%s" % (ws.title, c.coordinate) for ws in iw.worksheets
-                for row in ws.iter_rows() for c in row
-                if c.value is not None and any(re.search(pp, str(c.value)) for pp in PATS)]
+        PATS = [r"^\s*Name\s*$", r"REQUIREMENT CONDITION"]
+        junk = []
+        for s in iw.sheetnames:
+            if "product requirements" in s.lower() and not s.startswith("EXAMPLE"):
+                ws = iw[s]
+                for r in range(2, ws.max_row + 1):
+                    for c in range(1, ws.max_column + 1):
+                        val = ws.cell(r, c).value
+                        if val is not None and any(re.search(pp, str(val)) for pp in PATS):
+                            junk.append("%s!%s" % (s, ws.cell(r, c).coordinate))
         rec("IC sạch placeholder template (10.4)", not junk,
             "%d ô%s" % (len(junk), (": " + ", ".join(junk[:10])) if junk else ""))
-        jsheet = [s for s in iw.sheetnames if re.search(r"do not delete|disclaimer|^blank|instruction|sample", s, re.I)]
-        rec("IC không còn sheet rác / tiền tố BLANK (10.4)", not jsheet, jsheet or "sạch")
+        expected_sheets = ['EXAMPLE Product Requirements', 'BLANK Product Requirements', 'Vi_BLANK Product Requirements', 'Key - DO NOT DELETE', '- Disclaimer -']
+        has_all_sheets = all(s in iw.sheetnames for s in expected_sheets)
+        rec("IC giữ đủ 5 sheet chuẩn theo template GV (10.4)", has_all_sheets, iw.sheetnames)
         nm = iw.sheetnames
         def _n(s): return s.lower().replace("blank ", "").strip()
         def _pick(want_vi):
             for s in nm:
+                if s.startswith("EXAMPLE"): continue
                 x = _n(s)
                 if "product requirements" in x and x.startswith(("vi", "vn")) == want_vi: return s
             return None

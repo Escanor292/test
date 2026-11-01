@@ -1,11 +1,47 @@
 {
   "version": 1,
   "skills": {
+    "apply-comments": {
+      "source": "open-slide/open-slide",
+      "sourceType": "github",
+      "skillPath": "packages/core/skills/apply-comments/SKILL.md",
+      "computedHash": "b4b97cb3368adea8ed6ae77f04cd6440310bdd90dd3d6e5c9a85d9897e85dfad"
+    },
+    "create-slide": {
+      "source": "open-slide/open-slide",
+      "sourceType": "github",
+      "skillPath": "packages/core/skills/create-slide/SKILL.md",
+      "computedHash": "de85bd737f8f2609499027aa8dfde1ef37271960e6bed54154ae15ef57364993"
+    },
+    "create-theme": {
+      "source": "open-slide/open-slide",
+      "sourceType": "github",
+      "skillPath": "packages/core/skills/create-theme/SKILL.md",
+      "computedHash": "733246330db51b91d38646315d5ff248764e97d93ea8e5c5acc9db129f5f8531"
+    },
+    "current-slide": {
+      "source": "open-slide/open-slide",
+      "sourceType": "github",
+      "skillPath": "packages/core/skills/current-slide/SKILL.md",
+      "computedHash": "16b2bb1dc442fed8fff2fbaa120a3ce32fea66d7fbe3047ca1851cd926630255"
+    },
     "neon": {
       "source": "neondatabase/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/neon/SKILL.md",
       "computedHash": "be346e41230da99ec27555ea8eb781a398568a5c8d70bdc1e5d82d3f2547f2f0"
+    },
+    "slide-authoring": {
+      "source": "open-slide/open-slide",
+      "sourceType": "github",
+      "skillPath": "packages/core/skills/slide-authoring/SKILL.md",
+      "computedHash": "1a68502c0b4bae8c891c68b08a6ebe318f3db5a66959ee5f2f56799351b254c3"
+    },
+    "ui-screenshots": {
+      "source": "open-slide/open-slide",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/ui-screenshots/SKILL.md",
+      "computedHash": "3b8cb984a63ca81c4760c23252dbd9cacbe5fbed62800c8c9dc2ce1d840065f7"
     }
   }
 }

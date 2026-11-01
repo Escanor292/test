@@ -132,14 +132,14 @@ expected = {
     "Test Case_23CT113_Nhom02.xlsx",
     "Test Plan_23CT113_Nhom02.docx",
     "Test Report_23CT113_Nhom02.docx",
-    "TimeLine/Nhom2_Ke_hoach_Truong_nhom_Bao_cao_cuoi_ky.docx",
+    "TimeLine/Nhom2_Ke_hoach_Bao_cao_cuoi_ky.docx",
     "TimeLine/Biên Bản Họp Nhóm Lần 1 – Báo Cáo Cuối Kỳ Môn Kiểm Thử Phần Mềm.docx",
     "TimeLine/Biên Bản Họp Nhóm Lần 2 – Báo Cáo Cuối Kỳ Môn Kiểm Thử Phần Mềm.docx",
     "TimeLine/Biên Bản Họp Nhóm Lần 3 – Báo Cáo Cuối Kỳ Môn Kiểm Thử Phần Mềm.docx",
     "TimeLine/TimeLine_23CT113_Nhom02.xlsx",
     "Word+ppt Báo Cáo/Báo Cáo Word_23CT113_Nhom02.docx",
     "Word+ppt Báo Cáo/Nhom02_Final_Report_Software_Testing.pdf",
-    "Word+ppt Báo Cáo/Ppt Báo cáo Nhóm 2 - 23CT113.pptx",
+    "Word+ppt Báo Cáo/Nhom02_Final_Presentation.pptx",
 }
 actual = set()
 for p in glob.glob(os.path.join(BASE, "**", "*"), recursive=True):
@@ -149,7 +149,9 @@ for p in glob.glob(os.path.join(BASE, "**", "*"), recursive=True):
             actual.add(rel)
 # File IC/PRD: BẮT BUỘC với nhóm này — thiếu là lỗi chặn nộp, không phải "thông tin".
 ic_files = {f for f in actual if os.path.basename(f).startswith("01-IC-")}
-missing, extra = expected - actual, actual - expected - ic_files
+# Bản PPT cũ giữ lại để đối chiếu (KHÔNG nộp) — không tính là file thừa
+keep = {"Word+ppt Báo Cáo/Ppt Báo cáo Nhóm 2 - 23CT113.pptx"}
+missing, extra = expected - actual, actual - expected - ic_files - keep
 rec("Đủ 12 file bắt buộc (có IC), không thừa file lạ", not missing and not extra,
     "thiếu=%s | thừa=%s" % (sorted(missing), sorted(extra)))
 rec("Có file IC .xlsx", any(f.endswith(".xlsx") for f in ic_files),
@@ -397,7 +399,7 @@ def doc(path):
         rec("Mở được %s" % path, False, e); return None
 
 for p in ["Test Plan_23CT113_Nhom02.docx", "Test Report_23CT113_Nhom02.docx",
-          "TimeLine/Nhom2_Ke_hoach_Truong_nhom_Bao_cao_cuoi_ky.docx"]:
+          "TimeLine/Nhom2_Ke_hoach_Bao_cao_cuoi_ky.docx"]:
     d = doc(p)
     if d:
         sizes = collections.Counter()
@@ -414,7 +416,7 @@ for p in ["Test Plan_23CT113_Nhom02.docx", "Test Report_23CT113_Nhom02.docx",
             rec("%s: font Times New Roman" % p,
                 "times new roman" in fonts.most_common(1)[0][0].lower(), dict(fonts))
 
-k = doc("TimeLine/Nhom2_Ke_hoach_Truong_nhom_Bao_cao_cuoi_ky.docx")
+k = doc("TimeLine/Nhom2_Ke_hoach_Bao_cao_cuoi_ky.docx")
 if k:
     rec("Kế hoạch trưởng nhóm: đúng 3 bảng", len(k.tables) == 3, len(k.tables))
     rec("Kế hoạch trưởng nhóm: bảng 1 đúng 6 dòng", bool(k.tables) and len(k.tables[0].rows) == 6,
@@ -431,8 +433,16 @@ if Presentation is None:
     rec("Đếm slide PPT", "KHÔNG KIỂM ĐƯỢC", "thiếu python-pptx — pip install python-pptx")
 else:
     try:
-        prs = Presentation(os.path.join(BASE, "Word+ppt Báo Cáo/Ppt Báo cáo Nhóm 2 - 23CT113.pptx"))
+        prs = Presentation(os.path.join(BASE, "Word+ppt Báo Cáo/Nhom02_Final_Presentation.pptx"))
         rec("PPT 10–12 slide", 10 <= len(prs.slides) <= 12, len(prs.slides))
+        rec("PPT đúng khổ 20 × 11,25 in",
+            (prs.slide_width, prs.slide_height) == (18288000, 10287000),
+            "%dx%d" % (prs.slide_width, prs.slide_height))
+        bg_ok = sum(1 for s in prs.slides
+                    if [sh.name for sh in list(s.shapes)[:3]]
+                    == ["Freeform 2", "Group 3", "Group 5"])
+        rec("PPT đủ nền + 2 logo ở mọi slide", bg_ok == len(prs.slides),
+            "%d/%d slide" % (bg_ok, len(prs.slides)))
     except Exception as e:
         rec("Đọc được PPT", False, e)
 

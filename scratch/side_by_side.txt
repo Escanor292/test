@@ -1,0 +1,292 @@
+R01 EN: PRODUCT REQUIREMENTS TEMPLATE |  |  | 
+R01 VI: MẪU YÊU CẦU SẢN PHẨM |  |  | 
+------------------------------------------------------------
+R02 EN: PRODUCT TITLE | Tu Te Fund — Community Crowdfunding Platform |  | 
+R02 VI: TÊN SẢN PHẨM | Tử Tế Fund — Nền tảng gây quỹ cộng đồng |  | 
+------------------------------------------------------------
+R03 EN: AUTHOR | Nguyen Quach Phu Tai |  | 
+R03 VI: TÁC GIẢ | Nguyễn Quách Phú Tài |  | 
+------------------------------------------------------------
+R04 EN: PHONE | 0932299701 |  | 
+R04 VI: ĐIỆN THOẠI | 0932299701 |  | 
+------------------------------------------------------------
+R05 EN: EMAIL | nguyenquachphutai@gmail.com |  | 
+R05 VI: E-MAIL | nguyenquachphutai@gmail.com |  | 
+------------------------------------------------------------
+R06 EN: ADDRESS | Faculty of IT, Lac Hong University, Bien Hoa, Dong Nai, Vietnam |  | 
+R06 VI: ĐỊA CHỈ | Khoa CNTT, Trường Đại học Lạc Hồng, Biên Hòa, Đồng Nai, Việt Nam |  | 
+------------------------------------------------------------
+R07 EN: DATE | 2026-09-07 00:00:00 |  | 
+R07 VI: NGÀY | 2026-09-07 00:00:00 |  | 
+------------------------------------------------------------
+R08 EN: OVERVIEW |  |  | 
+R08 VI: TỔNG QUAN | nguyenquachphutai@gmail.com | nhom2_Nentanggayquycongdong_TuTe_Fund | 
+------------------------------------------------------------
+R09 EN: Tu Te Fund is a Vietnam-focused crowdfunding platform with campaign fundraising, creator project hubs, reward/product catalogs, blogs, and member chat. Visitors browse public campaigns. Backers pledge or buy rewards in VND. Creators manage projects after manual KYC. Admins review campaigns, users, badges, and reports. Stack: Next.js 15 App Router, NextAuth 5, Prisma/PostgreSQL, MongoDB, Redis read-through cache, Cloudinary, Vercel. Audience: VN creators, backers, the course instructor, and platform operators. Demo: https://platform-seven-navy-44.vercel.app |  |  | 
+R09 VI: Tử Tế Fund là nền tảng gây quỹ cộng đồng cho thị trường Việt Nam, gồm chiến dịch ủng hộ, project hub của creator, catalog phần quà/sản phẩm, blog và chat giữa thành viên. Visitor xem nội dung công khai. Backer ủng hộ hoặc mua bằng VNĐ. Creator quản lý project sau khi hoàn tất KYC thủ công. Admin duyệt chiến dịch, người dùng, badge và báo cáo. Stack: Next.js 15 App Router, NextAuth 5, Prisma/PostgreSQL, MongoDB, Redis cache đọc, Cloudinary, Vercel. Đối tượng: creator–backer trong nước, giảng viên hướng dẫn và ban vận hành. Demo: https://platform-seven-navy-44.vercel.app |  |  | 
+------------------------------------------------------------
+R10 EN: PRODUCT OBJECTIVES |  |  | 
+R10 VI: MỤC TIÊU SẢN PHẨM |  | VAI TRÒ + NỘI DUNG + MẪU
+eX: Với vai trò là project manager. tôi muốn viết tổng quản của ứng dụng [tên] cho product requirement vói mục tiêu [mục tiêu], [kết quả mong đợi], [các dối tượng liên quan] hãy viết ngắn gọn theo đinh dạng đoạn văn với văn phong của dữ án kỹ thuật, hãy diễn đạt theo hình thức quy nap | 
+------------------------------------------------------------
+R11 EN: Define the overarching objectives and goals the product aims to achieve. This section sets the context for the requirements that follow. |  |  | 
+R11 VI: Xác định các mục tiêu và mục tiêu tổng thể mà sản phẩm hướng tới. Phần này đặt bối cảnh cho các yêu cầu tiếp theo. |  |  | 
+------------------------------------------------------------
+R12 EN: OBJECTIVE 1 | Enable transparent fundraising with goals, progress, dates, pledges, updates, and DRAFT → PENDING_REVIEW → ACTIVE lifecycle. |  | 
+R12 VI: MỤC TIÊU 1 | Gây quỹ minh bạch: mục tiêu, tiến độ, thời hạn, pledge, cập nhật và vòng đời DRAFT → PENDING_REVIEW → ACTIVE. |  | 
+------------------------------------------------------------
+R13 EN: OBJECTIVE 2 | Give creators a Project Hub that links campaigns, rewards/products, blogs, and a public Profile Studio. |  | 
+R13 VI: MỤC TIÊU 2 | Project Hub cho creator: liên kết campaign, reward/product, blog và Profile Studio công khai. |  | 
+------------------------------------------------------------
+R14 EN: OBJECTIVE 3 | Combine patronage with commerce: AVAILABLE rewards may use COD; DEVELOPMENT cannot; unlock the digital locker after a successful pledge. |  | 
+R14 VI: MỤC TIÊU 3 | Kết hợp ủng hộ với thương mại: phần quà AVAILABLE được COD; DEVELOPMENT không COD; mở kho đồ sau khi ủng hộ thành công. |  | 
+------------------------------------------------------------
+R15 EN: OBJECTIVE 4 | Retain community via blog, follow/like/bookmark/comment, notifications, and member chat/calls. |  | 
+R15 VI: MỤC TIÊU 4 | Giữ chân cộng đồng: blog, follow/like/bookmark/comment, thông báo, chat/gọi giữa thành viên. |  | 
+------------------------------------------------------------
+R16 EN: OBJECTIVE 5 | Protect users with session auth, manual KYC, Guest/Backer/Creator/Admin roles, moderation, and audit logs. |  | 
+R16 VI: MỤC TIÊU 5 | Bảo vệ người dùng: auth session, KYC thủ công, vai Guest/Backer/Creator/Admin, kiểm duyệt, nhật ký audit. |  | 
+------------------------------------------------------------
+R17 EN: STAKEHOLDER IDENTIFICATION |  |  | 
+R17 VI: XÁC ĐỊNH CÁC BÊN LIÊN QUAN |  |  | 
+------------------------------------------------------------
+R18 EN: List and describe the stakeholders involved in the project, specifying their roles, responsibilities, and interests in the product. |  |  | 
+R18 VI: Liệt kê và mô tả các bên liên quan tham gia vào dự án, nêu rõ vai trò, trách nhiệm và lợi ích của họ đối với sản phẩm. |  |  | 
+------------------------------------------------------------
+R19 EN: NAME | ROLE | RESPONSIBILITY | INTERESTS IN THIS PRODUCT
+R19 VI: TÊN | TÊN | RESPONSIBILITY | INTERESTS IN THIS PRODUCT
+------------------------------------------------------------
+R20 EN: Nguyen Quach Phu Tai | Student / Product owner / Developer | Gather requirements, design, implement, test by module, and deploy the demo. | Ship a working crowdfunding platform for Vietnamese creators and backers.
+R20 VI: Nguyễn Quách Phú Tài | Sinh viên / chủ sản phẩm / lập trình | Thu thập yêu cầu, thiết kế, cài đặt, kiểm thử theo từng module và triển khai bản demo. | Vận hành được nền tảng gây quỹ cho creator và backer tại Việt Nam.
+------------------------------------------------------------
+R21 EN: Nguyen Minh Phuc | Academic supervisor | Review PRD/SRS, weekly progress, and acceptance of the course deliverable. | Ensure the topic meets Lac Hong University PTUD standards (phuc@lhu.edu.vn).
+R21 VI: Creator | Người dùng bên cung | Tạo project, campaign, reward, blog; nộp KYC thủ công; đăng cập nhật; giao phần quà. | Gây quỹ VNĐ trong nước, có danh tính tin cậy và công cụ nội dung.
+------------------------------------------------------------
+R22 EN: Creator | Primary supply-side user | Create projects, campaigns, rewards, and blogs; submit manual KYC; post updates; fulfill rewards. | Raise VND funds locally with trusted identity and content tools.
+R22 VI: Backer / Visitor | Người dùng bên cầu | Khám phá, ủng hộ hoặc mua, theo dõi tiến độ, nhận kho đồ, chat, đánh giá. | Ủng hộ bằng phương thức thanh toán nội địa quen thuộc, rõ quyền lợi phần quà.
+------------------------------------------------------------
+R23 EN: Backer / Visitor | Primary demand-side user | Discover campaigns, pledge or buy, track progress, receive locker items, chat, and review. | Support projects with familiar VN payment methods and clear reward rights.
+R23 VI: Admin | Vận hành tin cậy | Duyệt campaign, blog và hồ sơ KYC thủ công; quản lý trạng thái user, badge, báo cáo, từ ngữ cấm. | Giảm gian lận và giữ an toàn cộng đồng.
+------------------------------------------------------------
+R24 EN: Admin | Trust and operations | Review campaigns, blogs, and manual KYC files; manage user status, badges, reports, and word filters. | Reduce fraud and keep the community safe.
+R24 VI: Nhà cung cấp dịch vụ | Hosting, cơ sở dữ liệu và lưu trữ ảnh | Cung cấp hạ tầng cho các module cần kiểm thử (hosting, PostgreSQL, MongoDB, ảnh). | Tích hợp ổn định; ứng dụng vẫn phải kiểm tra phía máy chủ.
+------------------------------------------------------------
+R25 EN: Service providers | Cloud hosting, database, and media vendors | Provide hosting, PostgreSQL, MongoDB, and image storage used by the modules under test. | Stable integrations; the app must still validate on the server.
+R25 VI:  |  |  | 
+------------------------------------------------------------
+R26 EN: FUNCTIONAL REQUIREMENTS |  |  | 
+R26 VI: YÊU CẦU CHỨC NĂNG |  |  | 
+------------------------------------------------------------
+R27 EN: Detail the specific functionalities the product must have. Use user stories, scenarios, or use cases to describe how users will interact with the product and what the product needs to do. |  |  | 
+R27 VI: Chi tiết các chức năng cụ thể mà sản phẩm phải có. Sử dụng các câu chuyện, kịch bản hoặc trường hợp sử dụng của người dùng để mô tả cách người dùng sẽ tương tác với sản phẩm và những gì sản phẩm cần làm. |  |  | 
+------------------------------------------------------------
+R28 EN: Module Auth: as a visitor or backer I can register, log in (email+password or Google), reset a password with a one-time token, and a banned account is blocked on protected pages and APIs. |  |  | 
+R28 VI: Module Auth: với vai trò visitor/backer, tôi đăng ký, đăng nhập (email+mật khẩu hoặc Google), khôi phục mật khẩu bằng token một lần; tài khoản bị cấm không vào được trang và API được bảo vệ. |  |  | 
+------------------------------------------------------------
+R29 EN: Module Profile & manual KYC: as a user I edit my public profile and Profile Studio; to become a creator I upload ID documents and wait for an admin to approve or reject them by hand. |  |  | 
+R29 VI: Module Hồ sơ & KYC thủ công: tôi sửa hồ sơ và Profile Studio; khi nâng creator tôi tải ảnh giấy tờ và chờ admin duyệt hoặc từ chối bằng tay. |  |  | 
+------------------------------------------------------------
+R30 EN: Module Project & Campaign: as a creator I CRUD a project hub and campaigns (DRAFT / PENDING_REVIEW / ACTIVE); as an admin I review campaigns; only ACTIVE campaigns accept pledges. |  |  | 
+R30 VI: Module Project & Campaign: creator CRUD project hub và campaign (DRAFT / PENDING_REVIEW / ACTIVE); admin duyệt campaign; chỉ campaign ACTIVE nhận pledge. |  |  | 
+------------------------------------------------------------
+R31 EN: Module Reward & Checkout: as a creator I manage rewards (AVAILABLE or DEVELOPMENT, stock, up to 8 images + 1 video); as a backer I pledge or buy, use COD only when allowed, and receive locker items after success. |  |  | 
+R31 VI: Module Reward & Checkout: creator quản lý phần quà (AVAILABLE hoặc DEVELOPMENT, tồn kho, tối đa 8 ảnh + 1 video); backer ủng hộ hoặc mua, COD chỉ khi được phép, nhận kho đồ khi thành công. |  |  | 
+------------------------------------------------------------
+R32 EN: Module Blog, Chat & Admin: as a member I use sanitized blogs, follow/comment, notifications, and person-to-person chat; as an admin I manage badges, reports, and banned words. |  |  | 
+R32 VI: Module Blog, Chat & Admin: thành viên dùng blog đã làm sạch HTML, follow/comment, thông báo và chat người–người; admin quản lý badge, báo cáo và từ cấm. |  |  | 
+------------------------------------------------------------
+R33 EN: NON-FUNCTIONAL REQUIREMENTS |  |  | 
+R33 VI: YÊU CẦU PHI CHỨC NĂNG |  |  | 
+------------------------------------------------------------
+R34 EN: Address aspects beyond specific features, such as performance, security, scalability, usability, compliance, and any technical constraints. |  |  | 
+R34 VI: Giải quyết các khía cạnh ngoài các tính năng cụ thể, chẳng hạn như hiệu suất, bảo mật, khả năng mở rộng, khả năng sử dụng, tuân thủ và mọi ràng buộc kỹ thuật. |  |  | 
+------------------------------------------------------------
+R35 EN: Security: authorize from the server session only; sanitize HTML and uploads; do not store full card numbers; audit sensitive actions without writing secrets into logs. |  |  | 
+R35 VI: Bảo mật: phân quyền theo session máy chủ; làm sạch HTML/upload; không lưu đủ số thẻ; audit không ghi secret vào log. |  |  | 
+------------------------------------------------------------
+R36 EN: Performance targets used when testing each module (not a production SLA): public read p95 < 500ms with healthy cache; authenticated CRUD p95 < 800ms; public LCP < 2.5s. |  |  | 
+R36 VI: Hiệu năng dùng khi test từng module (chưa phải SLA): đọc public p95 < 500ms khi cache khỏe; CRUD đã đăng nhập p95 < 800ms; LCP public < 2.5s. |  |  | 
+------------------------------------------------------------
+R37 EN: Operations: Vercel build runs prisma generate + migrate deploy + next build; Redis is read-through cache only. |  |  | 
+R37 VI: Vận hành: Vercel chạy prisma generate + migrate deploy + next build; Redis chỉ cache đọc. |  |  | 
+------------------------------------------------------------
+R38 EN: User Experience: Fully responsive across all devices; clear and user-friendly workflow; smooth Framer Motion animations. |  |  | 
+R38 VI: Trải nghiệm người dùng: Responsive mọi thiết bị; Quy trình rõ ràng, dễ dùng; Framer Motion mượt mà |  |  | 
+------------------------------------------------------------
+R39 EN: Maintainability: TypeScript + Prisma schema as source of truth; Jest, DB tests, and Playwright organized by module. |  |  | 
+R39 VI: Bảo trì: TypeScript, Prisma là nguồn sự thật; Jest + test DB + Playwright tách theo module. |  |  | 
+------------------------------------------------------------
+R40 EN: ASSUMPTIONS AND CONSTRAINTS |  |  | 
+R40 VI: GIẢ ĐỊNH VÀ Ràng buộc |  |  | 
+------------------------------------------------------------
+R41 EN: Identify any assumptions made during the requirement-gathering process and constraints that might impact the product's development or deployment. |  |  | 
+R41 VI: Xác định bất kỳ giả định nào được đưa ra trong quá trình thu thập yêu cầu và các ràng buộc có thể ảnh hưởng đến quá trình phát triển hoặc triển khai sản phẩm. |  |  | 
+------------------------------------------------------------
+R42 EN: ASSUMPTIONS |  |  | 
+R42 VI: GIẢ ĐỊNH |  |  | 
+------------------------------------------------------------
+R43 EN: Primary users are in Vietnam and complete pledges in VND with local payment methods, not a crypto wallet. |  |  | 
+R43 VI: Người dùng chính ở Việt Nam, ủng hộ bằng VNĐ và kênh thanh toán nội địa. |  |  | 
+------------------------------------------------------------
+R44 EN: Existing cloud (Vercel, Neon, MongoDB Atlas, Redis Cloud, Cloudinary) is sufficient for the demo environment. |  |  | 
+R44 VI: Hạ tầng cloud hiện có (Vercel, Neon, MongoDB Atlas, Redis Cloud, Cloudinary) đủ cho môi trường demo. |  |  | 
+------------------------------------------------------------
+R45 EN: Creators finish profile and manual KYC before full privileges; admin is the final reviewer of campaigns and identity files. |  |  | 
+R45 VI: Creator hoàn tất hồ sơ và KYC thủ công trước khi đủ quyền; admin là người duyệt cuối hồ sơ và chiến dịch. |  |  | 
+------------------------------------------------------------
+R46 EN: Quality is accepted module by module (Auth, KYC, Campaign, Reward, Checkout, Blog, Chat, Admin), not as one untested monolith. |  |  | 
+R46 VI: Nghiệm thu theo từng module (Auth, KYC, Campaign, Reward, Checkout, Blog, Chat, Admin), không gộp một lần cho cả hệ thống. |  |  | 
+------------------------------------------------------------
+R47 EN: CONSTRAINTS |  |  | 
+R47 VI: HẠN CHẾ |  |  | 
+------------------------------------------------------------
+R48 EN: Development capacity is limited; core modules (Auth, Campaign, KYC, Checkout) take priority over later extensions. |  |  | 
+R48 VI: Nguồn lực phát triển hữu hạn; ưu tiên module lõi (Auth, Campaign, KYC, Checkout) trước phần mở rộng. |  |  | 
+------------------------------------------------------------
+R49 EN: The product is a crowdfunding and catalog platform, not a licensed payment company or exchange. |  |  | 
+R49 VI: Sản phẩm là nền tảng gây quỹ và catalog, không phải công ty trung gian thanh toán hay sàn giao dịch. |  |  | 
+------------------------------------------------------------
+R50 EN: Source used for review must not include live environment files; testers receive the demo site or a sanitized snapshot. |  |  | 
+R50 VI: Tài liệu/source dùng để review không kèm file môi trường thật; tester nhận demo hoặc bản đã rà. |  |  | 
+------------------------------------------------------------
+R51 EN: Module tests run against sandbox/demo data; missing production vendor credentials must not block module acceptance on the demo. |  |  | 
+R51 VI: Test module dùng dữ liệu demo; thiếu cấu hình nhà cung cấp production không chặn nghiệm thu trên bản demo. |  |  | 
+------------------------------------------------------------
+R52 EN: DEPENDENCIES |  |  | 
+R52 VI: PHỤ THUỘC |  |  | 
+------------------------------------------------------------
+R53 EN: Outline any external factors or dependencies that could affect the development or release of the product, such as third-party integrations or external services. |  |  | 
+R53 VI: Phác thảo mọi yếu tố bên ngoài hoặc sự phụ thuộc có thể ảnh hưởng đến việc phát triển hoặc phát hành sản phẩm, chẳng hạn như sự tích hợp của bên thứ ba hoặc các dịch vụ bên ngoài. |  |  | 
+------------------------------------------------------------
+R54 EN: DEPENDENCY 1 | Neon PostgreSQL with Prisma migrations (accounts, campaigns, pledges). |  | 
+R54 VI: PHỤ THUỘC 1 | Neon PostgreSQL + Prisma migrate (tài khoản, campaign, pledge). |  | 
+------------------------------------------------------------
+R55 EN: DEPENDENCY 2 | MongoDB Atlas for member chat, blog content, notifications, and activity logs. |  | 
+R55 VI: PHỤ THUỘC 2 | MongoDB Atlas cho chat thành viên, nội dung blog, thông báo, nhật ký. |  | 
+------------------------------------------------------------
+R56 EN: DEPENDENCY 3 | NextAuth 5 and optional Google OAuth for the Auth module. |  | 
+R56 VI: PHỤ THUỘC 3 | NextAuth 5 và Google OAuth tùy chọn cho module Auth. |  | 
+------------------------------------------------------------
+R57 EN: DEPENDENCY 4 | Cloudinary (or equivalent) for profile, campaign, reward, and manual KYC images. |  | 
+R57 VI: PHỤ THUỘC 4 | Cloudinary (hoặc tương đương) cho ảnh hồ sơ, campaign, reward và giấy tờ KYC thủ công. |  | 
+------------------------------------------------------------
+R58 EN: DEPENDENCY 5 | Vercel hosting for the Next.js 15 application. |  | 
+R58 VI: PHỤ THUỘC 5 | Vercel hosting cho ứng dụng Next.js 15. |  | 
+------------------------------------------------------------
+R59 EN: ACCEPTANCE CRITERIA |  |  | 
+R59 VI: TIÊU CHÍ CHẤP NHẬN |  |  | 
+------------------------------------------------------------
+R60 EN: Clearly define the conditions that must be met for each requirement to be considered successfully implemented and accepted. |  |  | 
+R60 VI: Xác định rõ ràng các điều kiện phải đáp ứng để mỗi yêu cầu được coi là thực hiện thành công và được chấp nhận. |  |  | 
+------------------------------------------------------------
+R61 EN: AUTH | Register, login, and reset work; a banned user cannot call protected APIs; no open redirect; passwords stored with bcrypt only. |  | 
+R61 VI: AUTH | Đăng ký, đăng nhập, reset hoạt động; user bị cấm không gọi được API bảo vệ; không open redirect; mật khẩu chỉ lưu bcrypt. |  | 
+------------------------------------------------------------
+R62 EN: CAMPAIGN | Visitors can list/filter public campaigns; creators save drafts; admin can set ACTIVE; pledges fail if the campaign is not ACTIVE or is outside its window. |  | 
+R62 VI: CAMPAIGN | Visitor lọc được campaign public; creator lưu nháp; admin đưa sang ACTIVE; pledge thất bại nếu campaign không ACTIVE hoặc hết hạn. |  | 
+------------------------------------------------------------
+R63 EN: KYC | A KYC submit without ID images is rejected; admin can approve or reject by hand; identity files are not shown on public pages. |  | 
+R63 VI: KYC | Nộp KYC thiếu ảnh giấy tờ thì từ chối; admin duyệt hoặc từ chối bằng tay; ảnh giấy tờ không hiện trang công khai. |  | 
+------------------------------------------------------------
+R64 EN: CHECKOUT | No-reward pledges use online checkout; COD only when allowed and the product is AVAILABLE; success writes the pledge and locker item; refunds revoke the item. |  | 
+R64 VI: CHECKOUT | Pledge không phần quà đi checkout online; COD chỉ khi được phép và hàng AVAILABLE; thành công ghi pledge và kho đồ; hoàn tiền thì thu hồi item. |  | 
+------------------------------------------------------------
+R65 EN: BLOG / CHAT / ADMIN | A published blog renders sanitized HTML; members can send a chat message; admin badge and report screens do not return 500. |  | 
+R65 VI: BLOG / CHAT / ADMIN | Blog xuất bản ra HTML đã làm sạch; thành viên gửi được tin chat; màn badge/báo cáo của admin không trả 500. |  | 
+------------------------------------------------------------
+R66 EN: RISK ANALYSIS |  |  | 
+R66 VI: PHÂN TÍCH RỦI RO |  |  | 
+------------------------------------------------------------
+R67 EN: Assess potential risks that could impact the project's success and detail mitigation strategies or contingency plans. |  |  | 
+R67 VI: Đánh giá các rủi ro tiềm ẩn có thể ảnh hưởng đến sự thành công của dự án và đưa ra các chiến lược giảm thiểu chi tiết hoặc kế hoạch dự phòng. |  |  | 
+------------------------------------------------------------
+R68 EN: RISK |  | MITIGATION | 
+R68 VI: RỦI RO |  | GIẢM THIỂU | 
+------------------------------------------------------------
+R69 EN: A campaign that is not ACTIVE still receives a pledge. |  | Module Campaign/Checkout tests reject pledges unless status is ACTIVE and the campaign window is open. | 
+R69 VI: Campaign chưa ACTIVE vẫn nhận được pledge. |  | Test module Campaign/Checkout từ chối pledge nếu trạng thái khác ACTIVE hoặc ngoài thời hạn. | 
+------------------------------------------------------------
+R70 EN: Fake or unreadable documents pass manual KYC. |  | Require images on submit; admin reviews files by hand; rejected cases cannot create campaigns. | 
+R70 VI: Hồ sơ KYC giả hoặc không đọc được vẫn được duyệt. |  | Bắt buộc có ảnh khi nộp; admin xem tay; hồ sơ từ chối không được tạo campaign. | 
+------------------------------------------------------------
+R71 EN: Two buyers take the last in-stock reward at the same time. |  | Module Reward/Checkout tests stock under concurrent pledges and never allow negative stock. | 
+R71 VI: Hai người mua cùng lúc hết hàng. |  | Test module Reward/Checkout với pledge đồng thời; tồn kho không được âm. | 
+------------------------------------------------------------
+R72 EN: XSS in the campaign or blog editor. |  | Sanitize rich text in the Blog/Campaign module; cap upload MIME and size. | 
+R72 VI: XSS trên editor campaign hoặc blog. |  | Làm sạch rich text ở module Blog/Campaign; giới hạn kiểu và dung lượng file. | 
+------------------------------------------------------------
+R73 EN: Database loss removes pledges or chat history. |  | Keep module data on managed cloud stores; record backup as an operations follow-up, not a product feature. | 
+R73 VI: Mất cơ sở dữ liệu làm mất pledge hoặc lịch sử chat. |  | Để dữ liệu module trên cloud có quản trị; backup là việc vận hành sau, không phải tính năng sản phẩm. | 
+------------------------------------------------------------
+R74 EN: A tester uses production secrets from a shared repo. |  | Share only the demo URL and test accounts; keep environment files out of the review package. | 
+R74 VI: Tester dùng secret production từ repo được chia sẻ. |  | Chỉ gửi URL demo và tài khoản thử; không đưa file môi trường vào gói review. | 
+------------------------------------------------------------
+R75 EN: PRIORITY EFFORT |  |  | 
+R75 VI: NỖ LỰC ƯU TIÊN |  |  | 
+------------------------------------------------------------
+R76 EN: Assign priority levels and estimate the effort required for each requirement to assist with project planning and resource allocation. |  |  | 
+R76 VI: Chỉ định mức độ ưu tiên và ước tính nỗ lực cần thiết cho từng yêu cầu để hỗ trợ lập kế hoạch dự án và phân bổ nguồn lực. |  |  | 
+------------------------------------------------------------
+R77 EN: REQUIREMENT | PRIORITY LEVEL | ESTIMATED EFFORT REQUIRED | 
+R77 VI: YÊU CẦU | YÊU CẦU | NỖ LỰC DỰ KIẾN YÊU CẦU | 
+------------------------------------------------------------
+R78 EN: Module Auth (register, session, reset, banned user) | High | Test this module first; about 1 week to close remaining cases | 
+R78 VI: Module Auth (đăng ký, phiên, reset, tài khoản bị cấm) | High | Test module này trước; khoảng 1 tuần đóng case còn lại | 
+------------------------------------------------------------
+R79 EN: Module Campaign (create, review, ACTIVE window) | Medium | About 2 weeks including admin review cases | 
+R79 VI: Module Campaign (tạo, duyệt, cửa sổ ACTIVE) | Medium | Khoảng 2 tuần, gồm case admin duyệt | 
+------------------------------------------------------------
+R80 EN: Module manual KYC (upload, admin approve/reject) | Low | About 1 week of admin-review test cases | 
+R80 VI: Module KYC thủ công (tải ảnh, admin duyệt/từ chối) | Low | Khoảng 1 tuần case admin | 
+------------------------------------------------------------
+R81 EN: Module Project & Reward (hub, stock, media) | High | About 2 weeks including empty-state and stock cases | 
+R81 VI: Module Project & Reward (hub, tồn kho, media) | High | Khoảng 2 tuần, gồm empty state và tồn kho | 
+------------------------------------------------------------
+R82 EN: Module Blog & member Chat | Medium | About 2 weeks; person-to-person chat only | 
+R82 VI: Module Blog & Chat thành viên | Medium | Khoảng 2 tuần; chỉ chat người–người | 
+------------------------------------------------------------
+R83 EN: Module Profile / Profile Studio | Low | About 1 week | 
+R83 VI: Module Hồ sơ / Profile Studio | Low | Khoảng 1 tuần | 
+------------------------------------------------------------
+R84 EN: Module Checkout (online/COD, locker, stock) | High | About 3 weeks of module tests on the demo | 
+R84 VI: Module Checkout (online/COD, kho đồ, tồn kho) | High | Khoảng 3 tuần test trên bản demo | 
+------------------------------------------------------------
+R85 EN: VERSION HISTORY AND CHANGE LOG |  |  | 
+R85 VI: LỊCH SỬ PHIÊN BẢN VÀ NHẬT KÝ THAY ĐỔI |  |  | 
+------------------------------------------------------------
+R86 EN: Maintain a record of revisions, updates, and changes made to the document to track the evolution of requirements. |  |  | 
+R86 VI: Duy trì hồ sơ sửa đổi, cập nhật và thay đổi được thực hiện đối với tài liệu để theo dõi sự phát triển của các yêu cầu. |  |  | 
+------------------------------------------------------------
+R87 EN: VERSION | EDITS COMPLETED BY | DATE | DESCRIPTION OF EDIT
+R87 VI: PHIÊN BẢN | PHIÊN BẢN | DATE | DESCRIPTION OF EDIT
+------------------------------------------------------------
+R88 EN: 1.0.0 |  | 2026-07-09 00:00:00 | 
+R88 VI: 1.0.0 |  | 2026-07-09 00:00:00 | 
+------------------------------------------------------------
+R89 EN: 1.0 |  | MM/DD/YY | 
+R89 VI: 1.0 |  | MM/DD/YY | 
+------------------------------------------------------------
+R90 EN: 1.0 |  | MM/DD/YY | 
+R90 VI: 1.0 |  | MM/DD/YY | 
+------------------------------------------------------------
+R91 EN: 1.0 |  | MM/DD/YY | 
+R91 VI: 1.0 |  | MM/DD/YY | 
+------------------------------------------------------------
+R92 EN: 1.0 |  | MM/DD/YY | 
+R92 VI: 1.0 |  | MM/DD/YY | 
+------------------------------------------------------------
+R93 EN: 1.0 |  | MM/DD/YY | 
+R93 VI: 1.0 |  | MM/DD/YY | 
+------------------------------------------------------------
+R94 EN: 1.0 |  | MM/DD/YY | 
+R94 VI: 1.0 |  | MM/DD/YY | 
+------------------------------------------------------------
+R95 EN: 1.0 |  | MM/DD/YY | 
+R95 VI: 1.0 |  | MM/DD/YY | 
+------------------------------------------------------------
+R96 EN: VISUAL AIDS |  |  | 
+R96 VI: Hỗ trợ thị giác |  |  | 
+------------------------------------------------------------
+R97 EN: Visual references: demo https://platform-seven-navy-44.vercel.app ; architecture Browser → Next.js 15 → Prisma/Postgres + Mongo + Cloudinary; screens /gioi-thieu, /projects, /blog, /purchases, Profile Studio. Test evidence is collected per module. |  |  | 
+R97 VI: Tham chiếu trực quan: demo https://platform-seven-navy-44.vercel.app ; kiến trúc Browser → Next.js 15 → Prisma/Postgres + Mongo + Cloudinary; màn /gioi-thieu, /projects, /blog, /purchases, Profile Studio. Minh chứng kiểm thử lấy theo từng module. |  |  | 
+------------------------------------------------------------

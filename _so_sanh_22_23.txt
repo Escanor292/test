@@ -1,0 +1,619 @@
+
+==============================================================================
+BO 22  ->  22CT115_Nhom07_QuanLyBanHang(Sweet-Sip)
+==============================================================================
+
+[XLSX] 22CT115_Nhom07_QuanLyBanHang(Sweet-Sip)\01-IC-Product-Requirements-Template-Example_Google_Sheets (1).xlsx  (83505 bytes)
+  sheets: 5 -> ['EXAMPLE Product Requirements', 'BLANK Product Requirements', 'Vi_BLANK Product Requirements', 'Key - DO NOT DELETE', '- Disclaimer -']
+   - [EXAMPLE Product Requirements] dims=A1:Z275 max_row=275 max_col=26
+     R2: B2=PRODUCT REQUIREMENTS TEMPLATE EXAMPLE
+     R3: B3=PRODUCT TITLE | C3=Sweet Sip
+     R4: B4=AUTHOR | C4=Trần Thị Như Quỳnh 
+     R5: B5=PHONE | C5=363169755.0
+     rows_co_du_lieu=71
+   - [BLANK Product Requirements] dims=A1:Z297 max_row=297 max_col=26
+     R1: B1=PRODUCT REQUIREMENTS TEMPLATE 
+     R2: B2=PRODUCT TITLE | C2=Title
+     R3: B3=AUTHOR | C3=Name
+     R4: B4=PHONE | C4=Phone
+     R5: B5=EMAIL
+     rows_co_du_lieu=85
+   - [Vi_BLANK Product Requirements] dims=A1:Z308 max_row=308 max_col=26
+     R1: B1=MẪU YÊU CẦU SẢN PHẨM 
+     R2: B2=TÊN SẢN PHẨM | C2=Sweet Sip
+     R3: B3=TÁC GIẢ | C3=Trần Thị Như Quỳnh - Nguyễn Đình Minh 
+     R4: B4=ĐIỆN THOẠI | C4=0363169755 - 
+     R5: B5=E-MAIL | C5=nhuquynhthi2k4@gmail.com 
+     rows_co_du_lieu=102
+   - [Key - DO NOT DELETE] dims=B2:F6 max_row=6 max_col=6
+     R2: B2=KEY - DO NOT DELETE
+     R4: B4=High
+     R5: B5=Medium
+     rows_co_du_lieu=4
+   - [- Disclaimer -] dims=A1:Z4 max_row=4 max_col=26
+     R2: B2=Any articles, templates, or informatio
+     R4: B4=Mọi bài viết, mẫu hoặc thông tin do Sm
+     rows_co_du_lieu=2
+
+[XLSX] 22CT115_Nhom07_QuanLyBanHang(Sweet-Sip)\Test Case_22CT115_Nhóm07.xlsx  (115858 bytes)
+  sheets: 2 -> ['TC List', 'TR List']
+   - [TC List] dims=A1:Z768 max_row=768 max_col=26
+     R1: A1=Test Case List
+     R2: A2=TR ID | B2=TC ID | C2=TC  Description | D2=TC  Description(VN) | E2=Pre-Condition | F2=Pre-Condition(VN) | G2=Steps | H2=Step | I2=Step(VN) | K2=Expected Result | L2=Expected Result(VN) | M2=Test Result Chrome 67.0.3 | N2=Build
+     R3: A3=Inventory Management
+     R4: A4=TR-001 | B4=TC-001 | C4=        Users can add new products in  | D4=Người dùng có thể thêm sản phẩm mới tr | E4=User is logged in and has access to th | F4=Người dùng đã đăng nhập và có quyền tr | G4=1. Navigate to the inventory managemen | H4=1. Navigate to the inventory managemen | I4=1. Điều hướng đến trang quản lý tồn kh | J4=1. Điều hướng đến trang quản lý tồn kh | K4=The new product should be added to the | L4=Sản phẩm mới sẽ được thêm vào danh mục | M4=Passed | N4=1.0
+     R5: A5=TR-001 | B5=TC-002 | C5=Ensure the page loads quickly when acc | D5=Đảm bảo tốc độ tải trang nhanh khi tru | E5=User is logged in with administrator r | F5=Người dùng đã đăng nhập và có quyền qu | G5=1. Access the inventory management pag | H5=1. Access the inventory management pag | I5=1. Truy cập vào trang quản lý tồn kho. | J5=1. Truy cập vào trang quản lý tồn kho. | K5=The page should load within 3 seconds. | L5=Trang phải tải trong vòng 3 giây. | M5=Passed | N5=1.0
+     rows_co_du_lieu=215
+   - [TR List] dims=A1:AD900 max_row=900 max_col=30
+     R1: A1=Test Requirement List
+     R4: A4=TR-ID | B4=Test Requirements | C4=Yêu cầu Test | D4=TR Type | E4=Notes | F4=Reviewer | G4=Mark
+     R5: A5=Inventory Management
+     rows_co_du_lieu=68
+
+[DOCX] 22CT115_Nhom07_QuanLyBanHang(Sweet-Sip)\Test Plan_22CT115_Nhóm07.docx  (1681638 bytes)
+  paragraphs=54 tables=0 sections=1
+  heading-like: 0
+
+[DOCX] 22CT115_Nhom07_QuanLyBanHang(Sweet-Sip)\Test Repost_22CT115_Nhóm07.docx  (36863 bytes)
+  paragraphs=20 tables=4 sections=1
+  heading-like: 7
+    [Heading 1] BÁO CÁO TỔNG HỢP KIỂM THỬ TRANG WEB BÁN BÁNH ONLINE TẠI KHU VỰC
+    [Heading 2] THÔNG TIN CHUNG
+    [Heading 2] 2. TỔNG QUAN KẾT QUẢ
+    [Heading 2] 3. BẢNG TỔNG HỢP THEO MODULE
+    [Heading 2] 4. PHÂN TÍCH LỖI
+    [Heading 2] 5. KHUYẾN NGHỊ & ƯU TIÊN
+    [Heading 2] 6. QUYẾT ĐỊNH TRIỂN KHAI
+  table1: 13r x 6c | header=Module / TC / Pass / Fail / Skip / Tỷ lệ Pass
+  table2: 7r x 6c | header=ID / Module / Mô tả lỗi / Mức độ / TC / TR-ID
+  table3: 7r x 5c | header=ID / Mô tả lỗi / Mức độ / Khuyến nghị / Hành động cần thực hiện
+  table4: 5r x 2c | header=Triển khai / ID
+
+[DOCX] 22CT115_Nhom07_QuanLyBanHang(Sweet-Sip)\TimeLine\Biên Bản Họp Nhóm Lần 1 – Báo Cáo Cuối Kỳ Môn Kiểm Thử Phần Mềm.docx  (10626 bytes)
+  paragraphs=45 tables=0 sections=1
+  heading-like: 9
+    [Heading 2] Biên Bản Họp Nhóm Lần 1 – Báo Cáo Cuối Kỳ Môn Kiểm Thử Phần Mềm
+    [Heading 3] Mục Đích Cuộc Họp
+    [Heading 3] Nội Dung Thảo Luận
+    [Heading 4] 1. Lập kế hoạch báo cáo
+    [Heading 4] 2. Phân tích
+    [normal] 3. Phân công công việc
+    [Heading 4] 4. Lập kế hoạch tiến độ
+    [Heading 4] 5. Công cụ sử dụng
+    [Heading 3] 6.Kết Quả Cuộc Họp
+
+[DOCX] 22CT115_Nhom07_QuanLyBanHang(Sweet-Sip)\TimeLine\Biên Bản Họp Nhóm Lần 2 – Báo Cáo Cuối Kỳ Môn Kiểm Thử Phần Mềm.docx  (197587 bytes)
+  paragraphs=29 tables=0 sections=1
+  heading-like: 18
+    [Heading 2] Biên Bản Họp Nhóm Lần 2 – Báo Cáo Cuối Kỳ Môn Kiểm Thử Phần Mềm
+    [Heading 3] Mục Đích Cuộc Họp
+    [Heading 3] Kiểm tra chất lượng Test Plan.
+    [Heading 3] Đánh giá tiến độ hoàn thành các Test Case.
+    [Heading 3] Hướng dẫn quy trình kiểm thử mẫu và cách viết báo cáo.
+    [Heading 4] Nội Dung Thảo Luận
+    [Heading 4] Kiểm tra Test Plan
+    [Heading 4] Trình bày cấu trúc và nội dung cần thiết.
+    [Heading 4] Thảo luận tiêu chí chất lượng.
+    [Heading 4] Đánh giá Test Case
+    [Heading 4] Báo cáo số lượng Test Case đã hoàn thành.
+    [Heading 4] Phân tích nguyên nhân các Test Case chưa hoàn thành.
+    [Heading 4] Hướng dẫn kiểm thử và viết báo cáo
+    [Heading 4] Trình bày quy trình kiểm thử mẫu.
+    [Heading 4] Thảo luận cấu trúc báo cáo kiểm thử.
+    [Heading 4] 3. Phân công công việc
+    [Heading 4] 4. Công cụ sử dụng
+    [Heading 3] 5. Kết Quả Cuộc Họp
+
+[DOCX] 22CT115_Nhom07_QuanLyBanHang(Sweet-Sip)\TimeLine\Biên Bản Họp Nhóm Lần 3 – Báo Cáo Cuối Kỳ Môn Kiểm Thử Phần Mềm.docx  (197507 bytes)
+  paragraphs=24 tables=0 sections=1
+  heading-like: 9
+    [Heading 2] Biên Bản Họp Nhóm Lần 3 – Báo Cáo Cuối Kỳ Môn Kiểm Thử Phần Mềm
+    [Heading 3] Mục Đích Cuộc Họp
+    [Heading 3] Thảo luận về việc viết Test Report.
+    [Heading 3] Chuẩn bị báo cáo Word.
+    [Heading 3] Lập báo cáo PowerPoint.
+    [Heading 4] Nội Dung Thảo Luận
+    [Heading 4] 3. Phân công công việc
+    [Heading 4] 4. Công cụ sử dụng
+    [Heading 3] 5. Kết Quả Cuộc Họp
+
+[XLSX] 22CT115_Nhom07_QuanLyBanHang(Sweet-Sip)\TimeLine\TimeLine_22CT115_Nhóm07.xlsx  (17835 bytes)
+  sheets: 1 -> ['Biểu đồ Gantt']
+   - [Biểu đồ Gantt] dims=A1:BQ37 max_row=37 max_col=69
+     R2: B2=MẪU BIỂU ĐỒ GANTT | I2=Mẹo sử dụng Smartsheet ➜
+     R4: B4=TIÊU ĐỀ DỰ ÁN | D4=Web Bán Bánh – Sweep Sip | I4=TÊN CÔNG TY
+     R5: B5=NGƯỜI QUẢN LÝ DỰ ÁN | D5=Trần Thị Như Quỳnh
+     rows_co_du_lieu=28
+
+[PDF] 22CT115_Nhom07_QuanLyBanHang(Sweet-Sip)\Word+ppt Báo Cáo\Báo Cáo Word_22CT115_07.pdf  (242266 bytes)
+
+[DOCX] 22CT115_Nhom07_QuanLyBanHang(Sweet-Sip)\Word+ppt Báo Cáo\Báo Cáo Word_22CT115_Nhóm07.docx  (2506437 bytes)
+  paragraphs=109 tables=5 sections=1
+  heading-like: 10
+    [Heading 1] Tháng 11/2025
+    [Heading 3] Tình trạng tổng thể các test case…………………………………….……….……………6
+    [Heading 2] 4. Khuyến nghị và ưu tiên……………………………………………………………………..7
+    [Heading 2] 5. Quyết định triển khai……………………………………………………………………….8
+    [Heading 1] BÁO CÁO THỰC THI KIỂM THỬ VÀ BÁO CÁO LỖI
+    [Normal] 1. Tổng quan kết quả:
+    [Normal] 2.Phân tích lỗi:
+    [Heading 3] 3.Tình trạng tổng thể các test case
+    [Heading 2] 4. Khuyến nghị và ưu tiên
+    [Heading 2] 5. Quyết định triển khai
+  table1: 5r x 2c | header=Tổng TC / 200
+  table2: 7r x 6c | header=ID / Module / Mô tả lỗi / Mức độ / TC / TR-ID
+  table3: 12r x 5c | header=Tính năng / Tổng số Test Case / Đã Passed / Failed / Tỉ lệ Passed (%)
+  table4: 7r x 5c | header=ID / Mô tả lỗi / Mức độ / Khuyến nghị / Hành động cần thực hiện
+  table5: 5r x 2c | header=Triển khai / ID
+
+[PPTX] 22CT115_Nhom07_QuanLyBanHang(Sweet-Sip)\Word+ppt Báo Cáo\Ppt Báo cáo Nhóm 7 - 22CT115.pptx  (5673298 bytes)
+  slides=17 size=18288000x10287000
+    slide1: shapes=5 | 
+    slide2: shapes=9 | Nhóm trưởng: Trần Thị Như Quỳnh Thành viên nhóm: Lê Phúc Hậu Nguyễn Tr || Giáo viên hướng dẫn: Nguyễn Minh Phúc
+    slide3: shapes=10 | Trong thời đại công nghệ số, các nền tảng thương mại điện tử ngày càng
+    slide4: shapes=7 | Lập Test Plan Viết Test Case Thực thi kiểm thử Lập Test Report Báo cáo
+    slide5: shapes=6 | 
+    slide6: shapes=7 | Đề tài tập trung vào việc kiểm thử chức năng và giao diện người dùng c
+    slide7: shapes=7 | . Mục Tiêu Chất Lượng (Quality Objectives) Đạt tỷ lệ Test Case Passed 
+    slide8: shapes=8 | Rủi Ro và Kế Hoạch Giảm Thiểu (Risks & Mitigation) Rủi ro chức năng: l
+    slide9: shapes=5 | 
+    slide10: shapes=8 | Test Case là tập hợp các bước kiểm thử cụ thể được thiết kế để xác min
+    slide11: shapes=8 | 
+    slide12: shapes=9 | Tổng số Test Case: 200 Pass: 194 Tỷ lệ pass: 97% Chức năng: 11 chức nă
+    slide13: shapes=7 | 
+    slide14: shapes=7 | 
+    slide15: shapes=7 | 
+    slide16: shapes=7 | 
+    slide17: shapes=7 | Dự án hiện tại đã hoàn thành một giai đoạn quan trọng trong quá trình 
+
+==============================================================================
+BO 23  ->  23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)
+==============================================================================
+
+[XLSX] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\01-IC-Product-Requirements_23CT113_Nhom02.xlsx  (23438 bytes)
+  sheets: 2 -> ['Product Requirements', 'Vi_Product Requirements']
+   - [Product Requirements] dims=B1:E100 max_row=100 max_col=5
+     R1: B1=PRODUCT REQUIREMENTS
+     R2: B2=PRODUCT TITLE | C2=Tu Te Fund — Community Crowdfunding Pl
+     R3: B3=AUTHOR | C3=Nguyen Quach Phu Tai (Project Lead / D
+     R4: B4=PHONE | C4=0932299701
+     R5: B5=EMAIL | C5=nguyenquachphutai@gmail.com
+     rows_co_du_lieu=100
+   - [Vi_Product Requirements] dims=B1:E100 max_row=100 max_col=5
+     R1: B1=YÊU CẦU SẢN PHẨM
+     R2: B2=TÊN SẢN PHẨM | C2=Tử Tế Fund — Nền tảng gây quỹ cộng đồn
+     R3: B3=TÁC GIẢ | C3=Nguyễn Quách Phú Tài (Trưởng nhóm / Lậ
+     R4: B4=ĐIỆN THOẠI | C4=0932299701
+     R5: B5=E-MAIL | C5=nguyenquachphutai@gmail.com
+     rows_co_du_lieu=100
+
+[XLSX] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\Test Case_23CT113_Nhom02.xlsx  (45527 bytes)
+  sheets: 4 -> ['TongQuan_Dashboard', 'TR List', 'TC List', 'RTM']
+   - [TongQuan_Dashboard] dims=A1:I31 max_row=31 max_col=9
+     R1: A1=BẢNG ĐIỀU KHIỂN & CHỈ SỐ KIỂM THỬ — NỀ
+     R2: A2=Lớp & Học phần: | B2=23CT113 — Kiểm thử và Đảm bảo Chất lượ | E2=Giảng viên hướng dẫn: | F2=ThS. Nguyễn Minh Phúc
+     R3: A3=Đề tài dự án: | B3=Nền tảng Crowdfunding gây quỹ cộng đồn | E3=Thời gian thực hiện: | F3=12/10/2026 – 30/10/2026 (3 tuần)
+     R4: A4=Web Demo chính thức: | B4=https://test-gamma-azure-65.vercel.app | E4=Kho mã nguồn GitHub: | F4=https://github.com/Escanor292/test
+     R5: A5=Đội ngũ thực hiện: | B5=Nhóm 02 — Nguyễn Quách Phú Tài (123000 | E5=Môi trường test: | F5=Node.js 24 + Next.js 15.1 + Neon Postg
+     rows_co_du_lieu=28
+   - [TR List] dims=A1:G43 max_row=43 max_col=7
+     R1: A1=STT | B1=TR ID | C1=Phân hệ | D1=Tên Yêu cầu Kiểm thử | E1=Kỹ thuật áp dụng | F1=Điểm vào (route/API) | G1=Mục tiêu kiểm thử & đặc tả nghiệp vụ
+     R2: A2=1 | B2=TR-001 | C2=AUTH | D2=Đăng nhập bằng email và mật khẩu qua N | E2=Functional | F2=/auth/login, POST /api/auth/callback/c | G2=Xác thực credentials người dùng, tạo J
+     R3: A3=2 | B3=TR-002 | C3=AUTH | D3=Đăng nhập liên kết tài khoản Google OA | E3=Functional | F3=/auth/login, /api/auth/providers | G3=Xác minh luồng đăng nhập Single Sign-O
+     R4: A4=3 | B4=TR-003 | C4=AUTH | D4=Đăng ký tài khoản người dùng mới và ph | E4=Boundary | F4=/auth/register, POST /api/auth/registe | G4=Xác minh quy tắc mật khẩu tối thiểu 6 
+     R5: A5=4 | B5=TR-004 | C5=AUTH | D5=Quên mật khẩu và tạo token khôi phục t | E5=Functional | F5=/auth/forgot-password, POST /api/auth/ | G5=Xác minh tạo mã token ngẫu nhiên sha25
+     rows_co_du_lieu=43
+   - [TC List] dims=A1:L105 max_row=105 max_col=12
+     R1: A1=TR ID | B1=TC ID | C1=Phân hệ | D1=Kịch bản kiểm thử | E1=Mức độ ưu tiên | F1=Điều kiện tiên quyết | G1=Các bước thực hiện | H1=Dữ liệu kiểm thử | I1=Kết quả mong đợi | J1=Kết quả thực thi | K1=Bằng chứng (lệnh/ảnh/log) | L1=Ngày chạy
+     R2: A2=TR-001 | B2=TC_AUTH_001 | C2=AUTH | D2=Kiểm tra hiển thị giao diện form đăng  | E2=High | F2=Người dùng chưa đăng nhập, kết nối mạn | G2=1. Mở trình duyệt truy cập /auth/login | H2=URL: /auth/login | I2=Hiển thị đầy đủ form đăng nhập, logo T | J2=PASS | K2=evidence/TC_AUTH_001.png; Playwright C | L2=01/11/2026 16:30
+     R3: A3=TR-001 | B3=TC_AUTH_002 | C3=AUTH | D3=Đăng nhập thành công với tài khoản Quả | E3=High | F3=Tài khoản admin@crowdfunding.vn đã có  | G3=1. Mở trang /auth/login 2. Nhập email: | H3=email: admin@crowdfunding.vn, pass: Ad | I3=Đăng nhập thành công, NextAuth cấp coo | J3=PASS | K3=evidence/TC_AUTH_002_response.json; HT | L3=01/11/2026 18:53
+     R4: A4=TR-001 | B4=TC_AUTH_003 | C4=AUTH | D4=Từ chối đăng nhập khi người dùng nhập  | E4=High | F4=Tài khoản tồn tại trong hệ thống | G4=1. Mở /auth/login 2. Nhập email admin@ | H4=email: admin@crowdfunding.vn, pass: Wr | I4=Đăng nhập thất bại, NextAuth trả HTTP  | J4=PASS | K4=evidence/TC_AUTH_003_response.json; HT | L4=01/11/2026 18:53
+     R5: A5=TR-002 | B5=TC_AUTH_004 | C5=AUTH | D5=Kiểm tra nút bấm đăng nhập bằng Google | E5=Medium | F5=Mở trang /auth/login | G5=1. Truy cập /auth/login 2. Kiểm tra sự | H5=URL: /api/auth/providers | I5=Nút Google hiển thị đúng thương hiệu;  | J5=PASS | K5=PASS | evidence/TC_AUTH_004.png, TC_AU | L5=01/11/2026
+     rows_co_du_lieu=105
+   - [RTM] dims=A1:M44 max_row=44 max_col=13
+     R1: A1=STT | B1=TR ID | C1=Phân hệ | D1=Tên TR | E1=Yêu cầu đặc tả (FR/NFR) | F1=Danh sách TC | G1=Tổng TC | H1=Đã chạy | I1=PASS | J1=FAIL | K1=BLOCKED | L1=Chưa chạy | M1=Người phụ trách
+     R2: A2=1 | B2=TR-001 | C2=AUTH | D2=Đăng nhập bằng email và mật khẩu qua N | E2=FR-01 — Xác thực & Phân quyền | F2=TC_AUTH_001, TC_AUTH_002, TC_AUTH_003 | G2=3 | H2=3 | I2=3 | J2=0 | K2=0 | L2=0 | M2=Nguyễn Quách Phú Tài
+     R3: A3=2 | B3=TR-002 | C3=AUTH | D3=Đăng nhập liên kết tài khoản Google OA | E3=FR-01 — Xác thực & Phân quyền | F3=TC_AUTH_004, TC_AUTH_005 | G3=2 | H3=2 | I3=1 | J3=1 | K3=0 | L3=0 | M3=Nguyễn Quách Phú Tài
+     R4: A4=3 | B4=TR-003 | C4=AUTH | D4=Đăng ký tài khoản người dùng mới và ph | E4=FR-01 — Xác thực & Phân quyền | F4=TC_AUTH_006, TC_AUTH_007, TC_AUTH_008 | G4=3 | H4=3 | I4=3 | J4=0 | K4=0 | L4=0 | M4=Nguyễn Quách Phú Tài
+     R5: A5=4 | B5=TR-004 | C5=AUTH | D5=Quên mật khẩu và tạo token khôi phục t | E5=FR-01 — Xác thực & Phân quyền | F5=TC_AUTH_009, TC_AUTH_010 | G5=2 | H5=2 | I5=1 | J5=1 | K5=0 | L5=0 | M5=Nguyễn Quách Phú Tài
+     rows_co_du_lieu=43
+
+[DOCX] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\Test Plan_23CT113_Nhom02.docx  (41282 bytes)
+  paragraphs=33 tables=3 sections=1
+  heading-like: 9
+    [Normal] 1. THÔNG TIN DỰ ÁN VÀ ĐỘI NGŨ THỰC HIỆN
+    [Normal] 2. MỤC TIÊU VÀ TIÊU CHÍ CHẤT LƯỢNG
+    [Normal] 3. PHẠM VI KIỂM THỬ (TEST SCOPE)
+    [Normal] 4. PHƯƠNG PHÁP KIỂM THỬ VÀ BA LÀN THỰC THI
+    [Normal] 5. MÔI TRƯỜNG VÀ DỮ LIỆU KIỂM THỬ
+    [Normal] 6. LỊCH TRÌNH THỰC HIỆN 3 TUẦN
+    [Normal] 7. TIÊU CHÍ BẮT ĐẦU, TẠM DỪNG VÀ KẾT THÚC
+    [Normal] 8. RỦI RO VÀ BIỆN PHÁP GIẢM THIỂU
+    [Normal] 9. TỔNG HỢP VÀ LIÊN KẾT TÀI LIỆU
+  table1: 6r x 6c | header=STT / Họ và tên / MSSV / Vai trò / Phân hệ phụ trách / Khối lượng
+  table2: 6r x 5c | header=Tài khoản Email / Vai trò (Role) / Mật khẩu / Đăng nhập được? / Nguồn cấp quyền
+  table3: 6r x 3c | header=Mã Rủi ro / Mô tả Rủi ro Tiềm ẩn / Biện pháp Giảm thiểu & K
+
+[DOCX] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\Test Report_23CT113_Nhom02.docx  (43054 bytes)
+  paragraphs=25 tables=2 sections=1
+  heading-like: 7
+    [Normal] 1. THÔNG TIN CHUNG DỰ ÁN
+    [Normal] 2. TÓM TẮT KẾT QUẢ THỰC THI (SỐ LIỆU TÍNH TỪ WORKBOOK)
+    [Normal] 3. BẢNG KẾT QUẢ CHI TIẾT THEO PHÂN HỆ (LẤY TỪ RTM)
+    [Normal] 4. BÁO CÁO LỖI PHÁT HIỆN (BUG REPORTS SINH TỪ FAIL THỰC TẾ)
+    [Normal] 5. ĐÁNH GIÁ CHẤT LƯỢNG VÀ KHUYẾN NGHỊ PHÁT TRIỂN
+    [Normal] 6. KẾT LUẬN VÀ BÀI HỌC KINH NGHIỆM
+    [Normal] 7. PHỤ LỤC TÀI LIỆU VÀ MINH CHỨNG
+  table1: 12r x 9c | header=STT / Phân hệ / Tên Phân hệ Nghiệp vụ / Tổng TR / Tổng TC / Đã chạy
+  table2: 27r x 8c | header=BUG-ID / Phân hệ / Tiêu đề lỗi / Mức độ / TC liên quan / File/route gây lỗi
+
+[DOCX] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\TimeLine\Biên Bản Họp Nhóm Lần 1 – Báo Cáo Cuối Kỳ Môn Kiểm Thử Phần Mềm.docx  (354388 bytes)
+  paragraphs=30 tables=0 sections=1
+  heading-like: 5
+    [Normal] 1. THÔNG TIN CHUNG BUỔI HỌP
+    [Normal] 2. NỘI DUNG VÀ MỤC ĐÍCH CUỘC HỌP
+    [Normal] 3. TÓM TẮT DIỄN BIẾN VÀ THẢO LUẬN
+    [Normal] 4. PHÂN CÔNG CÔNG VIỆC VÀ KẾT LUẬN
+    [Normal] 5. HÌNH ẢNH MINH CHỨNG PHIÊN HỌP
+
+[DOCX] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\TimeLine\Biên Bản Họp Nhóm Lần 2 – Báo Cáo Cuối Kỳ Môn Kiểm Thử Phần Mềm.docx  (623813 bytes)
+  paragraphs=28 tables=0 sections=1
+  heading-like: 4
+    [Normal] 1. THÔNG TIN CHUNG BUỔI HỌP
+    [Normal] 2. NỘI DUNG VÀ MỤC ĐÍCH CUỘC HỌP
+    [Normal] 3. TÓM TẮT DIỄN BIẾN VÀ THẢO LUẬN
+    [Normal] 4. PHÂN CÔNG CÔNG VIỆC VÀ KẾT LUẬN
+
+[DOCX] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\TimeLine\Biên Bản Họp Nhóm Lần 3 – Báo Cáo Cuối Kỳ Môn Kiểm Thử Phần Mềm.docx  (289613 bytes)
+  paragraphs=27 tables=0 sections=1
+  heading-like: 4
+    [Normal] 1. THÔNG TIN CHUNG BUỔI HỌP
+    [Normal] 2. NỘI DUNG VÀ MỤC ĐÍCH CUỘC HỌP
+    [Normal] 3. TÓM TẮT DIỄN BIẾN VÀ THẢO LUẬN
+    [Normal] 4. PHÂN CÔNG CÔNG VIỆC VÀ KẾT LUẬN
+
+[DOCX] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\TimeLine\Nhom2_Ke_hoach_Truong_nhom_Bao_cao_cuoi_ky.docx  (39527 bytes)
+  paragraphs=17 tables=3 sections=1
+  heading-like: 4
+    [Normal] 1. ĐÁNH GIÁ TIẾN ĐỘ VÀ SỰ ĐÓNG GÓP CỦA CÁC THÀNH VIÊN
+    [Normal] 2. TỔNG HỢP KẾT QUẢ THỰC THI KIỂM THỬ
+    [Normal] 3. BẢNG CHI TIẾT BUG REPORT (TRÍCH XUẤT 4 LỖI TIÊU BIỂU TRONG 26 BUGS PHÁT HIỆN 
+    [Normal] 4. ĐỐI CHIẾU PHÂN HỆ ↔ MÃ NGUỒN ↔ TR/TC
+  table1: 6r x 7c | header=STT / Thành viên / MSSV / Vai trò / Nhiệm vụ phân hệ / Khối lượng
+  table2: 5r x 7c | header=Mã Bug / Phân hệ / Tiêu đề lỗi phát hiện / Mức độ / File/route gây lỗi / Dữ liệu tái hiện
+  table3: 12r x 8c | header=Phân hệ / Route/API chính / Model Prisma / TR / TC / Đã chạy
+
+[XLSX] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\TimeLine\TimeLine_23CT113_Nhom02.xlsx  (7859 bytes)
+  sheets: 2 -> ['Tiến độ Gantt 3 Tuần', 'Phân công']
+   - [Tiến độ Gantt 3 Tuần] dims=A1:H12 max_row=12 max_col=8
+     R1: A1=KẾ HOẠCH & TIẾN ĐỘ THỰC HIỆN DỰ ÁN KIỂ
+     R2: A2=STT | B2=Hạng mục công việc kiểm thử | C2=Người thực hiện chính | D2=Bắt đầu | E2=Kết thúc | F2=Tiến độ | G2=Trạng thái | H2=Sản phẩm bàn giao
+     R3: A3=1 | B3=Khảo sát đặc tả PRD và kiến trúc Tử Tế | C3=Cả 5 thành viên Nhóm 02 | D3=12/10/2026 | E3=14/10/2026 | F3=100% | G3=Hoàn thành | H3=Bản đặc tả PRD v3.0 chuẩn hóa
+     R4: A4=2 | B4=Xây dựng Kế hoạch kiểm thử (Test Plan) | C4=Nguyễn Quách Phú Tài | D4=12/10/2026 | E4=16/10/2026 | F4=100% | G4=Hoàn thành | H4=Test Plan_23CT113_Nhom02.docx
+     R5: A5=3 | B5=Họp nhóm Lần 1: Thống nhất phân chia 1 | C5=Cả 5 thành viên Nhóm 02 | D5=12/10/2026 | E5=12/10/2026 | F5=100% | G5=Hoàn thành | H5=Biên bản họp nhóm lần 1
+     rows_co_du_lieu=12
+   - [Phân công] dims=A1:H7 max_row=7 max_col=8
+     R1: A1=DANH SÁCH THÀNH VIÊN VÀ PHÂN CÔNG PHÂN
+     R2: A2=STT | B2=Họ và tên thành viên | C2=MSSV | D2=Vai trò | E2=Phân hệ phụ trách (Mã TR & Số TC) | F2=Tỷ lệ đóng góp | G2=Đánh giá
+     R3: A3=1 | B3=Nguyễn Quách Phú Tài | C3=123000609 | D3=Trưởng nhóm | E3=AUTH & KYC (TR-001 -> TR-009, 23 TC) | F3=100% (20%) | G3=Xuất sắc
+     R4: A4=2 | B4=Trần Xuân Ân | C4=123001127 | D4=Thành viên | E4=CAMP & REWARD (TR-010 -> TR-018, 23 TC | F4=100% (20%) | G4=Tốt
+     R5: A5=3 | B5=Bùi Đặng Quốc Khánh | C5=123001005 | D5=Thành viên | E5=PLEDGE & CERT (TR-019 -> TR-027, 20 TC | F5=100% (20%) | G5=Tốt
+     rows_co_du_lieu=7
+
+[DOCX] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\Word+ppt Báo Cáo\Báo Cáo Word_23CT113_Nhom02.docx  (51811 bytes)
+  paragraphs=88 tables=8 sections=1
+  heading-like: 34
+    [Normal] 1.1. Giới thiệu nền tảng gây quỹ cộng đồng Tử Tế Fund  ......................  T
+    [Normal] 1.2. Kiến trúc công nghệ và môi trường triển khai  ..........................  T
+    [Normal] 1.3. Phân chia 10 phân hệ nghiệp vụ kiểm thử  ...............................  T
+    [Normal] 2.1. Mục tiêu và tiêu chí hoàn thành kiểm thử  ..............................  T
+    [Normal] 2.2. Phương pháp và ba làn thực thi kiểm thử  ...............................  T
+    [Normal] 2.3. Danh sách tài khoản kiểm thử và cơ chế cấp quyền  ......................  T
+    [Normal] 2.4. Phân công trách nhiệm 5 thành viên trong nhóm  .........................  T
+    [Normal] 3.1. Phương pháp suy diễn TR từ mã nguồn thực tế  ...........................  T
+    [Normal] 3.2. Bảng tổng hợp 42 Yêu cầu kiểm thử (TRs)  ...............................  T
+    [Normal] 3.3. Thiết kế 104 Kịch bản kiểm thử (Test Cases)  ...........................  T
+    [Normal] 4.1. Tổng hợp kết quả thực thi theo phân hệ  ................................  T
+    [Normal] 4.3. Báo cáo 26 lỗi thực tế phát hiện được (Bug Reports)  ...................  T
+    [Normal] 5.1. Thiết kế ma trận truy xuất nguồn gốc  .................................  Tr
+    [Normal] 5.2. Đánh giá độ bao phủ yêu cầu kiểm thử  .................................  Tr
+    [Normal] 6.1. Đánh giá mức độ sẵn sàng của phần mềm  ................................  Tr
+    [Normal] 6.2. Bài học kinh nghiệm trong quá trình kiểm thử  .........................  Tr
+    [Normal] 6.3. Kết luận  .............................................................  Tr
+    [Normal] 1.1. Giới thiệu nền tảng gây quỹ cộng đồng Tử Tế Fund
+    [Normal] 1.2. Kiến trúc công nghệ và môi trường triển khai
+    [Normal] 1.3. Phân chia 10 phân hệ nghiệp vụ kiểm thử
+    [Normal] 2.1. Mục tiêu và tiêu chí hoàn thành kiểm thử
+    [Normal] 2.2. Phương pháp và ba làn thực thi kiểm thử
+    [Normal] 2.3. Danh sách tài khoản kiểm thử và cơ chế cấp quyền
+    [Normal] 2.4. Phân công trách nhiệm 5 thành viên trong nhóm
+    [Normal] 3.1. Phương pháp suy diễn TR từ mã nguồn thực tế
+    [Normal] 3.2. Bảng tổng hợp 42 Yêu cầu kiểm thử (TRs)
+    [Normal] 3.3. Thiết kế 104 Kịch bản kiểm thử (Test Cases)
+    [Normal] 4.1. Tổng hợp kết quả thực thi theo phân hệ
+    [Normal] 4.3. Báo cáo 26 lỗi thực tế phát hiện được (Bug Reports)
+    [Normal] 5.1. Thiết kế ma trận truy xuất nguồn gốc
+    [Normal] 5.2. Đánh giá độ bao phủ yêu cầu kiểm thử
+    [Normal] 6.1. Đánh giá mức độ sẵn sàng của phần mềm
+    [Normal] 6.2. Bài học kinh nghiệm trong quá trình kiểm thử
+    [Normal] 6.3. Kết luận
+  table1: 7r x 2c | header=Giảng viên hướng dẫn: / ThS. Nguyễn Minh Phúc
+  table2: 11r x 4c | header=STT / Mã / Tên Phân hệ Nghiệp vụ / Mô tả phạm vi chức năng
+  table3: 6r x 5c | header=Email đăng nhập / Mật khẩu / Vai trò (Role) / Trạng thái xác thực / Mục đích sử dụng
+  table4: 6r x 6c | header=Thành viên / MSSV / Vai trò / Phân hệ phụ trách / Khối lượng / Tiến độ thực thi
+  table5: 11r x 4c | header=Phân hệ / Dải TR ID / Số lượng TR / Trọng tâm nghiệp vụ kiểm
+  table6: 12r x 8c | header=Phân hệ / Số TR / Số TC / Đã chạy / PASS / FAIL
+  table7: 27r x 5c | header=Mã Bug / Mức độ / Phân hệ / Hiện trạng lỗi & Mã nguồ / Hướng xử lý đề xuất
+  table8: 14r x 3c | header=STT / Tên Tài liệu / Thư mục / Mô tả nội dung & Quy chu
+
+[PDF] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\Word+ppt Báo Cáo\Nhom02_Final_Report_Software_Testing.pdf  (205403 bytes)
+
+[PPTX] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\Word+ppt Báo Cáo\Ppt Báo cáo Nhóm 2 - 23CT113.pptx  (46165 bytes)
+  slides=11 size=9144000x6858000
+    slide1: shapes=2 | BÁO CÁO TỔNG KẾT HỌC PHẦN KIỂM THỬ PHẦN MỀM Đề tài: Nền tảng Crowdfund
+    slide2: shapes=3 | Thành viên nhóm và phân công || Kiểm thử phần mềm – Nhóm 02 – 23CT113 – Tử Tế Fund
+    slide3: shapes=3 | Tổng quan dự án || Kiểm thử phần mềm – Nhóm 02 – 23CT113 – Tử Tế Fund
+    slide4: shapes=4 | Phạm vi kiểm thử || Kiểm thử phần mềm – Nhóm 02 – 23CT113 – Tử Tế Fund
+    slide5: shapes=4 | Test Plan – Mục tiêu & tiêu chí || Kiểm thử phần mềm – Nhóm 02 – 23CT113 – Tử Tế Fund
+    slide6: shapes=4 | Thiết kế Test Case || Kiểm thử phần mềm – Nhóm 02 – 23CT113 – Tử Tế Fund
+    slide7: shapes=3 | Tổng kết Kết quả Thực thi Kiểm thử || Kiểm thử phần mềm – Nhóm 02 – 23CT113 – Tử Tế Fund
+    slide8: shapes=3 | Báo cáo Lỗi Thực tế (26 Bug Reports) || Kiểm thử phần mềm – Nhóm 02 – 23CT113 – Tử Tế Fund
+    slide9: shapes=3 | Ma trận Truy xuất Nguồn gốc (RTM) || Kiểm thử phần mềm – Nhóm 02 – 23CT113 – Tử Tế Fund
+    slide10: shapes=4 | Đánh giá và khuyến nghị || Kiểm thử phần mềm – Nhóm 02 – 23CT113 – Tử Tế Fund
+    slide11: shapes=3 | Kết luận và Nghiệm thu Đồ án || Kiểm thử phần mềm – Nhóm 02 – 23CT113 – Tử Tế Fund
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_ADMN_001.png  (180103 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_ADMN_002.png  (116513 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_ADMN_003.png  (120349 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_ADMN_004.png  (169892 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_ADMN_004_response.json  (2685 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_ADMN_005.png  (88634 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_ADMN_005_response.json  (554 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_ADMN_006_response.json  (1286 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_ADMN_007.png  (126120 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_ADMN_007_response.json  (629 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_ADMN_008_response.json  (5118 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_ADMN_009_response.json  (368 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_AUTH_001.png  (181728 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_AUTH_002_response.json  (1023 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_AUTH_003_response.json  (884 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_AUTH_004.png  (177793 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_AUTH_004_response.json  (1008 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_AUTH_005_response.json  (425 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_AUTH_006_response.json  (1015 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_AUTH_007_response.json  (1102 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_AUTH_008_response.json  (1314 bytes)
+
+[LOG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_AUTH_008_test.log  (532 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_AUTH_009_response.json  (924 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_AUTH_010_response.json  (706 bytes)
+
+[LOG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_AUTH_010_test.log  (232 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_AUTH_011_response.json  (996 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_AUTH_012_response.json  (726 bytes)
+
+[LOG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_AUTH_012_test.log  (422 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_BLOG_001.png  (272127 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_BLOG_002_response.json  (8341 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_BLOG_003.png  (358809 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_BLOG_004.png  (37675 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_BLOG_004_response.json  (1364 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_BLOG_005.png  (180185 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_BLOG_005_response.json  (1802 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_BLOG_006_response.json  (2198 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_BLOG_007_response.json  (1938 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_BLOG_008_response.json  (879 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_BLOG_009_response.json  (1502 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_BLOG_010_response.json  (1639 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_BLOG_011_response.json  (909 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_BLOG_012_response.json  (564 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CAMP_001_response.json  (965 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CAMP_002_response.json  (986 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CAMP_003_response.json  (1190 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CAMP_004_response.json  (1164 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CAMP_005_response.json  (1004 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CAMP_006.png  (566439 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CAMP_007_response.json  (2113 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CAMP_008_response.json  (6511 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CAMP_009.png  (404734 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CAMP_009_response.json  (755 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CAMP_010.png  (39123 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CAMP_010_response.json  (1191 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CAMP_011_response.json  (815 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CAMP_012_response.json  (1254 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CAMP_013_response.json  (952 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CAMP_014.png  (270616 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CAMP_014_response.json  (1180 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CAMP_015_response.json  (833 bytes)
+
+[LOG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CAMP_015_test.log  (320 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CERT_001.png  (180731 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CERT_002_response.json  (850 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CERT_003_response.json  (855 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CERT_004.png  (103192 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CERT_005.png  (29166 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CERT_005_response.json  (1340 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CERT_006.png  (146461 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CERT_006_response.json  (1856 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CERT_007_response.json  (1337 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CERT_008.png  (88785 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CERT_008_response.json  (2101 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CERT_009.png  (21893 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CERT_009_response.json  (3341 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CERT_010_response.json  (365 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CHAT_001.png  (172472 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CHAT_001_response.json  (1028 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CHAT_002.png  (61575 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CHAT_003_response.json  (744 bytes)
+
+[LOG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CHAT_003_test.log  (258 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CHAT_004_response.json  (639 bytes)
+
+[LOG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CHAT_004_test.log  (180 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CHAT_005_response.json  (1541 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CHAT_006_response.json  (1071 bytes)
+
+[LOG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_CHAT_006_test.log  (602 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_COMM_001.png  (64372 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_COMM_002_response.json  (952 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_COMM_003.png  (62925 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_COMM_003_response.json  (779 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_COMM_004_response.json  (1026 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_COMM_005_response.json  (1029 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_COMM_006_response.json  (1084 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_COMM_007_response.json  (1247 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_COMM_008_response.json  (1031 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_COMM_009_response.json  (1373 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_COMM_010_response.json  (1589 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_COMM_011_response.json  (540 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_KYC_001_response.json  (899 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_KYC_002_response.json  (982 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_KYC_003_response.json  (961 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_KYC_004_response.json  (1029 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_KYC_005.png  (98097 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_KYC_006_response.json  (1280 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_KYC_007_response.json  (1288 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_KYC_008_response.json  (806 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_KYC_009_response.json  (900 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_KYC_010_response.json  (910 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_KYC_011_response.json  (385 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_PLED_001.png  (74870 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_PLED_001_response.json  (2472 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_PLED_002_response.json  (928 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_PLED_003_response.json  (1144 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_PLED_004_response.json  (1042 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_PLED_005_response.json  (1045 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_PLED_006_response.json  (1044 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_PLED_007_response.json  (2305 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_PLED_008_response.json  (870 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_PLED_009_response.json  (371 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_PLED_010_response.json  (357 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_REWD_001_response.json  (2237 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_REWD_002_response.json  (1014 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_REWD_003_response.json  (1745 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_REWD_004_response.json  (1475 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_REWD_005_response.json  (930 bytes)
+
+[PNG] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_REWD_006.png  (34682 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_REWD_006_response.json  (574 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_REWD_007_response.json  (838 bytes)
+
+[JSON] 23CT113_Nhom02_NenTangCrowdfunding(TuTeFund)\evidence\TC_REWD_008_response.json  (3353 bytes)
