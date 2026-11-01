@@ -1,7 +1,0 @@
-{
-  "testCaseId": "TC_REWD_009",
-  "status": "NGOÀI PHẠM VI",
-  "executionTimestamp": "2026-11-01T14:00:15.688928+00:00",
-  "verification": "Giao hàng tận tay không thuộc phần mềm. Không tính vào số ca chạy, PASS hay FAIL.",
-  "criteriaSource": "Yêu cầu của nhóm: ca này không phải kiểm thử phần mềm."
-}
