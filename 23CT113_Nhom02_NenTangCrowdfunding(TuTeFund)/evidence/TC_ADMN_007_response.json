@@ -1,0 +1,13 @@
+{
+  "testCaseId": "TC_ADMN_007",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T13:21:07.149597Z",
+  "steps": [
+    {
+      "url": "https://test-gamma-azure-65.vercel.app/dashboard/admin/revenue",
+      "shot": "evidence/TC_ADMN_007.png"
+    }
+  ],
+  "verification": "Admin mở /dashboard/admin/revenue. Phân tích doanh thu: tổng tiền từ backers 4.658.000đ, phí dịch vụ sàn 16.000đ, tổng thanh toán 4.662.000đ. Trang không vẽ biểu đồ riêng và không có dòng chữ giải ngân.",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > cột Kết quả mong đợi"
+}

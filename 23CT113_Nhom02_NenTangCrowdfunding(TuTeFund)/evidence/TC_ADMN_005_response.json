@@ -1,0 +1,13 @@
+{
+  "testCaseId": "TC_ADMN_005",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T13:21:07.149507Z",
+  "steps": [
+    {
+      "url": "https://test-gamma-azure-65.vercel.app/dashboard/admin/moderation",
+      "shot": "evidence/TC_ADMN_005.png"
+    }
+  ],
+  "verification": "Admin mở /dashboard/admin/moderation, kéo tới mục Từ bị cấm. Có ô thêm từ, nút Thêm, danh sách (cờ bạc, lừa đảo, tu_cam_moi_2026) và nút Xóa.",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > cột Kết quả mong đợi"
+}

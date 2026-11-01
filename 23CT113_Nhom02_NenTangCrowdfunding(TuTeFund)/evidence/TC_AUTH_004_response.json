@@ -1,0 +1,29 @@
+{
+  "testCaseId": "TC_AUTH_004",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T13:19:44.167Z",
+  "request": {
+    "endpoint": "https://test-gamma-azure-65.vercel.app/api/auth/providers",
+    "method": "GET"
+  },
+  "response": {
+    "statusCode": 200,
+    "body": {
+      "google": {
+        "id": "google",
+        "name": "Google",
+        "type": "oidc",
+        "signinUrl": "https://test-navy.vercel.app/api/auth/signin/google",
+        "callbackUrl": "https://test-navy.vercel.app/api/auth/callback/google"
+      },
+      "credentials": {
+        "id": "credentials",
+        "name": "Đăng nhập với Email",
+        "type": "credentials",
+        "signinUrl": "https://test-navy.vercel.app/api/auth/signin/credentials",
+        "callbackUrl": "https://test-navy.vercel.app/api/auth/callback/credentials"
+      }
+    }
+  },
+  "verification": "GET /api/auth/providers có google id=google type=oidc. Nút Google nằm trên /auth/login, ảnh TC_AUTH_004.png."
+}

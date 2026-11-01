@@ -1,0 +1,13 @@
+{
+  "testCaseId": "TC_REWD_006",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T13:21:07.149212Z",
+  "steps": [
+    {
+      "url": "https://test-gamma-azure-65.vercel.app/campaigns/sach-giao-duc-vung-cao",
+      "shot": "evidence/TC_REWD_006.png"
+    }
+  ],
+  "verification": "Mở /campaigns/sach-giao-duc-vung-cao, bấm Ủng hộ ngay. Modal hiện Gói Sách Giấy 250.000đ, mô tả 'Nhận 1 bộ sách in phiên bản giới hạn.', chọn được gói.",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > cột Kết quả mong đợi"
+}

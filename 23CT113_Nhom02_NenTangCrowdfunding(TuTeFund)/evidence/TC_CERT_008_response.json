@@ -1,0 +1,13 @@
+{
+  "testCaseId": "TC_CERT_008",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T13:21:07.149648Z",
+  "steps": [
+    {
+      "url": "https://test-gamma-azure-65.vercel.app/so",
+      "shot": "evidence/TC_CERT_008.png"
+    }
+  ],
+  "verification": "Admin vào /so, mã ca Hà Kế toán 4444, mở Ngân hàng. Sổ hiện Vietcombank 0000000001 và các dòng thu 420.000, 290.000, 350.000 cùng khoản chi Phí nền tảng Shopee -18.500.",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > cột Kết quả mong đợi"
+}

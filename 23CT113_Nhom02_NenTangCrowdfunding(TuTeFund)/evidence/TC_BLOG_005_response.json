@@ -1,0 +1,13 @@
+{
+  "testCaseId": "TC_BLOG_005",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T13:21:07.149695Z",
+  "steps": [
+    {
+      "url": "https://test-gamma-azure-65.vercel.app/auth/login?callbackUrl=https%3A%2F%2Ftest-gamma-azure-65.vercel.app%2Fauth%2Fsignin",
+      "shot": "evidence/TC_BLOG_005.png"
+    }
+  ],
+  "verification": "Khách mở /blog/editor. Trang editor đẩy sang /auth/signin, rồi tới /auth/login?callbackUrl=.../auth/signin. Không phải callbackUrl=/blog/editor. Ảnh là trang đăng nhập thật sau bước đó.",
+  "criteriaSource": "Test Case_23CT113_Nhom02.xlsx > cột Kết quả mong đợi"
+}
