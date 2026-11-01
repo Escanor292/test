@@ -1,0 +1,6 @@
+vercel.json crons: /api/cron/update-campaign-status schedule 0 1 * * *
+src/lib/campaign-lifecycle.ts
+ACTIVE và endDate < now
+reachedGoal = currentAmount >= goalAmount
+shouldRefundOnDeadline: chỉ true khi không có hàng, chưa đủ mục tiêu, model ALL_OR_NOTHING
+nextStatus = refund ? "FAILED" : "SUCCESS"

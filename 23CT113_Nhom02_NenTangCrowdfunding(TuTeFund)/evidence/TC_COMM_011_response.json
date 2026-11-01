@@ -1,0 +1,13 @@
+{
+  "testCaseId": "TC_COMM_011",
+  "status": "FAIL",
+  "executionTimestamp": "2026-11-01T13:47:36.906734+00:00",
+  "steps": [
+    {
+      "file": "src/app/api/blog/posts/[slug]/comments/route.ts",
+      "line": "createComment(post.id, userId, content)"
+    }
+  ],
+  "verification": "Tạo bình luận chỉ lưu content. Không có lời gọi mô hình AI và không trả nhãn tích cực/tiêu cực.",
+  "criteriaSource": "Đối chiếu mã nguồn với cột Kết quả mong đợi. Không gọi dịch vụ ngoài."
+}

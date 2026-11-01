@@ -1,0 +1,17 @@
+{
+  "testCaseId": "TC_AUTH_012",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T13:47:36.906734+00:00",
+  "steps": [
+    {
+      "file": "src/lib/password-reset.ts",
+      "line": "PASSWORD_RESET_TTL_MS = 30 * 60 * 1000"
+    },
+    {
+      "file": "src/app/api/auth/reset-password/route.ts",
+      "line": "expiresAt: { gt: now }"
+    }
+  ],
+  "verification": "password-reset.ts đặt PASSWORD_RESET_TTL_MS = 30*60*1000. forgot-password ghi expiresAt = now + TTL. reset-password chỉ nhận token khi usedAt null và expiresAt > now, nếu không trả 400 'đã hết hạn'.",
+  "criteriaSource": "Đối chiếu mã nguồn với cột Kết quả mong đợi. Không gọi dịch vụ ngoài."
+}

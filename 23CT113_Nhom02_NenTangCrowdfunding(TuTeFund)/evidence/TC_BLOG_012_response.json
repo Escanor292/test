@@ -1,0 +1,13 @@
+{
+  "testCaseId": "TC_BLOG_012",
+  "status": "FAIL",
+  "executionTimestamp": "2026-11-01T13:47:36.906734+00:00",
+  "steps": [
+    {
+      "searched": "facebook|graph.facebook|Page Token",
+      "found": "src/components/profile/SocialLinksEditor.tsx placeholder URL"
+    }
+  ],
+  "verification": "Không có Graph API, Page Token hay webhook đăng bài lên Fanpage. Facebook trong code chỉ là ô link hồ sơ (facebook.com).",
+  "criteriaSource": "Đối chiếu mã nguồn với cột Kết quả mong đợi. Không gọi dịch vụ ngoài."
+}

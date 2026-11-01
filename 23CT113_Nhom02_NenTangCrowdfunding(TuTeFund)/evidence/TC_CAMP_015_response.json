@@ -1,0 +1,18 @@
+{
+  "testCaseId": "TC_CAMP_015",
+  "status": "PASS",
+  "executionTimestamp": "2026-11-01T13:47:36.906734+00:00",
+  "steps": [
+    {
+      "file": "src/lib/campaign-lifecycle.ts",
+      "line": "nextStatus = refund ? FAILED : SUCCESS"
+    },
+    {
+      "file": "vercel.json",
+      "schedule": "0 1 * * *",
+      "path": "/api/cron/update-campaign-status"
+    }
+  ],
+  "verification": "Cron GET /api/cron/update-campaign-status chạy 01:00 UTC mỗi ngày (vercel.json). closeExpiredCampaigns lấy chiến dịch ACTIVE có endDate < now. Đủ mục tiêu → SUCCESS. Không quà, All-or-Nothing, chưa đủ mục tiêu → FAILED và hoàn sổ. Có hàng thì hết hạn vẫn SUCCESS.",
+  "criteriaSource": "Đối chiếu mã nguồn với cột Kết quả mong đợi. Không gọi dịch vụ ngoài."
+}
